@@ -1,4 +1,4 @@
-# Introducere în analiza datelor {#cap1}
+# Crearea și partajarea rapoartelor și tablourilor de bord {#cap6}
 
 ## Importanța datelor în luare deciziilor
 

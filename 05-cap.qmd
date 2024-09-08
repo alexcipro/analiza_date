@@ -1,4 +1,4 @@
-# Introducere în analiza datelor {#cap1}
+# Etapele analizei datelor {#cap5}
 
 ## Importanța datelor în luare deciziilor
 

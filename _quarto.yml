@@ -20,6 +20,12 @@ book:
     - index.qmd
     - intro.qmd
     - 01-cap.qmd
+    - 02-cap.qmd
+    - 03-cap.qmd
+    - 04-cap.qmd
+    - 05-cap.qmd
+    - 06-cap.qmd
+    - 07-cap.qmd
     - summary.qmd
     - references.qmd
 

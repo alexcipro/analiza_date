@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ciprian Alexandru-Caragea">
-<meta name="dcterms.date" content="2024-09-08">
 
-<title>Introducere în analiza datelor economico-financiare</title>
+<title>Introducere în analiza datelor economico-financiare - 3&nbsp; Analiza datelor economico-financiare</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./04-cap.html" rel="next">
+<link href="./02-cap.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Introducere în analiza datelor economico-financiare</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analiza datelor economico-financiare</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -105,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Despre autor</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Despre autor</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -125,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-cap.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analiza datelor economico-financiare</span></a>
+  <a href="./03-cap.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analiza datelor economico-financiare</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -167,7 +166,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#despre-autor" id="toc-despre-autor" class="nav-link active" data-scroll-target="#despre-autor">Despre autor</a></li>
+  <li><a href="#importanța-datelor-în-luare-deciziilor" id="toc-importanța-datelor-în-luare-deciziilor" class="nav-link active" data-scroll-target="#importanța-datelor-în-luare-deciziilor"><span class="toc-section-number">3.1</span>  Importanța datelor în luare deciziilor</a></li>
+  <li><a href="#identificarea-seturilor-de-date-relevante" id="toc-identificarea-seturilor-de-date-relevante" class="nav-link" data-scroll-target="#identificarea-seturilor-de-date-relevante"><span class="toc-section-number">3.2</span>  Identificarea seturilor de date relevante</a>
+  <ul class="collapse">
+  <li><a href="#surse-de-date-publice-și-private-inclusiv-open-data" id="toc-surse-de-date-publice-și-private-inclusiv-open-data" class="nav-link" data-scroll-target="#surse-de-date-publice-și-private-inclusiv-open-data"><span class="toc-section-number">3.2.1</span>  Surse de date publice și private, inclusiv Open Data</a></li>
+  <li><a href="#evaluarea-calității-și-relevanței-datelor" id="toc-evaluarea-calității-și-relevanței-datelor" class="nav-link" data-scroll-target="#evaluarea-calității-și-relevanței-datelor"><span class="toc-section-number">3.2.2</span>  Evaluarea calității și relevanței datelor</a></li>
+  <li><a href="#utilizarea-platformelor-de-date" id="toc-utilizarea-platformelor-de-date" class="nav-link" data-scroll-target="#utilizarea-platformelor-de-date"><span class="toc-section-number">3.2.3</span>  Utilizarea platformelor de date</a></li>
+  </ul></li>
+  <li><a href="#concepte-de-bază-legate-de-formatarea-datelor" id="toc-concepte-de-bază-legate-de-formatarea-datelor" class="nav-link" data-scroll-target="#concepte-de-bază-legate-de-formatarea-datelor"><span class="toc-section-number">3.3</span>  Concepte de bază legate de formatarea datelor</a>
+  <ul class="collapse">
+  <li><a href="#tipuri-de-surse-de-date-primare-și-secundare" id="toc-tipuri-de-surse-de-date-primare-și-secundare" class="nav-link" data-scroll-target="#tipuri-de-surse-de-date-primare-și-secundare"><span class="toc-section-number">3.3.1</span>  Tipuri de surse de date (primare și secundare)</a></li>
+  <li><a href="#tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" id="toc-tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" class="nav-link" data-scroll-target="#tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor"><span class="toc-section-number">3.3.2</span>  Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor</a></li>
+  <li><a href="#importanța-și-utilizarea-metadatelor" id="toc-importanța-și-utilizarea-metadatelor" class="nav-link" data-scroll-target="#importanța-și-utilizarea-metadatelor"><span class="toc-section-number">3.3.3</span>  Importanța și utilizarea metadatelor</a></li>
+  </ul></li>
+  <li><a href="#instrumente-și-software-pentru-analiza-datelor" id="toc-instrumente-și-software-pentru-analiza-datelor" class="nav-link" data-scroll-target="#instrumente-și-software-pentru-analiza-datelor"><span class="toc-section-number">3.4</span>  Instrumente și Software pentru Analiza Datelor</a>
+  <ul class="collapse">
+  <li><a href="#utilizarea-excel-pentru-analize-financiare" id="toc-utilizarea-excel-pentru-analize-financiare" class="nav-link" data-scroll-target="#utilizarea-excel-pentru-analize-financiare"><span class="toc-section-number">3.4.1</span>  Utilizarea Excel pentru analize financiare</a></li>
+  <li><a href="#utilizarea-power-bi-pentru-analize-financiare" id="toc-utilizarea-power-bi-pentru-analize-financiare" class="nav-link" data-scroll-target="#utilizarea-power-bi-pentru-analize-financiare"><span class="toc-section-number">3.4.2</span>  Utilizarea Power BI pentru analize financiare</a></li>
+  <li><a href="#introducere-în-r-și-python-pentru-analize-statistice" id="toc-introducere-în-r-și-python-pentru-analize-statistice" class="nav-link" data-scroll-target="#introducere-în-r-și-python-pentru-analize-statistice"><span class="toc-section-number">3.4.3</span>  Introducere în R și Python pentru analize statistice</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/alexcipro/analiza_date/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -176,27 +193,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Introducere în analiza datelor economico-financiare</h1>
-<p class="subtitle lead">Aplicații și exemple rezolvate prin: R, Python, Excel, PowerBI</p>
+<h1 class="title"><span id="cap3" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Analiza datelor economico-financiare</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ciprian Alexandru-Caragea </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -204,20 +208,58 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="importanța-datelor-în-luare-deciziilor" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="importanța-datelor-în-luare-deciziilor"><span class="header-section-number">3.1</span> Importanța datelor în luare deciziilor</h2>
+<p>text</p>
+</section>
+<section id="identificarea-seturilor-de-date-relevante" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="identificarea-seturilor-de-date-relevante"><span class="header-section-number">3.2</span> Identificarea seturilor de date relevante</h2>
+<p>text</p>
+<section id="surse-de-date-publice-și-private-inclusiv-open-data" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="surse-de-date-publice-și-private-inclusiv-open-data"><span class="header-section-number">3.2.1</span> Surse de date publice și private, inclusiv Open Data</h3>
+<p>text</p>
+</section>
+<section id="evaluarea-calității-și-relevanței-datelor" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="evaluarea-calității-și-relevanței-datelor"><span class="header-section-number">3.2.2</span> Evaluarea calității și relevanței datelor</h3>
+<p>text</p>
+</section>
+<section id="utilizarea-platformelor-de-date" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="utilizarea-platformelor-de-date"><span class="header-section-number">3.2.3</span> Utilizarea platformelor de date</h3>
+<p>• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data</p>
+</section>
+</section>
+<section id="concepte-de-bază-legate-de-formatarea-datelor" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="concepte-de-bază-legate-de-formatarea-datelor"><span class="header-section-number">3.3</span> Concepte de bază legate de formatarea datelor</h2>
+<p>(formatul și tipurile de date)</p>
+<section id="tipuri-de-surse-de-date-primare-și-secundare" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="tipuri-de-surse-de-date-primare-și-secundare"><span class="header-section-number">3.3.1</span> Tipuri de surse de date (primare și secundare)</h3>
+<p>text</p>
+</section>
+<section id="tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor"><span class="header-section-number">3.3.2</span> Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor</h3>
+<p>text</p>
+</section>
+<section id="importanța-și-utilizarea-metadatelor" class="level3" data-number="3.3.3">
+<h3 data-number="3.3.3" class="anchored" data-anchor-id="importanța-și-utilizarea-metadatelor"><span class="header-section-number">3.3.3</span> Importanța și utilizarea metadatelor</h3>
+<p>text</p>
+</section>
+</section>
+<section id="instrumente-și-software-pentru-analiza-datelor" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="instrumente-și-software-pentru-analiza-datelor"><span class="header-section-number">3.4</span> Instrumente și Software pentru Analiza Datelor</h2>
+<section id="utilizarea-excel-pentru-analize-financiare" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="utilizarea-excel-pentru-analize-financiare"><span class="header-section-number">3.4.1</span> Utilizarea Excel pentru analize financiare</h3>
+<p>text</p>
+</section>
+<section id="utilizarea-power-bi-pentru-analize-financiare" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="utilizarea-power-bi-pentru-analize-financiare"><span class="header-section-number">3.4.2</span> Utilizarea Power BI pentru analize financiare</h3>
+<p>text</p>
+</section>
+<section id="introducere-în-r-și-python-pentru-analize-statistice" class="level3" data-number="3.4.3">
+<h3 data-number="3.4.3" class="anchored" data-anchor-id="introducere-în-r-și-python-pentru-analize-statistice"><span class="header-section-number">3.4.3</span> Introducere în R și Python pentru analize statistice</h3>
+<p>text</p>
 
-<section id="despre-autor" class="level1 unnumbered">
-<p><img src="cover.png" title="Introducere în analiza datelor economico-financiare" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">Despre autor</h1>
-<strong>Ciprian Alexandru-Caragea</strong> este conferenţiar universitar la Facultatea de Management Financiar, Universitatea Ecologică din București și Analist de Date la diverse instituții internaționale.<br>
 
-<p>Titlul de doctor în Economie l-a obţinut sub egida Academiei Române, Institutul de Economie Naţională.<br>
-A participat la un program de studii postdoctorale în care a implementat utilizarea software-ului R ca instrument de analiză a evoluției indicilor bursieri.<br>
-Activitatea sa didactică se concentrează, în principal, în domeniul burselor de valori, prin cursuri și seminarii la programele de licență și masterat (Piețe de capital, Managementul Portofoliului, Piețe internaționale de capital).<br>
-A participat la diverse proiecte de cercetare, workshop-uri, conferințe naționale și internaționale. Activitatea de cercetare a fost pusă în valoare prin publicarea studiilor în reviste din țară și din Europa, precum și în baze de date internaționale recunoscute (RePEC, DOAJ, EBSCO).<br>
-În prezent, în cadrul Institului Național de Statistică, participă ca expert în proiecte BigData și utilizează software-ul de analiză statistică R pentru Data cleaning, Data Matching, Web Scraping, analize de date și vizualizare, Data mining, Data integration, data processing, data validation, dar și utilizarea datelor din sursele administrative pentru realizarea de statistici oficiale.</p>
-<p><a href="http://www.researcherid.com/rid/V-2168-2017">ResearcherID: V-2168-2017</a><br>
-https://orcid.org/0000-0001-8215-6671</p>
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -356,10 +398,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./02-cap.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introducere în analiza statistică</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text">Introducere</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./04-cap.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analiza bugetară</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

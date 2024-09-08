@@ -1,55 +1,22 @@
 # Crearea și partajarea rapoartelor și tablourilor de bord {#cap6}
 
-## Importanța datelor în luare deciziilor
+## Crearea rapoartelor și tablourilor de bord
+
+### Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.
 
 text
 
-## Identificarea seturilor de date relevante
+### Utilizarea storytelling-ului în prezentarea datelor.
 
 text
 
-### Surse de date publice și private, inclusiv Open Data
+## Partajarea și colaborarea pe rapoarte
+
+### Tehnici de partajare a rapoartelor și tablourilor de bord în organizație
 
 text
 
-### Evaluarea calității și relevanței datelor
+### Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)
 
 text
-
-### Utilizarea platformelor de date
-
-•	Modalități de acces, descărcare și integrare a datelor
-•	Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data
-
-
-## Concepte de bază legate de formatarea datelor 
-
-(formatul și tipurile de date)
-
-### Tipuri de surse de date (primare și secundare)
-
-text
-
-### Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor
-
-text
-
-### Importanța și utilizarea metadatelor
-
-text
-
-## Instrumente și Software pentru Analiza Datelor
-
-### Utilizarea Excel pentru analize financiare
-
-text
-
-### Utilizarea Power BI pentru analize financiare
-
-text
-
-### Introducere în R și Python pentru analize statistice
-
-text
-
 

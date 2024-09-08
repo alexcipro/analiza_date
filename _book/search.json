@@ -49,178 +49,213 @@
     "text": "1.4 Instrumente și Software pentru Analiza Datelor\n\n1.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n1.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n1.4.3 Introducere în R și Python pentru analize statistice\ntext"
   },
   {
-    "objectID": "02-cap.html#importanța-datelor-în-luare-deciziilor",
-    "href": "02-cap.html#importanța-datelor-în-luare-deciziilor",
+    "objectID": "02-cap.html#concepte-de-bază-privind-analiza-statistică",
+    "href": "02-cap.html#concepte-de-bază-privind-analiza-statistică",
     "title": "2  Introducere în analiza statistică",
-    "section": "2.1 Importanța datelor în luare deciziilor",
-    "text": "2.1 Importanța datelor în luare deciziilor\ntext"
+    "section": "2.1 Concepte de bază privind analiza statistică",
+    "text": "2.1 Concepte de bază privind analiza statistică\ntext"
   },
   {
-    "objectID": "02-cap.html#identificarea-seturilor-de-date-relevante",
-    "href": "02-cap.html#identificarea-seturilor-de-date-relevante",
+    "objectID": "02-cap.html#mărimile-relative",
+    "href": "02-cap.html#mărimile-relative",
     "title": "2  Introducere în analiza statistică",
-    "section": "2.2 Identificarea seturilor de date relevante",
-    "text": "2.2 Identificarea seturilor de date relevante\ntext\n\n2.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n2.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n2.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "section": "2.2 Mărimile relative",
+    "text": "2.2 Mărimile relative\ntext"
   },
   {
-    "objectID": "02-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "href": "02-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
+    "objectID": "02-cap.html#sistematizarea-datelor",
+    "href": "02-cap.html#sistematizarea-datelor",
     "title": "2  Introducere în analiza statistică",
-    "section": "2.3 Concepte de bază legate de formatarea datelor",
-    "text": "2.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n2.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n2.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n2.3.3 Importanța și utilizarea metadatelor\ntext"
+    "section": "2.3 Sistematizarea datelor",
+    "text": "2.3 Sistematizarea datelor\ntext"
   },
   {
-    "objectID": "02-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "02-cap.html#instrumente-și-software-pentru-analiza-datelor",
+    "objectID": "02-cap.html#indicatorii-de-nivel",
+    "href": "02-cap.html#indicatorii-de-nivel",
     "title": "2  Introducere în analiza statistică",
-    "section": "2.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "2.4 Instrumente și Software pentru Analiza Datelor\n\n2.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n2.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n2.4.3 Introducere în R și Python pentru analize statistice\ntext"
+    "section": "2.4 Indicatorii de nivel",
+    "text": "2.4 Indicatorii de nivel\n• medie, mediană, mod, quantile"
   },
   {
-    "objectID": "03-cap.html#importanța-datelor-în-luare-deciziilor",
-    "href": "03-cap.html#importanța-datelor-în-luare-deciziilor",
+    "objectID": "02-cap.html#indicatorii-variației",
+    "href": "02-cap.html#indicatorii-variației",
+    "title": "2  Introducere în analiza statistică",
+    "section": "2.5 Indicatorii variației",
+    "text": "2.5 Indicatorii variației\n• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare"
+  },
+  {
+    "objectID": "02-cap.html#vizualizarea-datelor",
+    "href": "02-cap.html#vizualizarea-datelor",
+    "title": "2  Introducere în analiza statistică",
+    "section": "2.6 Vizualizarea datelor",
+    "text": "2.6 Vizualizarea datelor\ntext\n\n2.6.1 Introducerea statisticii descriptive și inferențiale.\ntext\n\n\n2.6.2 Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard\ntext"
+  },
+  {
+    "objectID": "03-cap.html#indicatori-economici-și-financiari",
+    "href": "03-cap.html#indicatori-economici-și-financiari",
     "title": "3  Analiza datelor economico-financiare",
-    "section": "3.1 Importanța datelor în luare deciziilor",
-    "text": "3.1 Importanța datelor în luare deciziilor\ntext"
+    "section": "3.1 Indicatori economici și financiari",
+    "text": "3.1 Indicatori economici și financiari\ntext"
   },
   {
-    "objectID": "03-cap.html#identificarea-seturilor-de-date-relevante",
-    "href": "03-cap.html#identificarea-seturilor-de-date-relevante",
+    "objectID": "03-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
+    "href": "03-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
     "title": "3  Analiza datelor economico-financiare",
-    "section": "3.2 Identificarea seturilor de date relevante",
-    "text": "3.2 Identificarea seturilor de date relevante\ntext\n\n3.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n3.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n3.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "section": "3.2 Principii de bază în economie și finanțe publice",
+    "text": "3.2 Principii de bază în economie și finanțe publice\ntext"
   },
   {
-    "objectID": "03-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "href": "03-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
+    "objectID": "03-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
+    "href": "03-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
     "title": "3  Analiza datelor economico-financiare",
-    "section": "3.3 Concepte de bază legate de formatarea datelor",
-    "text": "3.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n3.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n3.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n3.3.3 Importanța și utilizarea metadatelor\ntext"
+    "section": "3.3 Analiza indicatorilor financiari ai instituțiilor publice",
+    "text": "3.3 Analiza indicatorilor financiari ai instituțiilor publice\ntext"
   },
   {
-    "objectID": "03-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "03-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "title": "3  Analiza datelor economico-financiare",
-    "section": "3.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "3.4 Instrumente și Software pentru Analiza Datelor\n\n3.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n3.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n3.4.3 Introducere în R și Python pentru analize statistice\ntext"
-  },
-  {
-    "objectID": "04-cap.html#importanța-datelor-în-luare-deciziilor",
-    "href": "04-cap.html#importanța-datelor-în-luare-deciziilor",
+    "objectID": "04-cap.html#structura-bugetului-public",
+    "href": "04-cap.html#structura-bugetului-public",
     "title": "4  Analiza bugetară",
-    "section": "4.1 Importanța datelor în luare deciziilor",
-    "text": "4.1 Importanța datelor în luare deciziilor\ntext"
+    "section": "4.1 Structura bugetului public",
+    "text": "4.1 Structura bugetului public\ntext"
   },
   {
-    "objectID": "04-cap.html#identificarea-seturilor-de-date-relevante",
-    "href": "04-cap.html#identificarea-seturilor-de-date-relevante",
+    "objectID": "04-cap.html#metode-de-evaluare-a-performanței-bugetare",
+    "href": "04-cap.html#metode-de-evaluare-a-performanței-bugetare",
     "title": "4  Analiza bugetară",
-    "section": "4.2 Identificarea seturilor de date relevante",
-    "text": "4.2 Identificarea seturilor de date relevante\ntext\n\n4.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n4.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n4.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "section": "4.2 Metode de evaluare a performanței bugetare",
+    "text": "4.2 Metode de evaluare a performanței bugetare\ntext"
   },
   {
-    "objectID": "04-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "href": "04-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
+    "objectID": "04-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
+    "href": "04-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
     "title": "4  Analiza bugetară",
-    "section": "4.3 Concepte de bază legate de formatarea datelor",
-    "text": "4.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n4.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n4.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n4.3.3 Importanța și utilizarea metadatelor\ntext"
+    "section": "4.3 Analiza deviațiilor și optimizarea bugetară",
+    "text": "4.3 Analiza deviațiilor și optimizarea bugetară\ntext"
   },
   {
-    "objectID": "04-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "04-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "title": "4  Analiza bugetară",
-    "section": "4.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "4.4 Instrumente și Software pentru Analiza Datelor\n\n4.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n4.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n4.4.3 Introducere în R și Python pentru analize statistice\ntext"
-  },
-  {
-    "objectID": "05-cap.html#importanța-datelor-în-luare-deciziilor",
-    "href": "05-cap.html#importanța-datelor-în-luare-deciziilor",
+    "objectID": "05-cap.html#definirea-obiectivelor-analizei",
+    "href": "05-cap.html#definirea-obiectivelor-analizei",
     "title": "5  Etapele analizei datelor",
-    "section": "5.1 Importanța datelor în luare deciziilor",
-    "text": "5.1 Importanța datelor în luare deciziilor\ntext"
+    "section": "5.1 Definirea obiectivelor analizei",
+    "text": "5.1 Definirea obiectivelor analizei\ntext"
   },
   {
-    "objectID": "05-cap.html#identificarea-seturilor-de-date-relevante",
-    "href": "05-cap.html#identificarea-seturilor-de-date-relevante",
+    "objectID": "05-cap.html#colectarea-datelor",
+    "href": "05-cap.html#colectarea-datelor",
     "title": "5  Etapele analizei datelor",
-    "section": "5.2 Identificarea seturilor de date relevante",
-    "text": "5.2 Identificarea seturilor de date relevante\ntext\n\n5.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n5.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n5.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "section": "5.2 Colectarea datelor",
+    "text": "5.2 Colectarea datelor\ntext"
   },
   {
-    "objectID": "05-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "href": "05-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
+    "objectID": "05-cap.html#importarea-datelor",
+    "href": "05-cap.html#importarea-datelor",
     "title": "5  Etapele analizei datelor",
-    "section": "5.3 Concepte de bază legate de formatarea datelor",
-    "text": "5.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n5.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n5.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n5.3.3 Importanța și utilizarea metadatelor\ntext"
+    "section": "5.3 Importarea datelor",
+    "text": "5.3 Importarea datelor\ntext"
   },
   {
-    "objectID": "05-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "05-cap.html#instrumente-și-software-pentru-analiza-datelor",
+    "objectID": "05-cap.html#stocarea-datelor",
+    "href": "05-cap.html#stocarea-datelor",
     "title": "5  Etapele analizei datelor",
-    "section": "5.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "5.4 Instrumente și Software pentru Analiza Datelor\n\n5.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n5.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n5.4.3 Introducere în R și Python pentru analize statistice\ntext"
+    "section": "5.4 Stocarea datelor",
+    "text": "5.4 Stocarea datelor\ntext"
   },
   {
-    "objectID": "06-cap.html#importanța-datelor-în-luare-deciziilor",
-    "href": "06-cap.html#importanța-datelor-în-luare-deciziilor",
+    "objectID": "05-cap.html#curățarea-datelor",
+    "href": "05-cap.html#curățarea-datelor",
+    "title": "5  Etapele analizei datelor",
+    "section": "5.5 Curățarea datelor",
+    "text": "5.5 Curățarea datelor\n• Tratarea duplicatelor, gestionarea valorilor lipsă"
+  },
+  {
+    "objectID": "05-cap.html#agregarea-datelor",
+    "href": "05-cap.html#agregarea-datelor",
+    "title": "5  Etapele analizei datelor",
+    "section": "5.6 Agregarea datelor",
+    "text": "5.6 Agregarea datelor\n• Filtrarea/selectarea și agregarea datelor"
+  },
+  {
+    "objectID": "05-cap.html#analiza-descriptivă-a-seturilor-de-date",
+    "href": "05-cap.html#analiza-descriptivă-a-seturilor-de-date",
+    "title": "5  Etapele analizei datelor",
+    "section": "5.7 Analiza descriptivă a seturilor de date",
+    "text": "5.7 Analiza descriptivă a seturilor de date\n• Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor și identificarea valorile anormale (outliers)"
+  },
+  {
+    "objectID": "05-cap.html#interpretarea-rezultatelor",
+    "href": "05-cap.html#interpretarea-rezultatelor",
+    "title": "5  Etapele analizei datelor",
+    "section": "5.8 Interpretarea rezultatelor",
+    "text": "5.8 Interpretarea rezultatelor\ntext"
+  },
+  {
+    "objectID": "05-cap.html#vizualizarea-rezultatelor",
+    "href": "05-cap.html#vizualizarea-rezultatelor",
+    "title": "5  Etapele analizei datelor",
+    "section": "5.9 Vizualizarea rezultatelor",
+    "text": "5.9 Vizualizarea rezultatelor\ntext"
+  },
+  {
+    "objectID": "05-cap.html#diseminarea-rezultatelor-analizei",
+    "href": "05-cap.html#diseminarea-rezultatelor-analizei",
+    "title": "5  Etapele analizei datelor",
+    "section": "5.10 Diseminarea rezultatelor analizei",
+    "text": "5.10 Diseminarea rezultatelor analizei\ntext"
+  },
+  {
+    "objectID": "06-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
+    "href": "06-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
     "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.1 Importanța datelor în luare deciziilor",
-    "text": "6.1 Importanța datelor în luare deciziilor\ntext"
+    "section": "6.1 Crearea rapoartelor și tablourilor de bord",
+    "text": "6.1 Crearea rapoartelor și tablourilor de bord\n\n6.1.1 Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.\ntext\n\n\n6.1.2 Utilizarea storytelling-ului în prezentarea datelor.\ntext"
   },
   {
-    "objectID": "06-cap.html#identificarea-seturilor-de-date-relevante",
-    "href": "06-cap.html#identificarea-seturilor-de-date-relevante",
+    "objectID": "06-cap.html#partajarea-și-colaborarea-pe-rapoarte",
+    "href": "06-cap.html#partajarea-și-colaborarea-pe-rapoarte",
     "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.2 Identificarea seturilor de date relevante",
-    "text": "6.2 Identificarea seturilor de date relevante\ntext\n\n6.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n6.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n6.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "section": "6.2 Partajarea și colaborarea pe rapoarte",
+    "text": "6.2 Partajarea și colaborarea pe rapoarte\n\n6.2.1 Tehnici de partajare a rapoartelor și tablourilor de bord în organizație\ntext\n\n\n6.2.2 Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)\ntext"
   },
   {
-    "objectID": "06-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "href": "06-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.3 Concepte de bază legate de formatarea datelor",
-    "text": "6.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n6.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n6.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n6.3.3 Importanța și utilizarea metadatelor\ntext"
-  },
-  {
-    "objectID": "06-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "06-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "6.4 Instrumente și Software pentru Analiza Datelor\n\n6.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n6.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n6.4.3 Introducere în R și Python pentru analize statistice\ntext"
-  },
-  {
-    "objectID": "07-cap.html#importanța-datelor-în-luare-deciziilor",
-    "href": "07-cap.html#importanța-datelor-în-luare-deciziilor",
+    "objectID": "07-cap.html#standarde-ghiduri-și-monitorizare",
+    "href": "07-cap.html#standarde-ghiduri-și-monitorizare",
     "title": "7  Calitatea datelor",
-    "section": "7.1 Importanța datelor în luare deciziilor",
-    "text": "7.1 Importanța datelor în luare deciziilor\ntext"
+    "section": "7.1 Standarde, ghiduri și monitorizare",
+    "text": "7.1 Standarde, ghiduri și monitorizare\ntext"
   },
   {
-    "objectID": "07-cap.html#identificarea-seturilor-de-date-relevante",
-    "href": "07-cap.html#identificarea-seturilor-de-date-relevante",
+    "objectID": "07-cap.html#metodologii",
+    "href": "07-cap.html#metodologii",
     "title": "7  Calitatea datelor",
-    "section": "7.2 Identificarea seturilor de date relevante",
-    "text": "7.2 Identificarea seturilor de date relevante\ntext\n\n7.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n7.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n7.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "section": "7.2 Metodologii",
+    "text": "7.2 Metodologii\ntext"
   },
   {
-    "objectID": "07-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
-    "href": "07-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
+    "objectID": "07-cap.html#metadate",
+    "href": "07-cap.html#metadate",
     "title": "7  Calitatea datelor",
-    "section": "7.3 Concepte de bază legate de formatarea datelor",
-    "text": "7.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n7.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n7.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n7.3.3 Importanța și utilizarea metadatelor\ntext"
+    "section": "7.3 Metadate",
+    "text": "7.3 Metadate\ntext"
   },
   {
-    "objectID": "07-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "07-cap.html#instrumente-și-software-pentru-analiza-datelor",
+    "objectID": "07-cap.html#clasificări-și-nomenclatoare",
+    "href": "07-cap.html#clasificări-și-nomenclatoare",
     "title": "7  Calitatea datelor",
-    "section": "7.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "7.4 Instrumente și Software pentru Analiza Datelor\n\n7.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n7.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n7.4.3 Introducere în R și Python pentru analize statistice\ntext"
+    "section": "7.4 Clasificări și nomenclatoare",
+    "text": "7.4 Clasificări și nomenclatoare\ntext"
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+    "objectID": "07-cap.html#rapoarte-de-calitate",
+    "href": "07-cap.html#rapoarte-de-calitate",
+    "title": "7  Calitatea datelor",
+    "section": "7.5 Rapoarte de calitate",
+    "text": "7.5 Rapoarte de calitate\ntext"
+  },
+  {
+    "objectID": "07-cap.html#etica-și-transparența",
+    "href": "07-cap.html#etica-și-transparența",
+    "title": "7  Calitatea datelor",
+    "section": "7.6 Etica și transparența",
+    "text": "7.6 Etica și transparența\ntext"
   }
 ]

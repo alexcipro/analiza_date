@@ -1,55 +1,33 @@
 # Introducere în analiza statistică {#cap2}
 
-## Importanța datelor în luare deciziilor
+## Concepte de bază privind analiza statistică
 
 text
 
-## Identificarea seturilor de date relevante
+## Mărimile relative
 
 text
 
-### Surse de date publice și private, inclusiv Open Data
+## Sistematizarea datelor
 
 text
 
-### Evaluarea calității și relevanței datelor
+## Indicatorii de nivel
+
+•	medie, mediană, mod, quantile
+
+## Indicatorii variației
+
+•	abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare
+
+## Vizualizarea datelor
 
 text
 
-### Utilizarea platformelor de date
-
-•	Modalități de acces, descărcare și integrare a datelor
-•	Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data
-
-
-## Concepte de bază legate de formatarea datelor 
-
-(formatul și tipurile de date)
-
-### Tipuri de surse de date (primare și secundare)
+### Introducerea statisticii descriptive și inferențiale.
 
 text
 
-### Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor
+### Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard
 
 text
-
-### Importanța și utilizarea metadatelor
-
-text
-
-## Instrumente și Software pentru Analiza Datelor
-
-### Utilizarea Excel pentru analize financiare
-
-text
-
-### Utilizarea Power BI pentru analize financiare
-
-text
-
-### Introducere în R și Python pentru analize statistice
-
-text
-
-

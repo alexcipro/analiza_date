@@ -26,7 +26,7 @@ book:
     - 05-cap.qmd
     - 06-cap.qmd
     - 07-cap.qmd
-    - summary.qmd
+#    - summary.qmd
     - references.qmd
 
 crossref:

@@ -1,55 +1,45 @@
 # Etapele analizei datelor {#cap5}
 
-## Importanța datelor în luare deciziilor
+•	cu exemple practice în Excel, Power BI, R, Python
+
+## Definirea obiectivelor analizei
 
 text
 
-## Identificarea seturilor de date relevante
+## Colectarea datelor
 
 text
 
-### Surse de date publice și private, inclusiv Open Data
+## Importarea datelor
 
 text
 
-### Evaluarea calității și relevanței datelor
+## Stocarea datelor
 
 text
 
-### Utilizarea platformelor de date
+## Curățarea datelor
 
-•	Modalități de acces, descărcare și integrare a datelor
-•	Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data
+•	Tratarea duplicatelor, gestionarea valorilor lipsă
 
+## Agregarea datelor
 
-## Concepte de bază legate de formatarea datelor 
+•	Filtrarea/selectarea și agregarea datelor
 
-(formatul și tipurile de date)
+## Analiza descriptivă a seturilor de date
 
-### Tipuri de surse de date (primare și secundare)
+•	Tabele de frecvență, diagrame de distribuție
+•	Analiza distribuțiilor și identificarea valorile anormale (outliers)
 
-text
-
-### Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor
-
-text
-
-### Importanța și utilizarea metadatelor
+## Interpretarea rezultatelor
 
 text
 
-## Instrumente și Software pentru Analiza Datelor
-
-### Utilizarea Excel pentru analize financiare
+## Vizualizarea rezultatelor 
 
 text
 
-### Utilizarea Power BI pentru analize financiare
+## Diseminarea rezultatelor analizei
 
 text
-
-### Introducere în R și Python pentru analize statistice
-
-text
-
 

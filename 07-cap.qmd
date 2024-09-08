@@ -1,55 +1,26 @@
 # Calitatea datelor {#cap7}
 
-## Importanța datelor în luare deciziilor
+## Standarde, ghiduri și monitorizare
 
 text
 
-## Identificarea seturilor de date relevante
+## Metodologii
 
 text
 
-### Surse de date publice și private, inclusiv Open Data
+## Metadate
 
 text
 
-### Evaluarea calității și relevanței datelor
+## Clasificări și nomenclatoare
 
 text
 
-### Utilizarea platformelor de date
-
-•	Modalități de acces, descărcare și integrare a datelor
-•	Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data
-
-
-## Concepte de bază legate de formatarea datelor 
-
-(formatul și tipurile de date)
-
-### Tipuri de surse de date (primare și secundare)
+## Rapoarte de calitate
 
 text
 
-### Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor
+## Etica și transparența
 
 text
-
-### Importanța și utilizarea metadatelor
-
-text
-
-## Instrumente și Software pentru Analiza Datelor
-
-### Utilizarea Excel pentru analize financiare
-
-text
-
-### Utilizarea Power BI pentru analize financiare
-
-text
-
-### Introducere în R și Python pentru analize statistice
-
-text
-
 

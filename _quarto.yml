@@ -1,23 +1,67 @@
 project:
   type: book
+  output-dir: _book
 
 book:
-  title: "analiza_date"
-  author: "Jane Doe"
+  title: "Introducere în analiza datelor economico-financiare"
+  subtitle: "Aplicații și exemple rezolvate prin: R, Python, Excel, PowerBI"
+  author: "Ciprian Alexandru-Caragea"
   date: "9/8/2024"
+  reader-mode: true
+  
+  cover-image: cover.png
+  favicon: cover.png
+  site-url: https://mbooks.ro/
+  repo-url: https://github.com/alexcipro/analiza_date/
+  repo-branch: main
+  repo-actions: [issue]
+
   chapters:
     - index.qmd
     - intro.qmd
+    - 01-cap.qmd
     - summary.qmd
     - references.qmd
 
+crossref:
+  lof-title: Lista figurilor
+  lot-title: Lista tabelelor
+  fig-title: Figura
+  tbl-title: Tabel
+
+language: 
+  ui:
+    chapter_name: "Capitolul "
+
+biblio-style: apalike
 bibliography: references.bib
+link-citations: yes
 
 format:
   html:
     theme: cosmo
+    code-link: true
   pdf:
-    documentclass: scrreprt
+    documentclass: book
+    geometry: "left=2cm, right=2cm, top=2.5cm, bottom=2.5cm"
+    classoption: nottoc
+    toc: true
+    toc-depth: 2
+    lof: true
+    lot: true
+    toc-title: Cuprins
+    papersize: b5
+    fontsize: 11pt
+    monofont: "Source Code Pro"
+    monofontoptions: "Scale=0.7"
+    graphics: yes
+    keep-tex: true
+    include-in-header:
+    - text: |
+        \usepackage{tocbibind}
+    - file: preamble.tex
+
+    author-meta: "Ciprian Alexandru-Caragea"
 
 editor: visual
 

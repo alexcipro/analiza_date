@@ -1,0 +1,1238 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+  b5paper,
+  nottoc]{book}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmonofont[Scale=0.7]{Source Code Pro}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array,graphicx}
+\usepackage{wrapfig}
+\usepackage[normalem]{ulem}
+\usepackage{lscape}
+\usepackage{rotating}
+\useunder{\uline}{\ul}{}
+\usepackage{float}
+\floatplacement{figure}{H}
+\renewcommand{\chaptername}{Capitolul}
+\renewcommand{\contentsname}{Cuprins}
+\renewcommand\listfigurename{Lista figurilor}
+\renewcommand\listtablename{Lista tabelelor}
+\renewcommand\figurename{Figura}
+\renewcommand\tablename{Tabel}
+\renewcommand\bibname{Bibliografie}
+\newcommand*\rot{\rotatebox{90}}
+\usepackage{tocbibind}
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Lista figurilor}
+\else
+  \newcommand\listfigurename{Lista figurilor}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Lista tabelelor}
+\else
+  \newcommand\listtablename{Lista tabelelor}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabel}
+\else
+  \newcommand\tablename{Tabel}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Introducere în analiza datelor economico-financiare},
+  pdfauthor={Ciprian Alexandru-Caragea},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Introducere în analiza datelor economico-financiare}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Aplicații și exemple rezolvate prin: R, Python, Excel,
+PowerBI}
+\author{Ciprian Alexandru-Caragea}
+\date{9/8/24}
+
+\begin{document}
+\frontmatter
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, boxrule=0pt, frame hidden, sharp corners, breakable]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Cuprins}
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\listoffigures
+\listoftables
+\mainmatter
+\bookmarksetup{startatroot}
+
+\hypertarget{despre-autor}{%
+\chapter*{Despre autor}\label{despre-autor}}
+\addcontentsline{toc}{chapter}{Despre autor}
+
+\markboth{Despre autor}{Despre autor}
+
+\setcounter{page}{3}
+
+\textbf{Ciprian Alexandru-Caragea} este conferenţiar universitar la
+Facultatea de Management Financiar, Universitatea Ecologică din
+București și Analist de Date la diverse instituții internaționale.\\
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{images/Ciprian_DGINS2018.jpg}
+  \end{center}
+\end{wrapfigure}
+
+Titlul de doctor în Economie l-a obţinut sub egida Academiei Române,
+Institutul de Economie Naţională.\\
+A participat la un program de studii postdoctorale în care a implementat
+utilizarea software-ului R ca instrument de analiză a evoluției
+indicilor bursieri.\\
+Activitatea sa didactică se concentrează, în principal, în domeniul
+burselor de valori, prin cursuri și seminarii la programele de licență
+și masterat (Piețe de capital, Managementul Portofoliului, Piețe
+internaționale de capital).\\
+A participat la diverse proiecte de cercetare, workshop-uri, conferințe
+naționale și internaționale. Activitatea de cercetare a fost pusă în
+valoare prin publicarea studiilor în reviste din țară și din Europa,
+precum și în baze de date internaționale recunoscute (RePEC, DOAJ,
+EBSCO).\\
+În prezent, în cadrul Institului Național de Statistică, participă ca
+expert în proiecte BigData și utilizează software-ul de analiză
+statistică R pentru Data cleaning, Data Matching, Web Scraping, analize
+de date și vizualizare, Data mining, Data integration, data processing,
+data validation, dar și utilizarea datelor din sursele administrative
+pentru realizarea de statistici oficiale.
+
+\href{http://www.researcherid.com/rid/V-2168-2017}{ResearcherID:
+V-2168-2017}\\
+https://orcid.org/0000-0001-8215-6671
+
+\bookmarksetup{startatroot}
+
+\hypertarget{introducere}{%
+\chapter*{Introducere}\label{introducere}}
+\addcontentsline{toc}{chapter}{Introducere}
+
+\markboth{Introducere}{Introducere}
+
+\begin{quote}
+``\ldots acum nu mai e nimic nou de descoperit;\\
+tot ce rămâne e doar măsurătoarea din ce în ce mai precisă''
+
+--- Lord Kelvin (1894)
+\end{quote}
+
+Cartea tipărită merită răsfoită. Trăim în vremea în care internetul
+facilitează comunicarea globală, informația fiind disponibilă oricând și
+oricum. Toată lumea, de la oameni de știință și până la copii de vârstă
+școlară primesc și oferă informații și propagă idei pe calea
+internetului. Tirajele publicațiilor, cărților și manualelor tipărite
+sunt în scădere în întreaga lume, în timp ce postările online captează
+atenția omenirii.\\
+Obiectivul principal al cărții pe care o propun este de a fi un ghid
+cuprinzător, în termeni de concepte și tehnici, reprezentativ și, mai
+ales, practic, în ceea ce privește utilizarea instrumentelor software de
+analiză statistică, R fiind principalul software utilizat pentru
+aplicațiile propuse. Ca abordare generală, cartea prezintă principalele
+concepte utilizate în statistică, cu exemple și explicații descriptive.
+Exemplele din viața economică - cele mai multe dintre ele bazate pe date
+statistice reale - problemele rezolvate, dar și cele propuse, acoperă o
+arie cuprinzătoare de tematici, cititorul având șansa de a fi introdus
+în sfera aplicativă a conceptelor teoretice parcurse.\\
+Cartea este destinată tuturor celor care doresc să înțeleagă, prin
+mijloace științifice, fenomenele economice și sociale, sub aspectul
+măsurării cantitative și din perspectiva determinării cauzale. Deși se
+adresează, în principal, studenților care se pregătesc să devină
+specialiști în științele economice, lucrarea este utilă și celor care
+își propun să cunoască un domeniu atât de frumos și de captivant. Tocmai
+nevoia de informații, din ce în ce mai complexe, dar și posibilitățile
+de calcul avansat cu ajutorul soft-urilor tot mai performante, au condus
+la crearea unui bazin imens de date care pot fi cu ușurință exploatate
+pe baza analizei statistice. Poate că acesta este și motivul pentru care
+statistica rămâne o disciplină percepută ca fiind adesea prea
+matematizată, destinată specialiștilor. Pentru mulți cititori, mai ales
+dintre cei care nu au o formare bazată pe un aparat matematic, studiul
+fenomenelor economice prin metode statistice și matematice, presupune un
+efort deosebit. Din acest motiv, am încercat să tratez aspectele
+teoretice, dar și problemele cu aplicație practică din sfera economică,
+într-o manieră simplă, accesibilă. Așadar, lucrarea are menirea de a
+facilita înțelegerea conceptelor fundamentale cu care operează
+statistica, utilizarea adecvată a metodelor de analiză statistică,
+precum și interpretarea corectă a rezultatelor, în vederea cunoașterii
+modului de manifestare a fenomenelor.
+
+\begin{flushright}
+Nicoleta Caragea \\
+Septembrie, 2018
+\end{flushright}
+
+\newpage
+
+\hypertarget{quarto}{%
+\section*{Quarto}\label{quarto}}
+\addcontentsline{toc}{section}{Quarto}
+
+\markright{Quarto}
+
+Această carte a fost editată cu ajutorul pachetului R \textbf{bookdown}
+(\protect\hyperlink{ref-xie2015}{\textbf{xie2015?}}).\\
+Cartea are la bază manualul \emph{Statistică - concepte și metode de
+analiză a
+datelor}(\protect\hyperlink{ref-caragea2015}{\textbf{caragea2015?}}).
+
+Pachetul R \textbf{bookdown} este integrat R Markdown
+(http://rmarkdown.rstudio.com). Documentele elaborate pe baza acestui
+tip de instrumentar de editare sunt pe deplin reproductibile și dau
+posibilitatea creării unor formate de ieșire diverse
+(PDF/HTML/Word/\ldots). Informații suplimentare referitoare la
+utilizarea pachetului \textbf{bookdown} se pot găsi la adresa:
+https://bookdown.org.
+
+\includegraphics[width=0.2\textwidth]{images/logo.png}
+
+\hypertarget{informaux21bii-despre-software}{%
+\section*{Informații despre
+software}\label{informaux21bii-despre-software}}
+\addcontentsline{toc}{section}{Informații despre software}
+
+\markright{Informații despre software}
+
+Software-ul \textsf{R} a devenit în prezent unul dintre cele mai
+utilizate instrumente de analiză statistică, fiind utilizat în
+statisticile oficiale, în mediile universitare și de cercetare
+academică, dar și în mediul de afaceri. Acest manual este destinat
+tuturor celor care doresc să învețe statistica, fiind un material
+introductiv de studiu, care prezintă un spectru larg de exemple,
+prezentări grafice și analiză a datelor, dezvoltate cu ajutorul
+\textsf{R}.\\
+Aplicațiile din această carte utilizează \textsf{R}, ceea ce înseamnă că
+pentru reproducerea acestora va fi nevoie de instalarea \textsf{R} pe
+calculatorul pe care lucrați.\\
+\textsf{R} este un sistem pentru analize statistice și reprezentare
+grafică creat de către Ross Ihaka și Robert Gentleman, profesori de
+statistică la Universitatea Auckland din Noua
+Zeelandă\footnote{Ihaka R. \& Gentleman R. 1996. R: a language for data analysis and graphics. {\it Journal of Computational and Graphical Statistics} 5: 299--314.}.\\
+\index{limbajul S}\textsf{R} este considerat un dialect al limbajului
+\textsf{S} creat de AT\&T Bell Laboratories. \textsf{S} este disponibil
+sub forma software-ului S-PLUS, comercializat de compania Insightful.
+Există diferențe importante între cele două limbaje, \textsf{R} și
+\textsf{S}: acestea sunt documentate de către Ihaka \& Gentleman (1996)
+sau se regăsesc în
+R-FAQ\footnote{\href{http://cran.r-project.org/doc/FAQ/R-FAQ.html\#What-are-the-differences-between-R-and-S_003f}{R-FAQ}}.\\
+Astfel, numele limbajului R provine de la inițiala prenumelui
+creatorilor, dar este totodată și un omagiu adus limbajului
+\textsf{S}.\\
+În primul rând, \textsf{R} este open-source, fiind distribuit în mod
+gratuit sub licență
+\textit{GNU - General Public Licence}\footnote{\href{http://www.gnu.org/}{GNU}};
+dezvoltarea și distribuirea sunt în grija câtorva profesori și
+statisticieni, afiliați companiilor și universităților, cunoscuți sub
+denumirea generică de \textit{R Development Core Team}.\\
+Conform filosofiei
+\textit{GNU}\footnote{\href{http://www.gnu.org/philosophy/free-sw.ro.html\#exportcontrol}{GNU Philosophy}},
+software-ul open-source este caracterizat de libertatea acordată
+utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și
+îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate
+utilizatorilor(\protect\hyperlink{ref-dusa2015}{\textbf{dusa2015?}}):
+
+\begin{itemize}
+\item Libertatea de a utiliza programul, în orice scop (libertatea 0);
+\item Libertatea de a studia modul de funcționare a programului, și de a-l adapta nevoilor proprii (libertatea 1). Accesul la codul-sursă este o precondiție pentru aceasta;
+\item Libertatea de a redistribui copii, în scopul ajutorării aproapelui tău (libertatea 2);
+\item Libertatea de a îmbunătăți programul, și de a pune îmbunătățirile la dispoziția publicului, în folosul întregii societăți (libertatea 3). Accesul la codul-sursă este o precondiție pentru aceasta.
+\end{itemize}
+
+Faptul că este gratuit atrage automat avantajul competitiv în fața altor
+software-uri de analiză statistică, precum Stata, SAS și SPSS. Astfel,
+costurile alocate licenței de software dispar. \textsf{R} este denumit
+de către Norman Nie, unul dintre fondatorii SPSS și CEO al Revolution
+Analytics, ``cel mai puternic și flexibil limbaj de programare
+statistică din lume'' (în engleză
+\textit{"the most powerful and flexible statistical programming language in the world"}).\footnote{\href{http://blog.revolutionanalytics.com/2010/10/r-is-hot.html}{Smith, D., 2010,"R is Hot", Revolution Analytics}}
+Dovadă a succesului pe care \textsf{R} îl are în știința datelor, s-au
+dezvoltat medii de integrare a acestuia în SAS și chiar SPSS. Este vorba
+despre modulul
+SAS/IML\footnote{\href{http://www.sas.com/en_us/software/analytics/iml.html\#close}{SAS/IML Module}},
+care integrează limbajul \textsf{R} în SAS, și despre
+\textit{translate2R}, un serviciu de translatare a codului SPSS direct
+în \textsf{R} dezvoltat de compania
+\textit{eoda}\footnote{\href{http://www.eoda.de/en/translate2R.html}{translate2R - eoda}}.
+\textsf{R} are susținerea comunității științifice, dar și a multor
+companii internaționale. Dintre acestea, menționăm: Google, Facebook,
+Mozilla, Twitter, The New York Times, The Economist, NewScientist,
+Lloyd's, Bing, Johnson\&Johnson, Pfizer, Shell, Bank of America,
+Ford.\footnote{\href{http://www.revolutionanalytics.com/what-is-open-source-r/companies-using-r.php}{Revolution Analytics, "Companies Using R"}}
+\index{open-source}\textsf{R} este susținut și de mediul academic.
+Marile universități din lume sprijină \textsf{R}, la fel cum sprijină și
+alte inițiative sau software-uri open-source, precum sistemul de operare
+Linux sau sistemul de preparare a documentelor \LaTeX.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{cap1}{%
+\chapter{Concepte de bază în statistică}\label{cap1}}
+
+\hypertarget{ce-este-statistica}{%
+\section{Ce este statistica?}\label{ce-este-statistica}}
+
+Termenul de ``statistică'' este unul familiar, pe care îl auzim sau
+folosim în fiecare zi. Este asociat adesea cu calcule, cu un rezultat
+exprimat procentual sau cu un tabel de date. Cu toate acestea, termenul
+trebuie privit într-o accepțiune mai largă.\\
+Poate v-ați întrebat deseori care este valoarea medie a cifrei de
+afaceri sau care a fost creșterea medie a acesteia într-un interval de
+timp, ce valoare a vânzărilor ar putea avea o firmă de telefonie mobilă
+care ar lansa pe piață un nou produs sau serviciu, sau care ar fi cel
+mai potrivit loc de muncă disponibil când veți absolvi facultatea. Cine
+va fi ales noul președinte al țării la următoarele alegeri
+prezidențiale? Sau poate vă întrebați care ar fi contribuția creșterii
+nivelului de educație al populației ocupate la dezvoltarea economică a
+țării.\\
+Răspunsurile la astfel de întrebări, dar și la multe altele, vin din
+înțelegerea corectă a valorilor numerice înregistrate de o variabilă
+căreia îi vom spune generic ``de interes'', a fluctuațiilor sau a
+tendinței de creștere sau de scădere a acestor valori într-o anumită
+perioadă de timp.\\
+Conform dicționarelor publicate de institutele de cercetare din România,
+\textbf{statistica} este o \emph{știință care, folosind calculul
+probabilităților, studiază fenomenele și proceselor de tip colectiv (din
+societate, natură etc.) din punct de vedere cantitativ în scopul
+descrierii acestora și a descoperirii legilor care guvernează
+manifestarea lor}\footnote{Academia RPR \emph{Dicționar Enciclopedic
+  Român}, București: Editura Politică, 1962-1966; Academia Română,
+  Institutul de Lingvistică, Iorgu Iordan, \emph{Dicționarul explicativ
+  al limbii române} (DEX), București: Editura Univers Enciclopedic, 1998}.
+Altfel definită, statistica este \emph{știința care se ocupă cu
+descrierea și analiza numerică a fenomenelor de masă, dezvăluind
+particularitățile lor de volum, structură, dinamică, conexiune, precum
+și regularitățile sau legile ce le guvernează}\footnote{\emph{Mică
+  enciclopedie de statistică}, Editura Științifică și Enciclopedică,
+  București, 1985}.\\
+În practică, metodele statistice furnizează multor domenii ale științei
+un puternic set de instrumente pentru analiza datelor și pentru
+interpretarea semnificației rezultatelor cercetărilor statistice.\\
+Sensul termenului statistică poate avea mai multe conotații. Una dintre
+ele este aceea de \emph{date} sau \emph{colecție de date}, referitoare
+la un anumit fenomen sau domeniu. Într-o altă accepțiune, statistica
+înseamnă activitatea de \emph{producere a datelor statistice}, de
+culegere, prelucrare și prezentare a informației statistice sub diverse
+forme (diseminare), la dispoziția utilizatorilor. Mai mult, termenul de
+statistică se utilizează și pentru a desemna \emph{metodele statistice
+aplicate} în cunoașterea fenomenelor de masă, sau teoria statistică,
+implicând expunerea sistematică a conceptelor și metodelor de cercetare
+statistică.\\
+Statistica are ca \emph{obiect} studierea aspectelor cantitativ-numerice
+ale \emph{fenomenelor de masă}, a dimensiunii, dinamicii și structurii
+acestora, a raporturilor de interdependență și a altor aspecte care pot
+fi caracterizate numeric. Fenomenele de masă sunt fenomene care se
+produc sub acțiunea comună și repetată a unui număr mare de factori, cu
+caracter sistematic sau întâmplător. Fenomenele de masă sunt
+caracterizate printr-o mare diversitate, formele individuale de
+manifestare diferind de la o unitate la alta în funcție de modul în care
+se combină acțiunea acestor factori. Esența acestor fenomene poate fi
+pusă în evidență numai prin studierea unui număr mare de cazuri. De
+exemplu, productivitatea muncii, la nivelul economiei naționale, poate
+fi cunoscută numai prin analiza informațiilor privind rezultatele
+activității tuturor unităților din economia națională, respectiv
+cantitatea de forță de muncă utilizată (dintr-o ramură de activitate sau
+dintr-o unitate teritorială) sau a unei părți semnificative a
+acestora.\\
+\emph{Metoda statistică} este constituită dintr-un ansamblu de operații,
+tehnici, procedee și metode de cercetare statistică. Specificitatea
+metodei statistice constă în faptul că se bazează pe observarea unui
+număr mare de cazuri și utilizează instrumente derivate din teoria
+probabilităților, dezvoltate în cadrul statisticii matematice.
+
+\hypertarget{uxeenceputul-demersului-statistic}{%
+\section{Începutul demersului
+statistic}\label{uxeenceputul-demersului-statistic}}
+
+Înainte de a începe studiul statisticii este necesară o privire de
+ansamblu asupra termenilor cu care operează statistica. Este cunoscut
+faptul că, pentru organizarea unei cercetări corecte și cuprinzătoare,
+este necesar să se folosească un limbaj științific specific disciplinei.
+Acest lucru este valabil și pentru statistică, care a reușit să-și
+elaboreze propriile noțiuni, concepte de bază pe care să le folosească
+pe parcursul întregului demers statistic, de la stabilirea obiectivelor
+cercetării și până la analiza și interpretarea rezultatelor. În acest
+sens, cercetarea statistică operează cu câteva concepte specifice:
+colectivitatea sau populația statistică, unitatea statistică,
+caracteristicile sau variabilele statistice, datele statistice și
+indicatorii statistici.\\
+\emph{Colectivitatea} sau \emph{populația statistică} reprezintă
+totalitatea elementelor sau a manifestărilor de aceeași natură, asupra
+cărora se efectuează cercetarea. În funcție de obiectivul și
+particularitățile cercetării, populația statistică poate fi formată din
+persoane sau grupuri de persoane, din instituții, din obiecte, din
+tranzacții economice, din evenimente etc.\\
+De exemplu:
+
+\begin{itemize}
+\tightlist
+\item
+  O cercetare privind veniturile populației se realizează pe o
+  colectivitate formată din gospodării;
+\item
+  O cercetare referitoare la nivelul de educație a populației -- se
+  realizează pe o colectivitate formată din persoane;
+\item
+  Colectivitatea care face obiectul unei investigații privind producția
+  și eficiența economică este alcătuită din unități economice;
+\item
+  Colectivitatea cercetată în cadrul unui studiu privind activitatea
+  sistemului de sănătate cuprinde unități sanitare (toate spitalele,
+  policlinicile, centrele de tratament etc.);
+\item
+  Studiul statistic al calității producției se realizează pe
+  colectivități formate din obiecte (produse finite, semifabricate
+  etc.);
+\item
+  Studiul statistic al natalității sau mortalității se realizează pe
+  colectivități compuse din evenimente (nașteri sau decese).
+\end{itemize}
+
+Colectivitatea supusă cercetării poate fi totală (cercetare exhaustivă),
+atunci când se fac înregistrări referitoare la toate elementele care
+formează obiectul studiului, sau parțială (eșantion), atunci când se fac
+înregistrări referitoare numai la o parte din această colectivitate.\\
+Unitățile statistice reprezintă mulțimea numărabilă de elemente care
+compun colectivitatea statistică. De exemplu, unitatea statistică a unei
+cercetări referitoare la veniturile populației poate fi gospodăria sau
+persoana. Unitatea statistică a unei cercetări privind calitatea
+producției este produsul finit, semifabricatul sau piesa căreia i se
+testează caracteristicile.\\
+\emph{Unitățile statistice} pot fi simple sau complexe. Acestea din urmă
+sunt formate din mai multe unități simple. O astfel de unitate este
+gospodăria\footnote{Prin \textbf{gospodărie} se înțelege grupul de două
+  sau mai multe persoane care locuiesc împreună în mod obișnuit, având,
+  în general, legături de rudenie și care se gospodăresc (fac menajul)
+  în comun, participând în totalitate sau parțial la formarea
+  veniturilor și la cheltuirea lor. Persoana care nu aparține de o
+  gospodărie și care declară că locuiește și se gospodărește singură se
+  consideră gospodărie formată dintr-o singură persoană. Se consideră
+  membri ai gospodăriei și persoanele plecate din localitate pentru o
+  perioadă mai mare de 6 luni, care se află în țară sau străinătate,
+  dacă acestea păstrează legături familiale cu gospodăria}. Unitățile pe
+care se realizează cercetarea salariilor sunt, de asemenea unități
+complexe: unitățile economice la care se face înregistrarea datelor.
+Fiecare element al colectivității este purtătorul unei
+\emph{caracteristici} supuse observării statistice. Caracteristica
+statistică reprezintă acea proprietate/însușire care este comună tuturor
+unităților unei colectivități statistice cercetate. Formele sau
+nivelurile concrete ale acestora, denumite \emph{variante} sau
+\emph{valori}, diferă de la o unitate la alta (sau în timp, în cazul
+aceleiași unități) sub influența unui complex de factori. Numărul
+unităților la care se înregistrează aceeași variantă sau valoare poartă
+denumirea de \emph{frecvență} a variantei/valorii respective.\\
+Caracteristicele statistice poartă numele și de variabile. Acestea pot
+fi calitative sau cantitative.\\
+Iată câteva exemple de variabile calitative în tabelele de mai jos:
+
+\begin{table}[!h]
+\centering
+\caption{Exemple de variabile calitative}
+\label{my-label}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textit{Variabilă}   & \textit{Categorie}                                                                                                            \\ \midrule
+Gen                  & \begin{tabular}[c]{@{}l@{}}masculin,\\ feminin\end{tabular}                                                                   \\
+Mediu de rezidență   & \begin{tabular}[c]{@{}l@{}}urban,\\ rural\end{tabular}                                                                        \\
+Formă juridică       & \begin{tabular}[c]{@{}l@{}}societate comercială pe acțiuni,\\ societate cu răspundere limitată,\\ regie autonomă\end{tabular} \\
+Activitate economică & \begin{tabular}[c]{@{}l@{}}industrie,\\ agricultură,\\ comerț\end{tabular}                                                    \\
+Statut ocupațional   & \begin{tabular}[c]{@{}l@{}}salariat,\\ agricultor,\\ șomer,\\ pensionar\end{tabular}                                          \\
+Nivel de educație    & \begin{tabular}[c]{@{}l@{}}scăzut,\\ mediu,\\ superior\end{tabular}                                                           \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{R Code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{date\_educatie }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"date/date\_educatie.csv"}\NormalTok{)}
+\FunctionTok{head}\NormalTok{(date\_educatie)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  id varsta      gen mediu_rezidenta nivel_educatie
+1  1     63 masculin           urban          mediu
+2  2     55 masculin           rural         scazut
+3  3     31 masculin           rural         scazut
+4  4     56 masculin           urban          mediu
+5  5     31  feminin           urban          mediu
+6  6     63  feminin           rural       superior
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(date\_educatie[}\DecValTok{2}\SpecialCharTok{:}\DecValTok{4}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     varsta          gen            mediu_rezidenta   
+ Min.   :16.00   Length:70          Length:70         
+ 1st Qu.:33.00   Class :character   Class :character  
+ Median :44.50   Mode  :character   Mode  :character  
+ Mean   :43.79                                        
+ 3rd Qu.:55.00                                        
+ Max.   :65.00                                        
+\end{verbatim}
+
+\textbf{Python Code}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\NormalTok{date\_educatie }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"date/date\_educatie.csv"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(date\_educatie.head())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+   id  varsta       gen mediu_rezidenta nivel_educatie
+0   1      63  masculin           urban          mediu
+1   2      55  masculin           rural         scazut
+2   3      31  masculin           rural         scazut
+3   4      56  masculin           urban          mediu
+4   5      31   feminin           urban          mediu
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(date\_educatie.iloc[:, }\DecValTok{1}\NormalTok{].describe())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+count    70.000000
+mean     43.785714
+std      14.613764
+min      16.000000
+25%      33.000000
+50%      44.500000
+75%      55.000000
+max      65.000000
+Name: varsta, dtype: float64
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(date\_educatie.iloc[:, }\DecValTok{2}\NormalTok{:}\DecValTok{5}\NormalTok{].describe())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+            gen mediu_rezidenta nivel_educatie
+count        70              70             70
+unique        2               2              3
+top     feminin           rural         scazut
+freq         39              41             25
+\end{verbatim}
+
+Variabilele cantitative sunt măsurabile și se exprimă numeric. Acestea
+pot fi discrete sau continue.\\
+De exemplu, nota la statistică, este o variabilă cantitativă, discretă.
+
+\begin{table}[!h]
+\centering
+\caption{Exemple de variabile cantitative discrete}
+\label{my-label}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\multicolumn{1}{c}{\textit{Variabilă}} & \multicolumn{1}{c}{\textit{Valoare}} \\ \midrule
+\multirow{6}{*}{Nota la statistică}    & 10                                   \\
+                                       & 9                                    \\
+                                       & 8                                    \\
+                                       & 7                                    \\
+                                       & 6                                    \\
+                                       & 5                                    \\ \cmidrule(l){2-2} 
+\end{tabular}
+\end{table}
+
+Un exemplu de variabilă cantitativă continuă este venitul net al
+salariaților unei firme.\\
+Considerăm că se cunosc veniturile tuturor celor n=200 salariați.
+
+\begin{table}[!h]
+\centering
+\caption{Exemple de variabile cantitative continue}
+\label{my-label}
+\begin{tabular}{@{}lc@{}}
+\toprule
+\multicolumn{1}{c}{\textit{Variabilă}} & \multicolumn{1}{c}{\textit{Valoare}} \\ \midrule
+\multirow{6}{*}{Venit net}             & 3500                                  \\
+                                       & 1800                                  \\
+                                       & ...                                  \\
+                                       & 6300                                  \\
+                                       & 5450                                  \\ \cmidrule(l){2-2} 
+\end{tabular}
+\end{table}
+
+Statistica operează, în principal, cu frecvențele diferitelor variante
+ale caracteristicilor calitative, iar analiza statistică a acestor
+caracteristici se realizează prin metode ce diferă de cele utilizate în
+studiul variabilelor cantitative.\\
+În cazul unei cercetări referitoare la activitatea economică, de
+exemplu, se vor înregistra informații privind volumul producției,
+cheltuielile de producție și profitul, numărul de salariați și dotarea
+cu active corporale etc. din fiecare unitate economică.\\
+Evaluarea situației existente pe piața forței de muncă, evoluția
+fenomenelor de ocupare, șomaj și inactivitate va înregistra informații
+referitoare la populația în vârstă de muncă, populația activă, populația
+ocupată, numărul șomerilor etc. Un alt exemplu este cel al unei
+cercetări referitoare la venituri, care va cuprinde, în principal,
+informații numerice despre nivelul veniturilor de care beneficiază
+gospodăriile (din activități salariale, din agricultură, din activități
+pe cont propriu, din prestații sociale etc.), despre impozitele și
+contribuțiile de asigurări sociale plătite de gospodării, despre mărimea
+gospodăriei, vârsta membrilor acesteia etc.\\
+Prin natura lor, variabilele cantitative se grupează în:
+
+\begin{itemize}
+\tightlist
+\item
+  variabile discrete - pot lua numai anumite valori (exprimate prin
+  numere întregi);
+\item
+  variabile continue - pot lua orice valori într-un interval finit sau
+  infinit.
+\end{itemize}
+
+Numărul salariaților unei firme sau numărul de persoane care compun o
+gospodărie sunt variabile discrete, în timp ce valoarea producției,
+nivelul salariilor sau nivelul veniturilor sunt variabile continue
+(chiar dacă nivelurile înregistrate ale acestora apar ca valori ale unor
+variabile discrete). În practică, variabilele discrete sunt tratate ca
+fiind continue, dacă valorile lor posibile sunt numeroase (de ex.,
+numărul salariaților unităților economice).\\
+\emph{Datele statistice} exprimă valori ale unor caracteristici
+cantitative ale unităților statistice, precum și ale unor grupe ale
+colectivității sau ale colectivității în ansamblul ei. Informațiile
+numerice sunt date statistice numai dacă sunt definite sub aspectul
+conținutului, al unității de măsură, al identificării
+unității/grupului/colectivității la care se referă, precum și al
+localizării în spațiu și în timp. Datele se obțin fie direct prin
+observare, fie sunt rezultate ale prelucrării datelor primare. De
+exemplu, date statistice sunt nivelurile cifrei de afaceri înregistrate
+de firmele X și Y din București, în luna septembrie 2014.\\
+\emph{Indicatorii statistici} reprezintă expresia numerică ce exprimă
+manifestările unor fenomene economice sau sociale, caracterizând nivelul
+și structura, modificările în timp și variația spațială, precum și
+interdependențele dintre ele.\\
+Indicatorii statistici sunt rezultate ale prelucrării informațiilor
+primare înregistrate în cursul unei observări statistice sau a unor
+informații cuprinse în publicații statistice sau baze de date. De
+exemplu, modificarea cifrei de afaceri a firmei X în luna septembrie
+2014 față de aceeași lună a anului precedent este un indicator
+statistic.\\
+Pentru cunoașterea fenomenelor de masă, indicatorii statistici
+îndeplinesc mai multe funcții și anume: de măsurare, de comparare, de
+analiză, de sinteză; de estimare, de verificare a ipotezelor și/sau de
+testare a semnificației parametrilor utilizați.\\
+Simpla enumerare a principalelor funcții\footnote{Pentru elaborarea şi
+  utilizarea corectă a indicatorilor statistici este esenţială
+  îndeplinirea unor cerinţe de principiu, generale. În acest sens, Yule
+  (1945) precizează condiţiile care ar trebui să le îndeplinească un
+  astfel de indicator şi anume:\\
+  - să fie definit în mod obiectiv, independent de dorinţa
+  utilizatorului;\\
+  - să depindă determinarea sa de toate valorile individuale
+  înregistrate;\\
+  - să aibă o semnificaţie concretă, uşor de înţeles chiar şi de
+  nespecialişti;\\
+  - să fie simplu şi rapid de calculat;\\
+  - să fie puţin sensibil la fluctuaţiile de selecţie (să nu prezinte
+  valori puternic diferite, dacă se calculează pe baza mai multor
+  eşantioane, de acelaşi volum, extrase prin acelaşi procedeu din
+  aceeaşi colectivitate);\\
+  - să se preteze la calcule algebrice (să poată fi utilizat în operaţii
+  de comparare a mai multor serii statistice sau în operaţii de
+  agregare/dezagregare).} ale indicatorilor statistici pune în evidență
+o multitudine de aspecte care trebuie avute în vedere la elaborarea și
+folosirea acestora în analiză, inclusiv stabilirea condițiilor și
+limitelor în care pot fi utilizați indicatorii statistici în raport cu
+conținutul specific al fenomenelor, al surselor de informație de care se
+dispune, cu scopul cercetării.\\
+Indicatorii statistici se pot grupa în indicatori primari și derivați:\\
+1. Indicatori primari (mărimi absolute) -- exprimă direct, general
+nivelul caracteristicii cercetate. Se pot obține prin înregistrarea
+directă, centralizarea datelor sau prin însumarea parțială sau totală a
+datelor individuale; prezintă o capacitate relativ limitată de descriere
+a fenomenului/procesului analizat, și nu permite realizarea unor
+aprecieri calitative, însă reprezintă punctul de plecare al analizei
+statistice;\\
+2. Indicatori derivați -- se obțin prin prelucrarea indicatorilor
+primari (absoluți) și fac posibilă analiza aspectelor calitative ale
+fenomenelor și proceselor analizate (de exemplu: mărimi relative, mărimi
+medii, indicatori ai variației, indici, indicatori ai corelației, etc.).
+
+\hypertarget{mux103rimi-relative}{%
+\section{Mărimi relative}\label{mux103rimi-relative}}
+
+Mărimile relative constituie una dintre principalele categorii de
+indicatori statistici utilizați în analiza economică. Indicatorii
+statistici reprezintă expresii numerice ale unor fenomene, procese sau
+categorii economico-sociale, definite în timp, în spațiu și
+instituțional-organizatoric.\\
+Statistica operează cu indicatori primari și derivați.\\
+\textbf{Indicatorii primari} sunt mărimi absolute care exprimă nivelul
+caracteristicii cercetate, obținându-se prin înregistrare directă sau
+prin însumarea datelor individuale. Indicatorii primari se exprimă în
+unități de măsură, naturale sau monetare, specifice caracteristicii
+observate: bucăți, tone, kilograme, metri, metri pătrați, dolari, Euro,
+lei, mii lei, milioane lei etc. Un astfel de indicator este, de exemplu:
+cifra de afaceri (în milioane lei) înregistrată de o firmă având ca
+principală activitate comercializarea carburanților și cea rezultată
+prin însumare la nivelul întregii țări; volumul producției la nivelul
+unei firme sau la nivel național, numărul populației unei localități, a
+unui județ și a țării; numărul salariaților unei unități economice
+(societate comercială sau instituție publică), al celor dintr-o anumită
+ramură de activitate sau dintr-o unitate teritorială (localitate sau
+județ) și al tuturor salariaților din economia națională; veniturile și
+cheltuielile bugetelor de asigurări sociale (în miliarde lei); volumul
+exportului sau importului realizat la o anumită grupă de produse, cu o
+anumită țară sau cu toate țările (în milioane dolari sau Euro).\\
+\textbf{Indicatorii derivați} se obțin în urma prelucrării datelor
+primare, prin aplicarea diferitelor metode și procedee de calcul
+statistic. Există o mare diversitate de indicatorii derivați, cu metode
+variate de calcul, de la operații simple de împărțire sau scădere la
+calcule bazate pe formule complexe. În categoria indicatorilor derivați
+intră mediile, quantilele, indicatorii variației și ai inegalității,
+indicatorii corelației, indicii etc. O parte a acestora au caracter
+absolut și se exprimă în unități de măsură naturale sau monetare
+specifice caracteristicilor care au stat la baza calculului lor. Altele
+de exprimă sub formă de coeficienți sau procente. Mărimile relative
+formează una dintre categoriile de indicatori derivați cele mai frecvent
+utilizate în analiză.\\
+\textbf{Mărimile relative} rezultă din compararea a doi indicatori, prin
+raportarea unuia, numit termen de comparat, la altul numit bază de
+comparație. Rezultatul obținut este un număr întreg sau fracționar, care
+arată câte unități din indicatorul de comparat revin la o unitate din
+indicatorul bază de raportare. În cazul celor mai multe mărimi relative,
+rezultatul raportului capătă relevanță în analiză prin multiplicarea cu
+10k (respectiv cu 10, 100, 1000, 10000, 100000, \ldots.., corespunzător
+lui k = 1, 2, 3, 4, 5, \ldots). Mărimile relative calculate ca raport a
+doi indicatori absoluți similari, exprimați în aceeași unitate de
+măsură, iau forma unor coeficienți rezultați direct din împărțire sau se
+exprimă sub formă de procente (\%, dacă rezultatul raportului este
+înmulțit cu 100), promile (‰, dacă rezultatul este multiplicat cu 1000),
+prodecimile (în cazul înmulțirii cu 10000) sau procentimile (în cazul
+înmulțirii cu 100000). Mărimile relative calculate ca raport a doi
+indicatori diferiți, exprimați în unități de măsură diferite, sunt
+exprimate în unități de măsură compuse din unitățile de măsură ale celor
+doi indicatori. Dacă asigurarea relevanței rezultatului impune
+multiplicarea raportului cu 100, 1000 etc., aceasta este reflectată în
+unitatea de măsură a indicatorului rezultat. Principalele tipuri de
+mărimi relative sunt: mărimile relative de structură, mărimile relative
+de coordonare, mărimile relative de intensitate, mărimile relative ale
+dinamicii, mărimile relative ale planului.
+
+\hypertarget{mux103rimi-relative-de-structurux103}{%
+\subsection{Mărimi relative de
+structură}\label{mux103rimi-relative-de-structurux103}}
+
+Mărimile relative de structură reprezintă raportul dintre un element sau
+un grup de elemente ale unei colectivități și întreaga colectivitate,
+calculat pe baza unei caracteristici de volum sau a frecvenței. Mărimea
+relativă de structură este raportul dintre o parte și întregul de care
+aparține această parte. Mărimile relative de structură sunt exprimate,
+în principal, sub formă procentuală, indicând câte unități revin părții
+analizate la fiecare 100 de unități ale întregului. Dacă sunt exprimate
+sub formă de coeficienți, acestea arată ce fracțiune din întreg revine
+părții analizate (0,25, adică 25 de sutimi un sfert; 0,10 sau o zecime;
+0,33(3) sau o treime etc).\\
+Dacă se calculează pe baza unei caracteristici de volum (volumul
+producției, al cheltuielilor de producție, al profitului, al importului
+sau exportului, al veniturilor etc), mărimea relativă de structură
+poartă denumirea de pondere sau greutate specifică. Aceasta exprimă
+raportul în care se află volumul aferent părții analizate (xi) față de
+volumul însumat al tuturor părților care compun întregul:
+
+\[g = \frac{x_{i}}{\sum_{i=1}^n x_i}100\] Observații:\\
+* Suma ponderilor tuturor componentelor este egală cu 100\%.\\
+** Diferența dintre doi indicatori calculați sub formă procentuală este
+exprimată în puncte procentuale (p.p.).
+
+Exemple: 1. Producția industrială realizată în anul t, pe principalele
+grupe de activități, a înregistrat următoarele valori, conform tabelului
+de mai jos:
+
+\begin{table}[!h]
+\centering
+\caption{Producția industrială în anul t}
+\label{my-label}
+\begin{tabular}{@{}lr@{}}
+\toprule
+                                                                                             & \multicolumn{1}{c}{\textit{Q (mil.lei)}} \\ \midrule
+\textbf{Industria extractivă}                                                                & \textit{55403,4}                         \\
+\textbf{Industria prelucrătoare}                                                             & \textit{769938,6}                        \\
+\textbf{\begin{tabular}[c]{@{}l@{}}Energie electrică și\\ termică, gaze și apă\end{tabular}} & \textit{141103,0}                        \\
+\textit{Total}                                                                               & \textit{966445,0}                        \\ \bottomrule
+\end{tabular}
+\end{table}  
+
+În anul t, ponderea industriei extractive în volumul total al producției
+industriale a fost de:
+
+\[g = \frac{x_{i}}{\sum_{i=1}^n x_i}100 =\frac{55403,4}{966445}100 = 5,7\%\]
+
+Ponderile celorlalte două grupe de activități se calculează în același
+mod, astfel încât structura producției industriale are următoarea
+configurație:
+
+\begin{table}[!h]
+\centering
+\caption{Structura producției industriale în anul t}
+\label{my-label}
+\begin{tabular}{@{}lc@{}}
+\toprule
+                                                                                             & \multicolumn{1}{c}{\textit{g (\%)}} \\ \midrule
+\textbf{Industria extractivă}                                                                & \textit{5,7}                         \\
+\textbf{Industria prelucrătoare}                                                             & \textit{79,7}                        \\
+\textbf{\begin{tabular}[c]{@{}l@{}}Energie electrică și\\ termică, gaze și apă\end{tabular}} & \textit{14,6}                        \\
+\textit{Total}                                                                               & \textit{100,0}                        \\ \bottomrule
+\end{tabular}
+\end{table}  
+
+Mărimile relative de structură calculate pentru seriile de distribuție
+de frecvențe, numite \textbf{frecvențe relative} sau \textbf{ponderi},
+exprimă raportul în care se află numărul unităților din fiecare grupă
+(ni) față de numărul unităților din întreaga colectivitate.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  În anul t, s-a înregistrat următoarea distribuție a salariaților după
+  nivelul salariilor:
+\end{enumerate}
+
+\begin{table}[!h]
+\centering
+\caption{Distribuția salariaților după nivelul salariului brut, în anul t}
+\label{my-label}
+\begin{tabular}{@{}rcc@{}}
+\toprule
+\multicolumn{1}{l}{} & \textbf{\begin{tabular}[c]{@{}c@{}}Grupe de salarii brute\\ realizate (lei)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Pondere\\ în numărul total de salariați n’ (\%)\end{tabular}} \\ \midrule
+1                    & Până la 350                                                                               & \textit{23,6}                                                                                    \\
+2                    & 350-400                                                                                   & \textit{8,1}                                                                                     \\
+3                    & 400-500                                                                                   & \textit{12,6}                                                                                    \\
+4                    & 500-700                                                                                   & \textit{17,9}                                                                                    \\
+5                    & 700-1000                                                                                  & \textit{16,1}                                                                                    \\
+6                    & 1000-1500                                                                                 & \textit{12,5}                                                                                    \\
+7                    & 1500-2000                                                                                 & \textit{4,6}                                                                                     \\
+8                    & 2000-3000                                                                                 & \textit{2,7}                                                                                     \\
+9                    & 3000-4000                                                                                 & \textit{1,0}                                                                                     \\
+10                   & 4000-5000                                                                                 & \textit{0,4}                                                                                     \\
+11                   & Peste 5000                                                                                & \textit{0,5}                                                                                     \\
+\multicolumn{1}{l}{} & \textit{\textbf{Total}}                                                                   & \textit{\textbf{100,0}}                                                                          \\ \bottomrule
+\end{tabular}
+\end{table}    
+
+Dacă numărul total al salariaților a fost de 3814 mii în anul t, poate
+fi estimat și numărul celor cuprinși în prima grupă (în mii):
+
+\[n_{1} = \frac{n^{'}_{1}}{100}N =\frac{23,6}{100}3814 = 900\]
+
+În mod similar se determină și numărul salariaților cuprinși în
+celelalte grupe. De exemplu, pentru ultima grupă, a unsprezecea:
+
+\[n_{11} = \frac{n^{'}_{11}}{100}N =\frac{0,5}{100}3814 = 19,07\]
+
+Așadar, numărul salariaților cu un salariu mai mare de 5000 este de 19
+mii.
+
+\hypertarget{mux103rimi-relative-de-intensitate}{%
+\subsection{Mărimi relative de
+intensitate}\label{mux103rimi-relative-de-intensitate}}
+
+Mărimile relative de coordonare se utilizează pentru a compara două
+niveluri ale aceluiași indicator, niveluri care privesc două grupe/părți
+(A și B) ale aceleiași populații statistice sau două populații (A și B)
+de același tip situate în spații diferite. Calculul mărimilor relative
+de coordonare se poate face raportând nivelul înregistrat în cazul
+populației/grupei A la cel înregistrat în cazul populației/grupei B sau,
+invers, raportând nivelul aferent populației B la cel corespunzător
+populației/grupei A:
+
+\[k_{{A}/{B}} = \frac{x_{A}}{x_{B}}\]
+
+\[k_{{B}/{A}} = \frac{x_{B}}{x_{A}}\]
+
+Rezultatul este supraunitar într-una dintre variantele de calcul și
+subunitar în cealaltă. Dacă xA \textgreater{} xB, raportul kA/B este
+supraunitar și arată de câte ori este mai mare nivelul corespunzător
+populației A, comparativ cu B. În acest caz, raportul invers kB/A este
+subunitar, indicând ce fracțiune reprezintă nivelul înregistrat de
+populația B în raport cu nivelul A. Indicatorul subunitar este mai
+relevant dacă este exprimat procentual.
+
+Exemple:\\
+1. În anul t, raportul dintre produsul intern brut pe locuitor al
+Italiei și cel al României (calculate în dolari la paritatea puterii de
+cumpărare) a fost de 3,3.
+
+\[k_{{Italia}/{România}} = \frac{PIB_{Italia}}{PIB_{România}}\]
+\[k_{{Italia}/{România}} = \frac{23300}{7100} = 3,3\]
+
+Rezultatul indică un nivel de bunăstare de 3,3 ori mai înalt în Italia
+decât în România.
+
+Raportul invers:
+
+\[k_{{România}/{Italia}} = \frac{PIB_{România}}{PIB_{Italia}} = 0,304\]
+arată că nivelul de bunăstare înregistrat în România reprezintă numai
+30,4\% în raport cu cel atins de Italia.
+
+\hypertarget{mux103rimi-relative-de-coordonare}{%
+\subsection{Mărimi relative de
+coordonare}\label{mux103rimi-relative-de-coordonare}}
+
+Mărimile relative de intensitate se determină prin raportarea a doi
+indicatori absoluți (x și y) de natură diferită, dar care se află într-o
+relație de interdependență. În calculul indicatorului relativ,
+rezultatul raportului este multiplicat cu 10k, dacă această operație
+este necesară pentru asigurarea relevanței:
+
+\[r = \frac{x}{y}10^{k}\]
+
+Indicatorii utilizați în calculul mărimilor relative de intensitate sunt
+exprimați, în general, în unități de măsură diferite, iar rezultatul
+este exprimat într-o unitate de măsură compusă. Din categoria mărimilor
+relative de intensitate fac parte următorii indicatori:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\tightlist
+\item
+  \textbf{productivitatea muncii} (w), calculată ca raport între volumul
+  fizic sau valoarea producției (Q) și consumul de muncă (T, dacă este
+  exprimat în unități de timp de muncă; N, dacă este exprimat în număr
+  de persoane ocupate/salariați):
+\end{enumerate}
+
+\[w = \frac{Q}{N}\] \[w = \frac{Q}{T}\] sau ca raport între consumul de
+muncă (T) și volumul producției (Q):
+
+\[w = \frac{T}{Q}\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{consumul specific} (c), calculat ca raport între consumul
+  total de materii prime, materiale și energie (C) și volumul producției
+  (Q):
+\end{enumerate}
+
+\[c = \frac{C}{Q}\]
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{randamentele în agricultură}, calculate ca raport între
+  producția vegetală realizată și suprafețele cultivate cu diferite
+  culturi (kilograme de grâu sau de porumb boabe pe hectar, de exemplu)
+  sau între producția animală și numărul animalelor;\\
+\item
+  \textbf{indicatorii demografici}: ratele natalității și mortalității,
+  nupțialității și divorțialității, calculate ca raport (multiplicat cu
+  1000) între numărul copiilor născuți vii, al deceselor, al
+  căsătoriilor și divorțurilor înregistrate în cursul unui an și numărul
+  populației; rata mortalității infantile și juvenile, calculată ca
+  raport (multiplicat cu 1000) între numărul copiilor sub un an,
+  respectiv sub 5 ani, decedați și numărul copiilor născuți vii în
+  cursul unui an etc.\\
+  O altă categorie de mărimi relative de intensitate este formată din
+  cele calculate pe baza a doi indicatori diferiți sub aspectul
+  conținutului economic, dar exprimați în aceeași unitate de măsură.
+  Indicatorul relativ rezultat din calcul are forma unei rate
+  procentuale:\\
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  rata de activitate și rata de ocupare, calculate ca raport între
+  populația activă, respectiv ocupată și populația în vârstă de muncă;\\
+\item
+  rata șomajului, calculată ca raport între numărul șomerilor și numărul
+  populației active;\\
+\item
+  rata sărăciei, calculată ca raport între populația săracă și populația
+  totală;\\
+\item
+  rata rentabilității;\\
+\item
+  rata dobânzii etc.
+\end{itemize}
+
+\hypertarget{mux103rimi-relative-ale-dinamicii-ux219i-ale-planului}{%
+\subsection{Mărimi relative ale dinamicii și ale
+planului}\label{mux103rimi-relative-ale-dinamicii-ux219i-ale-planului}}
+
+Mărimile relative ale dinamicii se utilizează pentru caracterizarea
+evoluției în timp a fenomenelor social-economice. Cele mai importante
+componente ale acestei categorii de mărimi relative sunt indicii și
+ritmurile. Indicii dinamicii se determină ca raport între nivelurile
+înregistrate de o variabilă într-o anumită perioadă sau la un moment dat
+(\(x_t\)) și într-o perioadă sau la un moment anterior, considerat bază
+de comparație (\(x_0\)):
+
+\[i_{t/0} = \frac{x_{t}}{x_{0}}\]
+
+Rezultatul raportului arată de câte ori a crescut nivelul variabilei în
+perioada t față de perioada de bază (dacă sunt supraunitari) sau la ce
+fracțiune din nivelul de bază a scăzut nivelul variabilei (dacă sunt
+subunitari). Forma de prezentare a indicilor este cea procentuală.\\
+Ritmul reprezintă raportul dintre sporul absolut al variabilei în
+perioada \texttt{t} față de perioada de bază și nivelul înregistrat în
+perioada de bază:
+
+\[r_{t/0} = \frac{x_{t}-x_{0}}{x_{0}}100\]
+
+și arată cu cât a crescut sau a scăzut nivelul variabilei în raport cu
+nivelul de bază. Mărimile relative ale planului sunt utilizate pentru
+analiza relației dintre nivelul înregistrat de un indicator în perioada
+de bază (x0), cel programat (\(x_{pl}\)) și cel realizat în perioada
+curentă (x1). Se utilizează doi indici ai planului, ambii calculați ca
+raport între nivelurile indicatorului analizat:\\
+• indicele sarcinii de plan, determinat prin raportarea nivelului
+planificat la cel realizat în perioada de bază:
+
+\[i_{plan/0} = \frac{x_{plan}}{x_{0}}100\] • indicele realizării
+planului, determinat prin raportarea nivelului realizat la cel
+planificat pentru perioada curentă:
+
+\[i_{1/plan} = \frac{x_{1}}{x_{plan}}100\]
+
+Cei doi indici arată proporția modificării programate a fenomenului
+analizat, respectiv proporția în care a fost realizat nivelul programat.
+Ambii indici ai planului se calculează sub formă procentuală.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{summary}{%
+\chapter*{Summary}\label{summary}}
+\addcontentsline{toc}{chapter}{Summary}
+
+\markboth{Summary}{Summary}
+
+In summary, this book has no content whatsoever.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DecValTok{1} \SpecialCharTok{+} \DecValTok{1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{bibliografie}{%
+\chapter*{Bibliografie}\label{bibliografie}}
+\addcontentsline{toc}{chapter}{Bibliografie}
+
+\markboth{Bibliografie}{Bibliografie}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\end{CSLReferences}
+
+
+\backmatter
+
+\end{document}

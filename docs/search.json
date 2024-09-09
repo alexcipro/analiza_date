@@ -2,260 +2,391 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Introducere în analiza datelor economico-financiare",
+    "title": "Analiza datelor economico-sociale",
     "section": "",
-    "text": "Despre autor\nCiprian Alexandru-Caragea este conferenţiar universitar la Facultatea de Management Financiar, Universitatea Ecologică din București și Analist de Date la diverse instituții internaționale.Titlul de doctor în Economie l-a obţinut sub egida Academiei Române, Institutul de Economie Naţională.\nA participat la un program de studii postdoctorale în care a implementat utilizarea software-ului R ca instrument de analiză a evoluției indicilor bursieri.\nActivitatea sa didactică se concentrează, în principal, în domeniul burselor de valori, prin cursuri și seminarii la programele de licență și masterat (Piețe de capital, Managementul Portofoliului, Piețe internaționale de capital).\nA participat la diverse proiecte de cercetare, workshop-uri, conferințe naționale și internaționale. Activitatea de cercetare a fost pusă în valoare prin publicarea studiilor în reviste din țară și din Europa, precum și în baze de date internaționale recunoscute (RePEC, DOAJ, EBSCO).\nÎn prezent, în cadrul Institului Național de Statistică, participă ca expert în proiecte BigData și utilizează software-ul de analiză statistică R pentru Data cleaning, Data Matching, Web Scraping, analize de date și vizualizare, Data mining, Data integration, data processing, data validation, dar și utilizarea datelor din sursele administrative pentru realizarea de statistici oficiale.\nResearcherID: V-2168-2017\nhttps://orcid.org/0000-0001-8215-6671\n\nlibrary(DiagrammeR)"
+    "text": "Despre autor\nCiprian Alexandru-Caragea este conferenţiar universitar la Facultatea de Management Financiar, Universitatea Ecologică din București și Analist de Date la diverse instituții internaționale.Titlul de doctor în Economie l-a obţinut sub egida Academiei Române, Institutul de Economie Naţională.\nA participat la un program de studii postdoctorale în care a implementat utilizarea software-ului R ca instrument de analiză a evoluției indicilor bursieri.\nActivitatea sa didactică se concentrează, în principal, în domeniul burselor de valori, prin cursuri și seminarii la programele de licență și masterat (Piețe de capital, Managementul Portofoliului, Piețe internaționale de capital).\nA participat la diverse proiecte de cercetare, workshop-uri, conferințe naționale și internaționale. Activitatea de cercetare a fost pusă în valoare prin publicarea studiilor în reviste din țară și din Europa, precum și în baze de date internaționale recunoscute (RePEC, DOAJ, EBSCO).\nÎn prezent, în cadrul Institului Național de Statistică, participă ca expert în proiecte BigData și utilizează software-ul de analiză statistică R pentru Data cleaning, Data Matching, Web Scraping, analize de date și vizualizare, Data mining, Data integration, data processing, data validation, dar și utilizarea datelor din sursele administrative pentru realizarea de statistici oficiale.\nResearcherID: V-2168-2017\nhttps://orcid.org/0000-0001-8215-6671\n\nlibrary(DiagrammeR)",
+    "crumbs": [
+      "Despre autor"
+    ]
   },
   {
-    "objectID": "intro.html#quarto",
-    "href": "intro.html#quarto",
+    "objectID": "intro.html",
+    "href": "intro.html",
     "title": "Introducere",
-    "section": "Quarto",
-    "text": "Quarto\nAceastă carte a fost editată cu ajutorul pachetului R bookdown (xie2015?).\nCartea are la bază manualul Statistică - concepte și metode de analiză a datelor(caragea2015?).\nPachetul R bookdown este integrat R Markdown (http://rmarkdown.rstudio.com). Documentele elaborate pe baza acestui tip de instrumentar de editare sunt pe deplin reproductibile și dau posibilitatea creării unor formate de ieșire diverse (PDF/HTML/Word/…). Informații suplimentare referitoare la utilizarea pachetului bookdown se pot găsi la adresa: https://bookdown.org."
+    "section": "",
+    "text": "Quarto\nAceastă carte a fost editată cu ajutorul pachetului R bookdown (xie2015?).\nCartea are la bază manualul Statistică - concepte și metode de analiză a datelor(caragea2015?).\nPachetul R bookdown este integrat R Markdown (http://rmarkdown.rstudio.com). Documentele elaborate pe baza acestui tip de instrumentar de editare sunt pe deplin reproductibile și dau posibilitatea creării unor formate de ieșire diverse (PDF/HTML/Word/…). Informații suplimentare referitoare la utilizarea pachetului bookdown se pot găsi la adresa: https://bookdown.org.",
+    "crumbs": [
+      "Introducere"
+    ]
   },
   {
     "objectID": "intro.html#informații-despre-software",
     "href": "intro.html#informații-despre-software",
     "title": "Introducere",
     "section": "Informații despre software",
-    "text": "Informații despre software\nSoftware-ul a devenit în prezent unul dintre cele mai utilizate instrumente de analiză statistică, fiind utilizat în statisticile oficiale, în mediile universitare și de cercetare academică, dar și în mediul de afaceri. Acest manual este destinat tuturor celor care doresc să învețe statistica, fiind un material introductiv de studiu, care prezintă un spectru larg de exemple, prezentări grafice și analiză a datelor, dezvoltate cu ajutorul .\nAplicațiile din această carte utilizează , ceea ce înseamnă că pentru reproducerea acestora va fi nevoie de instalarea pe calculatorul pe care lucrați.\neste un sistem pentru analize statistice și reprezentare grafică creat de către Ross Ihaka și Robert Gentleman, profesori de statistică la Universitatea Auckland din Noua Zeelandă.\neste considerat un dialect al limbajului creat de AT&T Bell Laboratories. este disponibil sub forma software-ului S-PLUS, comercializat de compania Insightful. Există diferențe importante între cele două limbaje, și : acestea sunt documentate de către Ihaka & Gentleman (1996) sau se regăsesc în R-FAQ.\nAstfel, numele limbajului R provine de la inițiala prenumelui creatorilor, dar este totodată și un omagiu adus limbajului .\nÎn primul rând, este open-source, fiind distribuit în mod gratuit sub licență ; dezvoltarea și distribuirea sunt în grija câtorva profesori și statisticieni, afiliați companiilor și universităților, cunoscuți sub denumirea generică de .\nConform filosofiei , software-ul open-source este caracterizat de libertatea acordată utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate utilizatorilor(dusa2015?):\nFaptul că este gratuit atrage automat avantajul competitiv în fața altor software-uri de analiză statistică, precum Stata, SAS și SPSS. Astfel, costurile alocate licenței de software dispar. este denumit de către Norman Nie, unul dintre fondatorii SPSS și CEO al Revolution Analytics, “cel mai puternic și flexibil limbaj de programare statistică din lume” (în engleză ). Dovadă a succesului pe care îl are în știința datelor, s-au dezvoltat medii de integrare a acestuia în SAS și chiar SPSS. Este vorba despre modulul SAS/IML, care integrează limbajul în SAS, și despre , un serviciu de translatare a codului SPSS direct în dezvoltat de compania . are susținerea comunității științifice, dar și a multor companii internaționale. Dintre acestea, menționăm: Google, Facebook, Mozilla, Twitter, The New York Times, The Economist, NewScientist, Lloyd’s, Bing, Johnson&Johnson, Pfizer, Shell, Bank of America, Ford. este susținut și de mediul academic. Marile universități din lume sprijină , la fel cum sprijină și alte inițiative sau software-uri open-source, precum sistemul de operare Linux sau sistemul de preparare a documentelor ."
+    "text": "Informații despre software\nSoftware-ul a devenit în prezent unul dintre cele mai utilizate instrumente de analiză statistică, fiind utilizat în statisticile oficiale, în mediile universitare și de cercetare academică, dar și în mediul de afaceri. Acest manual este destinat tuturor celor care doresc să învețe statistica, fiind un material introductiv de studiu, care prezintă un spectru larg de exemple, prezentări grafice și analiză a datelor, dezvoltate cu ajutorul .\nAplicațiile din această carte utilizează , ceea ce înseamnă că pentru reproducerea acestora va fi nevoie de instalarea pe calculatorul pe care lucrați.\neste un sistem pentru analize statistice și reprezentare grafică creat de către Ross Ihaka și Robert Gentleman, profesori de statistică la Universitatea Auckland din Noua Zeelandă.\neste considerat un dialect al limbajului creat de AT&T Bell Laboratories. este disponibil sub forma software-ului S-PLUS, comercializat de compania Insightful. Există diferențe importante între cele două limbaje, și : acestea sunt documentate de către Ihaka & Gentleman (1996) sau se regăsesc în R-FAQ.\nAstfel, numele limbajului R provine de la inițiala prenumelui creatorilor, dar este totodată și un omagiu adus limbajului .\nÎn primul rând, este open-source, fiind distribuit în mod gratuit sub licență ; dezvoltarea și distribuirea sunt în grija câtorva profesori și statisticieni, afiliați companiilor și universităților, cunoscuți sub denumirea generică de .\nConform filosofiei , software-ul open-source este caracterizat de libertatea acordată utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate utilizatorilor(dusa2015?):\nFaptul că este gratuit atrage automat avantajul competitiv în fața altor software-uri de analiză statistică, precum Stata, SAS și SPSS. Astfel, costurile alocate licenței de software dispar. este denumit de către Norman Nie, unul dintre fondatorii SPSS și CEO al Revolution Analytics, “cel mai puternic și flexibil limbaj de programare statistică din lume” (în engleză ). Dovadă a succesului pe care îl are în știința datelor, s-au dezvoltat medii de integrare a acestuia în SAS și chiar SPSS. Este vorba despre modulul SAS/IML, care integrează limbajul în SAS, și despre , un serviciu de translatare a codului SPSS direct în dezvoltat de compania . are susținerea comunității științifice, dar și a multor companii internaționale. Dintre acestea, menționăm: Google, Facebook, Mozilla, Twitter, The New York Times, The Economist, NewScientist, Lloyd’s, Bing, Johnson&Johnson, Pfizer, Shell, Bank of America, Ford. este susținut și de mediul academic. Marile universități din lume sprijină , la fel cum sprijină și alte inițiative sau software-uri open-source, precum sistemul de operare Linux sau sistemul de preparare a documentelor .",
+    "crumbs": [
+      "Introducere"
+    ]
+  },
+  {
+    "objectID": "01-cap.html",
+    "href": "01-cap.html",
+    "title": "1  Introducere în analiza datelor",
+    "section": "",
+    "text": "1.1 Importanța datelor în luare deciziilor\nDefinirea conceptului de analiză a datelor\nAnaliza datelor reprezintă procesul de examinare, curățare, transformare și modelare a datelor cu scopul de a descoperi informații utile, de a trage concluzii și de a susține luarea deciziilor informate. Acest proces implică utilizarea unor tehnici și metode statistice și computaționale care permit identificarea tiparelor și relațiilor ascunse în datele brute (en. raw data).\nDatele brute sunt informații în forma lor neprelucrată, care pot proveni din surse multiple, cum ar fi bazele de date interne ale unei organizații, statistici guvernamentale, date financiare sau date generate de utilizatorii unei platforme digitale. Prin analiza acestor date, decidenții pot obține perspective valoroase care îi ajută să adopte strategii eficiente, să îmbunătățească procesele și să maximizeze resursele disponibile.\nImportanța datelor în funcțiile managementului\nAnaliza și utilizarea eficientă a datelor contribuie la îndeplinirea fiecărei funcții de management, conform teoriei clasice a managementului: planificare, organizare, conducere, coordonare și control.\nflowchart TD\n  A(Plannificare) --&gt; B(Organizare)\n  B --&gt; C(Conducere)\n  C --&gt; D(Coordonare)\n  D --&gt; E(Control)\nDatele joacă un rol esențial în susținerea tuturor funcțiilor managementului, contribuind la luarea deciziilor mai bine fundamentate și la optimizarea performanței organizaționale. Să analizăm cum sunt datele integrate în fiecare dintre aceste funcții:\n1. Planificarea\nPlanificarea este prima și cea mai importantă funcție a managementului, deoarece stabilește obiectivele și strategia pentru atingerea acestora. Analiza datelor este esențială în acest proces, oferind informații precise care permit decidenților să:\nExemplu practic: O companie de retail dorește să își extindă rețeaua de magazine în alte regiuni. Managerii colectează date despre comportamentul consumatorilor, venituri medii pe cap de locuitor, și tendințele pieței din mai multe regiuni. Prin analizarea datelor disponibile, aceștia pot:\nIdentifica cele mai promițătoare regiuni: Pe baza datelor, se poate stabili unde există cerere ridicată pentru produsele oferite de companie. Proiecta venituri viitoare: Utilizând modele predictive, managerii pot estima veniturile potențiale pentru fiecare regiune. Planifica alocarea resurselor: Datele financiare și de resurse umane ajută la determinarea costurilor necesare pentru extindere și la alocarea eficientă a bugetului.\n2. Organizarea\nFuncția de organizare se referă la structurarea resurselor și activităților pentru a atinge obiectivele organizaționale. Datele sunt esențiale pentru:\n3. Conducerea\nFuncția de conducere (leadership) presupune motivarea și ghidarea echipei către atingerea obiectivelor organizaționale. Datele sprijină această funcție prin:\n4. Coordonarea\nCoordonarea implică integrarea activităților și resurselor pentru a atinge obiectivele în mod coerent și eficient. Datele permit o coordonare eficientă prin:\nÎn această secțiune am văzut cum datele sunt un element central pentru îndeplinirea tuturor funcțiilor managementului, oferind suport pentru decizii bine informate și pentru optimizarea proceselor în organizații. Fie că este vorba despre planificarea pe termen lung sau evaluarea performanței zilnice, datele oferă managerilor o imagine obiectivă și clară asupra realității organizaționale.\nDe ce este analiza datelor esențială pentru luarea deciziilor?\nDecizii bazate pe fapte și dovezi: În loc de a lua decizii pe baza instinctelor sau a intuiției, organizațiile moderne se bazează din ce în ce mai mult pe date pentru a ghida acțiunile și strategiile lor. Analiza datelor oferă o bază factuală solidă pentru luarea deciziilor, reducând riscurile asociate cu incertitudinea și lipsa de informații.\nIdentificarea tendințelor și tiparelor: Analiza datelor ajută la identificarea tendințelor emergente, a modelelor de comportament sau a anomaliilor care pot semnala oportunități sau riscuri. De exemplu, în sectorul financiar, analiza datelor poate dezvălui tendințe ale pieței sau poate identifica riscuri financiare iminente.\nOptimizarea resurselor: Prin examinarea detaliată a datelor, organizațiile pot identifica zonele în care resursele sunt utilizate ineficient și pot ajusta procesele pentru a îmbunătăți eficiența și a reduce costurile. Acest lucru este valabil atât pentru instituțiile publice, care trebuie să gestioneze bugete limitate, cât și pentru companiile private care doresc să maximizeze profiturile.\nMonitorizarea performanței: Analiza datelor permite organizațiilor să monitorizeze și să evalueze performanța programelor și inițiativelor în timp real, permițând ajustări rapide atunci când este necesar. Acest lucru este esențial în contextul economico-financiar, unde piețele și condițiile economice se pot schimba rapid.\nSusținerea inovației: Prin explorarea datelor, organizațiile pot descoperi noi oportunități de creștere și inovație, fie că este vorba de dezvoltarea unor produse noi, fie de optimizarea operațiunilor existente.\nÎn esență, analiza datelor nu doar că ajută la înțelegerea mai profundă a situațiilor curente, dar permite și previzionarea evoluțiilor viitoare, oferind decidenților informații esențiale pentru a naviga provocările economice și financiare.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducere în analiza datelor</span>"
+    ]
   },
   {
     "objectID": "01-cap.html#importanța-datelor-în-luare-deciziilor",
     "href": "01-cap.html#importanța-datelor-în-luare-deciziilor",
     "title": "1  Introducere în analiza datelor",
-    "section": "1.1 Importanța datelor în luare deciziilor",
-    "text": "1.1 Importanța datelor în luare deciziilor\nDefinirea conceptului de analiză a datelor\nAnaliza datelor reprezintă procesul de examinare, curățare, transformare și modelare a datelor cu scopul de a descoperi informații utile, de a trage concluzii și de a susține luarea deciziilor informate. Acest proces implică utilizarea unor tehnici și metode statistice și computaționale care permit identificarea tiparelor și relațiilor ascunse în datele brute (en. raw data).\nDatele brute sunt informații în forma lor neprelucrată, care pot proveni din surse multiple, cum ar fi bazele de date interne ale unei organizații, statistici guvernamentale, date financiare sau date generate de utilizatorii unei platforme digitale. Prin analiza acestor date, decidenții pot obține perspective valoroase care îi ajută să adopte strategii eficiente, să îmbunătățească procesele și să maximizeze resursele disponibile.\nImportanța datelor în funcțiile managementului\nAnaliza și utilizarea eficientă a datelor contribuie la îndeplinirea fiecărei funcții de management, conform teoriei clasice a managementului: planificare, organizare, conducere, coordonare și control.\n\n\n\n\nflowchart TD\n  A(Plannificare) --> B(Organizare)\n  B --> C(Conducere)\n  C --> D(Coordonare)\n  D --> E(Control)\n\n\n\n\n\n\n\n\nDatele joacă un rol esențial în susținerea tuturor funcțiilor managementului, contribuind la luarea deciziilor mai bine fundamentate și la optimizarea performanței organizaționale. Să analizăm cum sunt datele integrate în fiecare dintre aceste funcții:\n1. Planificarea\nPlanificarea este prima și cea mai importantă funcție a managementului, deoarece stabilește obiectivele și strategia pentru atingerea acestora. Analiza datelor este esențială în acest proces, oferind informații precise care permit decidenților să:\n\nProiecteze scenarii și previziuni: Utilizarea datelor istorice și a prognozelor statistice permite managerilor să anticipeze tendințele viitoare, riscurile și oportunitățile.\nStabilească obiective măsurabile: Datele oferă o bază concretă pentru setarea unor obiective clare și realiste, care pot fi monitorizate și ajustate în timp.\nEvalueze resursele disponibile: Datele financiare și operaționale ajută managerii să înțeleagă mai bine ce resurse (umane, financiare, materiale) sunt disponibile și cum pot fi acestea utilizate mai eficient.\n\nExemplu practic: O companie de retail dorește să își extindă rețeaua de magazine în alte regiuni. Managerii colectează date despre comportamentul consumatorilor, venituri medii pe cap de locuitor, și tendințele pieței din mai multe regiuni. Prin analizarea datelor disponibile, aceștia pot:\nIdentifica cele mai promițătoare regiuni: Pe baza datelor, se poate stabili unde există cerere ridicată pentru produsele oferite de companie. Proiecta venituri viitoare: Utilizând modele predictive, managerii pot estima veniturile potențiale pentru fiecare regiune. Planifica alocarea resurselor: Datele financiare și de resurse umane ajută la determinarea costurilor necesare pentru extindere și la alocarea eficientă a bugetului.\n2. Organizarea\nFuncția de organizare se referă la structurarea resurselor și activităților pentru a atinge obiectivele organizaționale. Datele sunt esențiale pentru:\n\nAlocarea resurselor: Analiza datelor privind performanțele departamentelor sau echipelor permite managerilor să aloce resursele în mod eficient, acolo unde sunt cele mai necesare.\nStructurarea proceselor: Datele despre fluxurile de lucru și activitățile operaționale pot dezvălui zonele ineficiente, permițând optimizarea proceselor și îmbunătățirea productivității.\nDefinirea responsabilităților: Analiza performanței individuale și colective, pe baza datelor, ajută la o mai bună definire a sarcinilor și responsabilităților în cadrul echipelor.\n\n3. Conducerea\nFuncția de conducere (leadership) presupune motivarea și ghidarea echipei către atingerea obiectivelor organizaționale. Datele sprijină această funcție prin:\n\nMonitorizarea performanței: Managerii pot utiliza datele pentru a urmări performanțele angajaților și pentru a oferi feedback în timp real, ajutând la menținerea moralului și motivației.\nStabilirea de obiective clare pentru echipă: Utilizarea datelor pentru a stabili obiective individuale și de echipă care sunt realiste și măsurabile.\nDezvoltarea abilităților: Datele referitoare la nevoile de formare și dezvoltare profesională permit managerilor să identifice domeniile în care echipa lor ar putea beneficia de instruire suplimentară.\n\n4. Coordonarea\nCoordonarea implică integrarea activităților și resurselor pentru a atinge obiectivele în mod coerent și eficient. Datele permit o coordonare eficientă prin:\n\nSincronizarea activităților: Analiza datelor despre calendarul proiectelor și resursele disponibile ajută managerii să coordoneze eforturile echipelor și departamentelor, evitând blocajele.\nFluxuri de informații: Datele sunt esențiale pentru a asigura un flux continuu de informații între departamente și echipe, reducând astfel riscul de erori și întârzieri.\nGestionarea resurselor în timp real: Instrumentele de analiză a datelor permit managerilor să vadă în timp real starea resurselor și să facă ajustări rapide pentru a menține echilibrul în activități.\n5. Controlul\nFuncția de control este esențială pentru a monitoriza progresul și a asigura că organizația atinge obiectivele stabilite. Analiza datelor joacă un rol crucial în:\nEvaluarea performanței: Datele sunt utilizate pentru a măsura performanțele în raport cu obiectivele stabilite. Analizele periodice permit managerilor să vadă unde sunt deviații și să intervină pentru a corecta cursul.\nCorectarea deviațiilor: Datele oferă o imagine clară asupra abaterilor de la planul inițial, permițând managerilor să implementeze măsuri corective pentru a readuce organizația pe drumul cel bun.\nRaportarea performanței: Utilizarea datelor pentru a genera rapoarte detaliate și tablouri de bord ajută la monitorizarea continuă a performanțelor și la identificarea problemelor înainte ca acestea să devină critice.\n\nÎn această secțiune am văzut cum datele sunt un element central pentru îndeplinirea tuturor funcțiilor managementului, oferind suport pentru decizii bine informate și pentru optimizarea proceselor în organizații. Fie că este vorba despre planificarea pe termen lung sau evaluarea performanței zilnice, datele oferă managerilor o imagine obiectivă și clară asupra realității organizaționale.\nDe ce este analiza datelor esențială pentru luarea deciziilor?\nDecizii bazate pe fapte și dovezi: În loc de a lua decizii pe baza instinctelor sau a intuiției, organizațiile moderne se bazează din ce în ce mai mult pe date pentru a ghida acțiunile și strategiile lor. Analiza datelor oferă o bază factuală solidă pentru luarea deciziilor, reducând riscurile asociate cu incertitudinea și lipsa de informații.\nIdentificarea tendințelor și tiparelor: Analiza datelor ajută la identificarea tendințelor emergente, a modelelor de comportament sau a anomaliilor care pot semnala oportunități sau riscuri. De exemplu, în sectorul financiar, analiza datelor poate dezvălui tendințe ale pieței sau poate identifica riscuri financiare iminente.\nOptimizarea resurselor: Prin examinarea detaliată a datelor, organizațiile pot identifica zonele în care resursele sunt utilizate ineficient și pot ajusta procesele pentru a îmbunătăți eficiența și a reduce costurile. Acest lucru este valabil atât pentru instituțiile publice, care trebuie să gestioneze bugete limitate, cât și pentru companiile private care doresc să maximizeze profiturile.\nMonitorizarea performanței: Analiza datelor permite organizațiilor să monitorizeze și să evalueze performanța programelor și inițiativelor în timp real, permițând ajustări rapide atunci când este necesar. Acest lucru este esențial în contextul economico-financiar, unde piețele și condițiile economice se pot schimba rapid.\nSusținerea inovației: Prin explorarea datelor, organizațiile pot descoperi noi oportunități de creștere și inovație, fie că este vorba de dezvoltarea unor produse noi, fie de optimizarea operațiunilor existente.\nÎn esență, analiza datelor nu doar că ajută la înțelegerea mai profundă a situațiilor curente, dar permite și previzionarea evoluțiilor viitoare, oferind decidenților informații esențiale pentru a naviga provocările economice și financiare."
+    "section": "",
+    "text": "Proiecteze scenarii și previziuni: Utilizarea datelor istorice și a prognozelor statistice permite managerilor să anticipeze tendințele viitoare, riscurile și oportunitățile.\nStabilească obiective măsurabile: Datele oferă o bază concretă pentru setarea unor obiective clare și realiste, care pot fi monitorizate și ajustate în timp.\nEvalueze resursele disponibile: Datele financiare și operaționale ajută managerii să înțeleagă mai bine ce resurse (umane, financiare, materiale) sunt disponibile și cum pot fi acestea utilizate mai eficient.\n\n\n\n\n\nAlocarea resurselor: Analiza datelor privind performanțele departamentelor sau echipelor permite managerilor să aloce resursele în mod eficient, acolo unde sunt cele mai necesare.\nStructurarea proceselor: Datele despre fluxurile de lucru și activitățile operaționale pot dezvălui zonele ineficiente, permițând optimizarea proceselor și îmbunătățirea productivității.\nDefinirea responsabilităților: Analiza performanței individuale și colective, pe baza datelor, ajută la o mai bună definire a sarcinilor și responsabilităților în cadrul echipelor.\n\n\n\nMonitorizarea performanței: Managerii pot utiliza datele pentru a urmări performanțele angajaților și pentru a oferi feedback în timp real, ajutând la menținerea moralului și motivației.\nStabilirea de obiective clare pentru echipă: Utilizarea datelor pentru a stabili obiective individuale și de echipă care sunt realiste și măsurabile.\nDezvoltarea abilităților: Datele referitoare la nevoile de formare și dezvoltare profesională permit managerilor să identifice domeniile în care echipa lor ar putea beneficia de instruire suplimentară.\n\n\n\nSincronizarea activităților: Analiza datelor despre calendarul proiectelor și resursele disponibile ajută managerii să coordoneze eforturile echipelor și departamentelor, evitând blocajele.\nFluxuri de informații: Datele sunt esențiale pentru a asigura un flux continuu de informații între departamente și echipe, reducând astfel riscul de erori și întârzieri.\nGestionarea resurselor în timp real: Instrumentele de analiză a datelor permit managerilor să vadă în timp real starea resurselor și să facă ajustări rapide pentru a menține echilibrul în activități.\n5. Controlul\nFuncția de control este esențială pentru a monitoriza progresul și a asigura că organizația atinge obiectivele stabilite. Analiza datelor joacă un rol crucial în:\nEvaluarea performanței: Datele sunt utilizate pentru a măsura performanțele în raport cu obiectivele stabilite. Analizele periodice permit managerilor să vadă unde sunt deviații și să intervină pentru a corecta cursul.\nCorectarea deviațiilor: Datele oferă o imagine clară asupra abaterilor de la planul inițial, permițând managerilor să implementeze măsuri corective pentru a readuce organizația pe drumul cel bun.\nRaportarea performanței: Utilizarea datelor pentru a genera rapoarte detaliate și tablouri de bord ajută la monitorizarea continuă a performanțelor și la identificarea problemelor înainte ca acestea să devină critice.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducere în analiza datelor</span>"
+    ]
   },
   {
     "objectID": "01-cap.html#identificarea-seturilor-de-date-relevante",
     "href": "01-cap.html#identificarea-seturilor-de-date-relevante",
     "title": "1  Introducere în analiza datelor",
     "section": "1.2 Identificarea seturilor de date relevante",
-    "text": "1.2 Identificarea seturilor de date relevante\ntext\n\n1.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n1.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n1.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data"
+    "text": "1.2 Identificarea seturilor de date relevante\ntext\n\n1.2.1 Surse de date publice și private, inclusiv Open Data\ntext\n\n\n1.2.2 Evaluarea calității și relevanței datelor\ntext\n\n\n1.2.3 Utilizarea platformelor de date\n• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducere în analiza datelor</span>"
+    ]
   },
   {
     "objectID": "01-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
     "href": "01-cap.html#concepte-de-bază-legate-de-formatarea-datelor",
     "title": "1  Introducere în analiza datelor",
     "section": "1.3 Concepte de bază legate de formatarea datelor",
-    "text": "1.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n1.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n1.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n1.3.3 Importanța și utilizarea metadatelor\ntext"
+    "text": "1.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n1.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n1.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n1.3.3 Importanța și utilizarea metadatelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducere în analiza datelor</span>"
+    ]
   },
   {
     "objectID": "01-cap.html#instrumente-și-software-pentru-analiza-datelor",
     "href": "01-cap.html#instrumente-și-software-pentru-analiza-datelor",
     "title": "1  Introducere în analiza datelor",
     "section": "1.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "1.4 Instrumente și Software pentru Analiza Datelor\n\n1.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n1.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n1.4.3 Introducere în R și Python pentru analize statistice\ntext"
+    "text": "1.4 Instrumente și Software pentru Analiza Datelor\n\n1.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n1.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n1.4.3 Introducere în R și Python pentru analize statistice\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducere în analiza datelor</span>"
+    ]
   },
   {
-    "objectID": "02-cap.html#concepte-de-bază-privind-analiza-statistică",
-    "href": "02-cap.html#concepte-de-bază-privind-analiza-statistică",
+    "objectID": "02-cap.html",
+    "href": "02-cap.html",
     "title": "2  Introducere în analiza statistică",
-    "section": "2.1 Concepte de bază privind analiza statistică",
-    "text": "2.1 Concepte de bază privind analiza statistică\ntext"
+    "section": "",
+    "text": "2.1 Concepte de bază privind analiza statistică\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
   },
   {
     "objectID": "02-cap.html#mărimile-relative",
     "href": "02-cap.html#mărimile-relative",
     "title": "2  Introducere în analiza statistică",
     "section": "2.2 Mărimile relative",
-    "text": "2.2 Mărimile relative\ntext"
+    "text": "2.2 Mărimile relative\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
   },
   {
     "objectID": "02-cap.html#sistematizarea-datelor",
     "href": "02-cap.html#sistematizarea-datelor",
     "title": "2  Introducere în analiza statistică",
     "section": "2.3 Sistematizarea datelor",
-    "text": "2.3 Sistematizarea datelor\ntext"
+    "text": "2.3 Sistematizarea datelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
   },
   {
     "objectID": "02-cap.html#indicatorii-de-nivel",
     "href": "02-cap.html#indicatorii-de-nivel",
     "title": "2  Introducere în analiza statistică",
     "section": "2.4 Indicatorii de nivel",
-    "text": "2.4 Indicatorii de nivel\n• medie, mediană, mod, quantile"
+    "text": "2.4 Indicatorii de nivel\n• medie, mediană, mod, quantile",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
   },
   {
     "objectID": "02-cap.html#indicatorii-variației",
     "href": "02-cap.html#indicatorii-variației",
     "title": "2  Introducere în analiza statistică",
     "section": "2.5 Indicatorii variației",
-    "text": "2.5 Indicatorii variației\n• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare"
+    "text": "2.5 Indicatorii variației\n• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
   },
   {
     "objectID": "02-cap.html#vizualizarea-datelor",
     "href": "02-cap.html#vizualizarea-datelor",
     "title": "2  Introducere în analiza statistică",
     "section": "2.6 Vizualizarea datelor",
-    "text": "2.6 Vizualizarea datelor\ntext\n\n2.6.1 Introducerea statisticii descriptive și inferențiale.\ntext\n\n\n2.6.2 Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard\ntext"
+    "text": "2.6 Vizualizarea datelor\ntext\n\n2.6.1 Introducerea statisticii descriptive și inferențiale.\ntext\n\n\n2.6.2 Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
   },
   {
-    "objectID": "03-cap.html#indicatori-economici-și-financiari",
-    "href": "03-cap.html#indicatori-economici-și-financiari",
+    "objectID": "03-cap.html",
+    "href": "03-cap.html",
     "title": "3  Analiza datelor economico-financiare",
-    "section": "3.1 Indicatori economici și financiari",
-    "text": "3.1 Indicatori economici și financiari\ntext"
+    "section": "",
+    "text": "3.1 Indicatori economici și financiari\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Analiza datelor economico-financiare</span>"
+    ]
   },
   {
     "objectID": "03-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
     "href": "03-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
     "title": "3  Analiza datelor economico-financiare",
     "section": "3.2 Principii de bază în economie și finanțe publice",
-    "text": "3.2 Principii de bază în economie și finanțe publice\ntext"
+    "text": "3.2 Principii de bază în economie și finanțe publice\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Analiza datelor economico-financiare</span>"
+    ]
   },
   {
     "objectID": "03-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
     "href": "03-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
     "title": "3  Analiza datelor economico-financiare",
     "section": "3.3 Analiza indicatorilor financiari ai instituțiilor publice",
-    "text": "3.3 Analiza indicatorilor financiari ai instituțiilor publice\ntext"
+    "text": "3.3 Analiza indicatorilor financiari ai instituțiilor publice\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Analiza datelor economico-financiare</span>"
+    ]
   },
   {
-    "objectID": "04-cap.html#structura-bugetului-public",
-    "href": "04-cap.html#structura-bugetului-public",
+    "objectID": "04-cap.html",
+    "href": "04-cap.html",
     "title": "4  Analiza bugetară",
-    "section": "4.1 Structura bugetului public",
-    "text": "4.1 Structura bugetului public\ntext"
+    "section": "",
+    "text": "4.1 Structura bugetului public\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Analiza bugetară</span>"
+    ]
   },
   {
     "objectID": "04-cap.html#metode-de-evaluare-a-performanței-bugetare",
     "href": "04-cap.html#metode-de-evaluare-a-performanței-bugetare",
     "title": "4  Analiza bugetară",
     "section": "4.2 Metode de evaluare a performanței bugetare",
-    "text": "4.2 Metode de evaluare a performanței bugetare\ntext"
+    "text": "4.2 Metode de evaluare a performanței bugetare\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Analiza bugetară</span>"
+    ]
   },
   {
     "objectID": "04-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
     "href": "04-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
     "title": "4  Analiza bugetară",
     "section": "4.3 Analiza deviațiilor și optimizarea bugetară",
-    "text": "4.3 Analiza deviațiilor și optimizarea bugetară\ntext"
+    "text": "4.3 Analiza deviațiilor și optimizarea bugetară\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Analiza bugetară</span>"
+    ]
   },
   {
-    "objectID": "05-cap.html#definirea-obiectivelor-analizei",
-    "href": "05-cap.html#definirea-obiectivelor-analizei",
+    "objectID": "05-cap.html",
+    "href": "05-cap.html",
     "title": "5  Etapele analizei datelor",
-    "section": "5.1 Definirea obiectivelor analizei",
-    "text": "5.1 Definirea obiectivelor analizei\ntext"
+    "section": "",
+    "text": "5.1 Definirea obiectivelor analizei\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#colectarea-datelor",
     "href": "05-cap.html#colectarea-datelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.2 Colectarea datelor",
-    "text": "5.2 Colectarea datelor\ntext"
+    "text": "5.2 Colectarea datelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#importarea-datelor",
     "href": "05-cap.html#importarea-datelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.3 Importarea datelor",
-    "text": "5.3 Importarea datelor\ntext"
+    "text": "5.3 Importarea datelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#stocarea-datelor",
     "href": "05-cap.html#stocarea-datelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.4 Stocarea datelor",
-    "text": "5.4 Stocarea datelor\ntext"
+    "text": "5.4 Stocarea datelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#curățarea-datelor",
     "href": "05-cap.html#curățarea-datelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.5 Curățarea datelor",
-    "text": "5.5 Curățarea datelor\n• Tratarea duplicatelor, gestionarea valorilor lipsă"
+    "text": "5.5 Curățarea datelor\n• Tratarea duplicatelor, gestionarea valorilor lipsă",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#agregarea-datelor",
     "href": "05-cap.html#agregarea-datelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.6 Agregarea datelor",
-    "text": "5.6 Agregarea datelor\n• Filtrarea/selectarea și agregarea datelor"
+    "text": "5.6 Agregarea datelor\n• Filtrarea/selectarea și agregarea datelor",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#analiza-descriptivă-a-seturilor-de-date",
     "href": "05-cap.html#analiza-descriptivă-a-seturilor-de-date",
     "title": "5  Etapele analizei datelor",
     "section": "5.7 Analiza descriptivă a seturilor de date",
-    "text": "5.7 Analiza descriptivă a seturilor de date\n• Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor și identificarea valorile anormale (outliers)"
+    "text": "5.7 Analiza descriptivă a seturilor de date\n• Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor și identificarea valorile anormale (outliers)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#interpretarea-rezultatelor",
     "href": "05-cap.html#interpretarea-rezultatelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.8 Interpretarea rezultatelor",
-    "text": "5.8 Interpretarea rezultatelor\ntext"
+    "text": "5.8 Interpretarea rezultatelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#vizualizarea-rezultatelor",
     "href": "05-cap.html#vizualizarea-rezultatelor",
     "title": "5  Etapele analizei datelor",
     "section": "5.9 Vizualizarea rezultatelor",
-    "text": "5.9 Vizualizarea rezultatelor\ntext"
+    "text": "5.9 Vizualizarea rezultatelor\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
   },
   {
     "objectID": "05-cap.html#diseminarea-rezultatelor-analizei",
     "href": "05-cap.html#diseminarea-rezultatelor-analizei",
     "title": "5  Etapele analizei datelor",
     "section": "5.10 Diseminarea rezultatelor analizei",
-    "text": "5.10 Diseminarea rezultatelor analizei\ntext"
+    "text": "5.10 Diseminarea rezultatelor analizei\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Etapele analizei datelor</span>"
+    ]
+  },
+  {
+    "objectID": "06-cap.html",
+    "href": "06-cap.html",
+    "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
+    "section": "",
+    "text": "6.1 Crearea rapoartelor și tablourilor de bord",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Crearea și partajarea rapoartelor și tablourilor de bord</span>"
+    ]
   },
   {
     "objectID": "06-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
     "href": "06-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
     "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.1 Crearea rapoartelor și tablourilor de bord",
-    "text": "6.1 Crearea rapoartelor și tablourilor de bord\n\n6.1.1 Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.\ntext\n\n\n6.1.2 Utilizarea storytelling-ului în prezentarea datelor.\ntext"
+    "section": "",
+    "text": "6.1.1 Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.\ntext\n\n\n6.1.2 Utilizarea storytelling-ului în prezentarea datelor.\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Crearea și partajarea rapoartelor și tablourilor de bord</span>"
+    ]
   },
   {
     "objectID": "06-cap.html#partajarea-și-colaborarea-pe-rapoarte",
     "href": "06-cap.html#partajarea-și-colaborarea-pe-rapoarte",
     "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
     "section": "6.2 Partajarea și colaborarea pe rapoarte",
-    "text": "6.2 Partajarea și colaborarea pe rapoarte\n\n6.2.1 Tehnici de partajare a rapoartelor și tablourilor de bord în organizație\ntext\n\n\n6.2.2 Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)\ntext"
+    "text": "6.2 Partajarea și colaborarea pe rapoarte\n\n6.2.1 Tehnici de partajare a rapoartelor și tablourilor de bord în organizație\ntext\n\n\n6.2.2 Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Crearea și partajarea rapoartelor și tablourilor de bord</span>"
+    ]
   },
   {
-    "objectID": "07-cap.html#standarde-ghiduri-și-monitorizare",
-    "href": "07-cap.html#standarde-ghiduri-și-monitorizare",
+    "objectID": "07-cap.html",
+    "href": "07-cap.html",
     "title": "7  Calitatea datelor",
-    "section": "7.1 Standarde, ghiduri și monitorizare",
-    "text": "7.1 Standarde, ghiduri și monitorizare\ntext"
+    "section": "",
+    "text": "7.1 Standarde, ghiduri și monitorizare\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calitatea datelor</span>"
+    ]
   },
   {
     "objectID": "07-cap.html#metodologii",
     "href": "07-cap.html#metodologii",
     "title": "7  Calitatea datelor",
     "section": "7.2 Metodologii",
-    "text": "7.2 Metodologii\ntext"
+    "text": "7.2 Metodologii\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calitatea datelor</span>"
+    ]
   },
   {
     "objectID": "07-cap.html#metadate",
     "href": "07-cap.html#metadate",
     "title": "7  Calitatea datelor",
     "section": "7.3 Metadate",
-    "text": "7.3 Metadate\ntext"
+    "text": "7.3 Metadate\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calitatea datelor</span>"
+    ]
   },
   {
     "objectID": "07-cap.html#clasificări-și-nomenclatoare",
     "href": "07-cap.html#clasificări-și-nomenclatoare",
     "title": "7  Calitatea datelor",
     "section": "7.4 Clasificări și nomenclatoare",
-    "text": "7.4 Clasificări și nomenclatoare\ntext"
+    "text": "7.4 Clasificări și nomenclatoare\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calitatea datelor</span>"
+    ]
   },
   {
     "objectID": "07-cap.html#rapoarte-de-calitate",
     "href": "07-cap.html#rapoarte-de-calitate",
     "title": "7  Calitatea datelor",
     "section": "7.5 Rapoarte de calitate",
-    "text": "7.5 Rapoarte de calitate\ntext"
+    "text": "7.5 Rapoarte de calitate\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calitatea datelor</span>"
+    ]
   },
   {
     "objectID": "07-cap.html#etica-și-transparența",
     "href": "07-cap.html#etica-și-transparența",
     "title": "7  Calitatea datelor",
     "section": "7.6 Etica și transparența",
-    "text": "7.6 Etica și transparența\ntext"
+    "text": "7.6 Etica și transparența\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Calitatea datelor</span>"
+    ]
   }
 ]

@@ -62,6 +62,7 @@ format:
     monofontoptions: "Scale=0.7"
     graphics: yes
     keep-tex: true
+    keep-md: true
     include-in-header:
     - text: |
         \usepackage{tocbibind}

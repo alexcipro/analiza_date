@@ -3,8 +3,8 @@ project:
   output-dir: _book
 
 book:
-  title: "Introducere în analiza datelor economico-financiare"
-  subtitle: "Aplicații și exemple rezolvate prin: R, Python, Excel, PowerBI"
+  title: "Analiza datelor economico-sociale"
+  subtitle: "cu aplicații și exemple în R, Python, Excel și PowerBI"
   author: "Ciprian Alexandru-Caragea"
   date: "9/8/2024"
   reader-mode: true
@@ -41,7 +41,7 @@ language:
 
 biblio-style: apalike
 bibliography: references.bib
-link-citations: yes
+link-citations: true
 
 format:
   html:

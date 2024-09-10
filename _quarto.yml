@@ -67,7 +67,6 @@ format:
     - text: |
         \usepackage{tocbibind}
     - file: preamble.tex
-
     author-meta: "Ciprian Alexandru-Caragea"
 
 editor: visual

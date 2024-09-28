@@ -10,17 +10,19 @@
 **Importanța datelor în funcțiile managementului**  
 
 Analiza și utilizarea eficientă a datelor contribuie la îndeplinirea fiecărei funcții de management, conform teoriei clasice a managementului: planificare, organizare, conducere, coordonare și control.  
-```{r, echo=FALSE}
-library(DiagrammeR)
-# ```{mermaid}
-# flowchart LR
-#  A(Plannificare) --> B(Organizare)
-#  B --> C(Conducere)
-#  C --> D(Coordonare)
-#  D --> E(Control)
-#  E --> A
-#```
-```
+
+
+
+
+
+::: {.cell}
+
+:::
+
+
+
+
+
 
 ![Functiile Managementului](images/functii_management.png)
 

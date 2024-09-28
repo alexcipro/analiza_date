@@ -17,7 +17,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -199,8 +219,8 @@ Obiectivul principal al cărții pe care o propun este de a fi un ghid cuprinză
 Cartea este destinată tuturor celor care doresc să înțeleagă, prin mijloace științifice, fenomenele economice și sociale, sub aspectul măsurării cantitative și din perspectiva determinării cauzale. Deși se adresează, în principal, studenților care se pregătesc să devină specialiști în științele economice, lucrarea este utilă și celor care își propun să cunoască un domeniu atât de frumos și de captivant. Tocmai nevoia de informații, din ce în ce mai complexe, dar și posibilitățile de calcul avansat cu ajutorul soft-urilor tot mai performante, au condus la crearea unui bazin imens de date care pot fi cu ușurință exploatate pe baza analizei statistice. Poate că acesta este și motivul pentru care statistica rămâne o disciplină percepută ca fiind adesea prea matematizată, destinată specialiștilor. Pentru mulți cititori, mai ales dintre cei care nu au o formare bazată pe un aparat matematic, studiul fenomenelor economice prin metode statistice și matematice, presupune un efort deosebit. Din acest motiv, am încercat să tratez aspectele teoretice, dar și problemele cu aplicație practică din sfera economică, într-o manieră simplă, accesibilă. Așadar, lucrarea are menirea de a facilita înțelegerea conceptelor fundamentale cu care operează statistica, utilizarea adecvată a metodelor de analiză statistică, precum și interpretarea corectă a rezultatelor, în vederea cunoașterii modului de manifestare a fenomenelor.</p>
 <div style="page-break-after: always;"></div>
 <section id="quarto" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="quarto">Quarto</h2>
-<p>Această carte a fost editată cu ajutorul pachetului R <strong>bookdown</strong> <span class="citation" data-cites="xie2015">(<a href="references.html#ref-xie2015" role="doc-biblioref"><strong>xie2015?</strong></a>)</span>.<br>
-Cartea are la bază manualul <em>Statistică - concepte și metode de analiză a datelor</em><span class="citation" data-cites="caragea2015">(<a href="references.html#ref-caragea2015" role="doc-biblioref"><strong>caragea2015?</strong></a>)</span>.</p>
+<p>Această carte a fost editată cu ajutorul pachetului R <strong>bookdown</strong> <span class="citation" data-cites="xie2015">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span>.<br>
+Cartea are la bază manualul <em>Statistică - concepte și metode de analiză a datelor</em><span class="citation" data-cites="caragea2015">(<a href="#ref-caragea2015" role="doc-biblioref"><strong>caragea2015?</strong></a>)</span>.</p>
 <p>Pachetul R <strong>bookdown</strong> este integrat R Markdown (http://rmarkdown.rstudio.com). Documentele elaborate pe baza acestui tip de instrumentar de editare sunt pe deplin reproductibile și dau posibilitatea creării unor formate de ieșire diverse (PDF/HTML/Word/…). Informații suplimentare referitoare la utilizarea pachetului <strong>bookdown</strong> se pot găsi la adresa: https://bookdown.org.</p>
 <p></p>
 <div class="cell" data-layout-align="center">
@@ -212,16 +232,21 @@ Cartea are la bază manualul <em>Statistică - concepte și metode de analiză a
 </div>
 </div>
 </section><section id="informații-despre-software" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="informații-despre-software">Informații despre software</h2>
-Software-ul a devenit în prezent unul dintre cele mai utilizate instrumente de analiză statistică, fiind utilizat în statisticile oficiale, în mediile universitare și de cercetare academică, dar și în mediul de afaceri. Acest manual este destinat tuturor celor care doresc să învețe statistica, fiind un material introductiv de studiu, care prezintă un spectru larg de exemple, prezentări grafice și analiză a datelor, dezvoltate cu ajutorul .<br>
+<p>Software-ul a devenit în prezent unul dintre cele mai utilizate instrumente de analiză statistică, fiind utilizat în statisticile oficiale, în mediile universitare și de cercetare academică, dar și în mediul de afaceri. Acest manual este destinat tuturor celor care doresc să învețe statistica, fiind un material introductiv de studiu, care prezintă un spectru larg de exemple, prezentări grafice și analiză a datelor, dezvoltate cu ajutorul .<br>
 Aplicațiile din această carte utilizează , ceea ce înseamnă că pentru reproducerea acestora va fi nevoie de instalarea pe calculatorul pe care lucrați.<br>
 este un sistem pentru analize statistice și reprezentare grafică creat de către Ross Ihaka și Robert Gentleman, profesori de statistică la Universitatea Auckland din Noua Zeelandă.<br>
 este considerat un dialect al limbajului creat de AT&amp;T Bell Laboratories. este disponibil sub forma software-ului S-PLUS, comercializat de compania Insightful. Există diferențe importante între cele două limbaje, și : acestea sunt documentate de către Ihaka &amp; Gentleman (1996) sau se regăsesc în R-FAQ.<br>
 Astfel, numele limbajului R provine de la inițiala prenumelui creatorilor, dar este totodată și un omagiu adus limbajului .<br>
 În primul rând, este open-source, fiind distribuit în mod gratuit sub licență ; dezvoltarea și distribuirea sunt în grija câtorva profesori și statisticieni, afiliați companiilor și universităților, cunoscuți sub denumirea generică de .<br>
-Conform filosofiei , software-ul open-source este caracterizat de libertatea acordată utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate utilizatorilor<span class="citation" data-cites="dusa2015">(<a href="references.html#ref-dusa2015" role="doc-biblioref"><strong>dusa2015?</strong></a>)</span>:
+Conform filosofiei , software-ul open-source este caracterizat de libertatea acordată utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate utilizatorilor<span class="citation" data-cites="dusa2015">(<a href="#ref-dusa2015" role="doc-biblioref"><strong>dusa2015?</strong></a>)</span>:</p>
 <p>Faptul că este gratuit atrage automat avantajul competitiv în fața altor software-uri de analiză statistică, precum Stata, SAS și SPSS. Astfel, costurile alocate licenței de software dispar. este denumit de către Norman Nie, unul dintre fondatorii SPSS și CEO al Revolution Analytics, “cel mai puternic și flexibil limbaj de programare statistică din lume” (în engleză ). Dovadă a succesului pe care îl are în știința datelor, s-au dezvoltat medii de integrare a acestuia în SAS și chiar SPSS. Este vorba despre modulul SAS/IML, care integrează limbajul în SAS, și despre , un serviciu de translatare a codului SPSS direct în dezvoltat de compania . are susținerea comunității științifice, dar și a multor companii internaționale. Dintre acestea, menționăm: Google, Facebook, Mozilla, Twitter, The New York Times, The Economist, NewScientist, Lloyd’s, Bing, Johnson&amp;Johnson, Pfizer, Shell, Bank of America, Ford. este susținut și de mediul academic. Marile universități din lume sprijină , la fel cum sprijină și alte inițiative sau software-uri open-source, precum sistemul de operare Linux sau sistemul de preparare a documentelor .</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-xie2015" class="csl-entry" role="listitem">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
+</div>
+</div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

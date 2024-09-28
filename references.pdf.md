@@ -2,7 +2,11 @@
 
 Bibliografie
 
-```{r echo=FALSE}
-# ::: {#refs}
-# :::
-```
+
+
+
+
+
+::: {.cell}
+
+:::

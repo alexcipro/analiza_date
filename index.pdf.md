@@ -18,14 +18,3 @@ Activitatea de cercetare a fost pusă în valoare prin publicarea studiilor în 
 [ResearcherID: V-2168-2017](http://www.researcherid.com/rid/V-2168-2017)  
 https://orcid.org/0000-0001-8215-6671  
 
-
-
-
-
-
-::: {.cell}
-
-```{.r .cell-code}
-library(DiagrammeR)
-```
-:::

@@ -1,0 +1,33 @@
+# Introducere în analiza statistică {#cap2}
+
+## Concepte de bază privind analiza statistică
+
+text
+
+## Mărimile relative
+
+text
+
+## Sistematizarea datelor
+
+text
+
+## Indicatorii de nivel
+
+•	medie, mediană, mod, quantile
+
+## Indicatorii variației
+
+•	abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare
+
+## Vizualizarea datelor
+
+text
+
+### Introducerea statisticii descriptive și inferențiale.
+
+text
+
+### Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard
+
+text

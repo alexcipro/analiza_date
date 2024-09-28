@@ -43,28 +43,14 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
-\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}{
-    \@ifstar
-      \xxxParagraphStar
-      \xxxParagraphNoStar
-  }
-  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
-  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}{
-    \@ifstar
-      \xxxSubParagraphStar
-      \xxxSubParagraphNoStar
-  }
-  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
-  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-\makeatother
 
 
 \providecommand{\tightlist}{%
@@ -91,38 +77,28 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-% definitions for citeproc citations
-\NewDocumentCommand\citeproctext{}{}
-\NewDocumentCommand\citeproc{mm}{%
-  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
-\makeatletter
- % allow citations to break across lines
- \let\@cite@ofmt\@firstofone
- % avoid brackets around text for \cite:
- \def\@biblabel#1{}
- \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
-\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
- {\begin{list}{}{%
-  \setlength{\itemindent}{0pt}
-  \setlength{\leftmargin}{0pt}
-  \setlength{\parsep}{0pt}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
   \ifodd #1
-   \setlength{\leftmargin}{\cslhangindent}
-   \setlength{\itemindent}{-1\cslhangindent}
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
   \fi
   % set entry spacing
-  \setlength{\itemsep}{#2\baselineskip}}}
- {\end{list}}
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{booktabs}
@@ -144,6 +120,8 @@
 \renewcommand\bibname{Bibliografie}
 \newcommand*\rot{\rotatebox{90}}
 \usepackage{tocbibind}
+\makeatletter
+\makeatother
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -183,17 +161,23 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
-\makeatother
-\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage{bookmark}
-
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -201,7 +185,6 @@
   pdfauthor={Ciprian Alexandru-Caragea},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
-
 
 \title{Analiza datelor economico-sociale}
 \usepackage{etoolbox}
@@ -217,6 +200,7 @@
 \begin{document}
 \frontmatter
 \maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Cuprins}
 {
@@ -225,11 +209,11 @@
 }
 \listoffigures
 \listoftables
-
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{Despre autor}\label{despre-autor}
+\hypertarget{despre-autor}{%
+\chapter*{Despre autor}\label{despre-autor}}
 \addcontentsline{toc}{chapter}{Despre autor}
 
 \markboth{Despre autor}{Despre autor}
@@ -273,7 +257,8 @@ https://orcid.org/0000-0001-8215-6671
 
 \bookmarksetup{startatroot}
 
-\chapter*{Introducere}\label{introducere}
+\hypertarget{introducere}{%
+\chapter*{Introducere}\label{introducere}}
 \addcontentsline{toc}{chapter}{Introducere}
 
 \markboth{Introducere}{Introducere}
@@ -331,15 +316,17 @@ Septembrie, 2018
 
 \newpage
 
-\section*{Quarto}\label{quarto}
+\hypertarget{quarto}{%
+\section*{Quarto}\label{quarto}}
 \addcontentsline{toc}{section}{Quarto}
 
 \markright{Quarto}
 
 Această carte a fost editată cu ajutorul pachetului R \textbf{bookdown}
-(\citeproc{ref-xie2015}{Xie 2015}).\\
+(\protect\hyperlink{ref-xie2015}{Xie 2015}).\\
 Cartea are la bază manualul \emph{Statistică - concepte și metode de
-analiză a datelor}(\citeproc{ref-caragea2015}{\textbf{caragea2015?}}).
+analiză a
+datelor}(\protect\hyperlink{ref-caragea2015}{\textbf{caragea2015?}}).
 
 Pachetul R \textbf{bookdown} este integrat R Markdown
 (http://rmarkdown.rstudio.com). Documentele elaborate pe baza acestui
@@ -351,8 +338,9 @@ https://bookdown.org.
 
 \includegraphics[width=0.2\textwidth]{images/logo.png}
 
+\hypertarget{informaux21bii-despre-software}{%
 \section*{Informații despre
-software}\label{informaux21bii-despre-software}
+software}\label{informaux21bii-despre-software}}
 \addcontentsline{toc}{section}{Informații despre software}
 
 \markright{Informații despre software}
@@ -393,7 +381,7 @@ Conform filosofiei
 software-ul open-source este caracterizat de libertatea acordată
 utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și
 îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate
-utilizatorilor(\citeproc{ref-dusa2015}{\textbf{dusa2015?}}):
+utilizatorilor(\protect\hyperlink{ref-dusa2015}{\textbf{dusa2015?}}):
 
 \begin{itemize}
 \item Libertatea de a utiliza programul, în orice scop (libertatea 0);
@@ -429,10 +417,12 @@ Linux sau sistemul de preparare a documentelor \LaTeX.
 
 \bookmarksetup{startatroot}
 
-\chapter{Introducere în analiza datelor}\label{cap1}
+\hypertarget{cap1}{%
+\chapter{Introducere în analiza datelor}\label{cap1}}
 
+\hypertarget{importanux21ba-datelor-uxeen-luare-deciziilor}{%
 \section{Importanța datelor în luare
-deciziilor}\label{importanux21ba-datelor-uxeen-luare-deciziilor}
+deciziilor}\label{importanux21ba-datelor-uxeen-luare-deciziilor}}
 
 \textbf{Definirea conceptului de analiză a datelor}
 
@@ -457,7 +447,7 @@ fiecărei funcții de management, conform teoriei clasice a
 managementului: planificare, organizare, conducere, coordonare și
 control.
 
-\begin{figure}[H]
+\begin{figure}
 
 {\centering \includegraphics{images/functii_management.png}
 
@@ -465,7 +455,7 @@ control.
 
 \caption{Functiile Managementului}
 
-\end{figure}%
+\end{figure}
 
 Datele joacă un rol esențial în susținerea tuturor funcțiilor
 managementului, contribuind la luarea deciziilor mai bine fundamentate
@@ -730,8 +720,9 @@ a situațiilor curente, dar permite și previzionarea evoluțiilor
 viitoare, oferind decidenților informații esențiale pentru a naviga
 provocările economice și financiare.
 
+\hypertarget{identificarea-seturilor-de-date-relevante}{%
 \section{Identificarea seturilor de date
-relevante}\label{identificarea-seturilor-de-date-relevante}
+relevante}\label{identificarea-seturilor-de-date-relevante}}
 
 Identificarea seturilor de date relevante este un pas esențial în
 procesul de analiză a datelor, deoarece calitatea și relevanța
@@ -911,8 +902,9 @@ software-urile de analiză utilizate. În plus, trebuie să se respecte
 reglementările privind protecția datelor și să se folosească surse de
 încredere.
 
+\hypertarget{surse-de-date-publice-ux219i-private-inclusiv-open-data}{%
 \subsection{Surse de date publice și private, inclusiv Open
-Data}\label{surse-de-date-publice-ux219i-private-inclusiv-open-data}
+Data}\label{surse-de-date-publice-ux219i-private-inclusiv-open-data}}
 
 Datele utilizate în analiza economico-financiară pot proveni dintr-o
 varietate de surse, fie publice, fie private. În ultimii ani, o sursă
@@ -1191,8 +1183,9 @@ Exemple de surse Open Data:
   deținute de structurile administrative.
 \end{itemize}
 
+\hypertarget{evaluarea-calitux103ux21bii-ux219i-relevanux21bei-datelor}{%
 \subsection{Evaluarea calității și relevanței
-datelor}\label{evaluarea-calitux103ux21bii-ux219i-relevanux21bei-datelor}
+datelor}\label{evaluarea-calitux103ux21bii-ux219i-relevanux21bei-datelor}}
 
 Evaluarea calității și relevanței datelor este un pas critic în procesul
 de analiză a datelor economico-financiare. Datele de calitate scăzută
@@ -1439,254 +1432,307 @@ oferă un fundament solid pentru analize precise și informații valoroase.
 Acest proces de evaluare nu trebuie să fie neglijat, indiferent dacă
 datele provin din surse publice, private sau din Open Data.
 
+\hypertarget{utilizarea-platformelor-de-date}{%
 \subsection{Utilizarea platformelor de
-date}\label{utilizarea-platformelor-de-date}
+date}\label{utilizarea-platformelor-de-date}}
 
 • Modalități de acces, descărcare și integrare a datelor • Prezentarea
 unor platforme comune: Eurostat, INS, UN data, OECD Data
 
+\hypertarget{concepte-de-bazux103-legate-de-formatarea-datelor}{%
 \section{Concepte de bază legate de formatarea
-datelor}\label{concepte-de-bazux103-legate-de-formatarea-datelor}
+datelor}\label{concepte-de-bazux103-legate-de-formatarea-datelor}}
 
 (formatul și tipurile de date)
 
+\hypertarget{tipuri-de-surse-de-date-primare-ux219i-secundare}{%
 \subsection{Tipuri de surse de date (primare și
-secundare)}\label{tipuri-de-surse-de-date-primare-ux219i-secundare}
+secundare)}\label{tipuri-de-surse-de-date-primare-ux219i-secundare}}
 
 text
 
+\hypertarget{tipuri-de-fiux219iere-csv-xml-json-ux219i-utilizarea-lor}{%
 \subsection{Tipuri de fișiere (CSV, XML, JSON) și utilizarea
-lor}\label{tipuri-de-fiux219iere-csv-xml-json-ux219i-utilizarea-lor}
+lor}\label{tipuri-de-fiux219iere-csv-xml-json-ux219i-utilizarea-lor}}
 
 text
 
+\hypertarget{importanux21ba-ux219i-utilizarea-metadatelor}{%
 \subsection{Importanța și utilizarea
-metadatelor}\label{importanux21ba-ux219i-utilizarea-metadatelor}
+metadatelor}\label{importanux21ba-ux219i-utilizarea-metadatelor}}
 
 text
 
+\hypertarget{instrumente-ux219i-software-pentru-analiza-datelor}{%
 \section{Instrumente și Software pentru Analiza
-Datelor}\label{instrumente-ux219i-software-pentru-analiza-datelor}
+Datelor}\label{instrumente-ux219i-software-pentru-analiza-datelor}}
 
+\hypertarget{utilizarea-excel-pentru-analize-financiare}{%
 \subsection{Utilizarea Excel pentru analize
-financiare}\label{utilizarea-excel-pentru-analize-financiare}
+financiare}\label{utilizarea-excel-pentru-analize-financiare}}
 
 text
 
+\hypertarget{utilizarea-power-bi-pentru-analize-financiare}{%
 \subsection{Utilizarea Power BI pentru analize
-financiare}\label{utilizarea-power-bi-pentru-analize-financiare}
+financiare}\label{utilizarea-power-bi-pentru-analize-financiare}}
 
 text
 
+\hypertarget{introducere-uxeen-r-ux219i-python-pentru-analize-statistice}{%
 \subsection{Introducere în R și Python pentru analize
-statistice}\label{introducere-uxeen-r-ux219i-python-pentru-analize-statistice}
+statistice}\label{introducere-uxeen-r-ux219i-python-pentru-analize-statistice}}
 
 text
 
 \bookmarksetup{startatroot}
 
-\chapter{Introducere în analiza statistică}\label{cap2}
+\hypertarget{cap2}{%
+\chapter{Introducere în analiza statistică}\label{cap2}}
 
+\hypertarget{concepte-de-bazux103-privind-analiza-statisticux103}{%
 \section{Concepte de bază privind analiza
-statistică}\label{concepte-de-bazux103-privind-analiza-statisticux103}
+statistică}\label{concepte-de-bazux103-privind-analiza-statisticux103}}
 
 text
 
-\section{Mărimile relative}\label{mux103rimile-relative}
+\hypertarget{mux103rimile-relative}{%
+\section{Mărimile relative}\label{mux103rimile-relative}}
 
 text
 
-\section{Sistematizarea datelor}\label{sistematizarea-datelor}
+\hypertarget{sistematizarea-datelor}{%
+\section{Sistematizarea datelor}\label{sistematizarea-datelor}}
 
 text
 
-\section{Indicatorii de nivel}\label{indicatorii-de-nivel}
+\hypertarget{indicatorii-de-nivel}{%
+\section{Indicatorii de nivel}\label{indicatorii-de-nivel}}
 
 • medie, mediană, mod, quantile
 
-\section{Indicatorii variației}\label{indicatorii-variaux21biei}
+\hypertarget{indicatorii-variaux21biei}{%
+\section{Indicatorii variației}\label{indicatorii-variaux21biei}}
 
 • abateri, dispersie, abatere standard, repartiție, asimetrie,
 concentrare
 
-\section{Vizualizarea datelor}\label{vizualizarea-datelor}
+\hypertarget{vizualizarea-datelor}{%
+\section{Vizualizarea datelor}\label{vizualizarea-datelor}}
 
 text
 
+\hypertarget{introducerea-statisticii-descriptive-ux219i-inferenux21biale.}{%
 \subsection{Introducerea statisticii descriptive și
-inferențiale.}\label{introducerea-statisticii-descriptive-ux219i-inferenux21biale.}
+inferențiale.}\label{introducerea-statisticii-descriptive-ux219i-inferenux21biale.}}
 
 text
 
+\hypertarget{noux21biuni-fundamentale-medie-medianux103-mod-varianux21bux103-deviaux21bie-standard}{%
 \subsection{Noțiuni fundamentale: medie, mediană, mod, varianță,
 deviație
-standard}\label{noux21biuni-fundamentale-medie-medianux103-mod-varianux21bux103-deviaux21bie-standard}
+standard}\label{noux21biuni-fundamentale-medie-medianux103-mod-varianux21bux103-deviaux21bie-standard}}
 
 text
 
 \bookmarksetup{startatroot}
 
-\chapter{Analiza datelor economico-financiare}\label{cap3}
+\hypertarget{cap3}{%
+\chapter{Analiza datelor economico-financiare}\label{cap3}}
 
+\hypertarget{indicatori-economici-ux219i-financiari}{%
 \section{Indicatori economici și
-financiari}\label{indicatori-economici-ux219i-financiari}
+financiari}\label{indicatori-economici-ux219i-financiari}}
 
 text
 
+\hypertarget{principii-de-bazux103-uxeen-economie-ux219i-finanux21be-publice}{%
 \section{Principii de bază în economie și finanțe
-publice}\label{principii-de-bazux103-uxeen-economie-ux219i-finanux21be-publice}
+publice}\label{principii-de-bazux103-uxeen-economie-ux219i-finanux21be-publice}}
 
 text
 
+\hypertarget{analiza-indicatorilor-financiari-ai-instituux21biilor-publice}{%
 \section{Analiza indicatorilor financiari ai instituțiilor
-publice}\label{analiza-indicatorilor-financiari-ai-instituux21biilor-publice}
+publice}\label{analiza-indicatorilor-financiari-ai-instituux21biilor-publice}}
 
 text
 
 \bookmarksetup{startatroot}
 
-\chapter{Analiza bugetară}\label{cap4}
+\hypertarget{cap4}{%
+\chapter{Analiza bugetară}\label{cap4}}
 
-\section{Structura bugetului public}\label{structura-bugetului-public}
+\hypertarget{structura-bugetului-public}{%
+\section{Structura bugetului public}\label{structura-bugetului-public}}
 
 text
 
+\hypertarget{metode-de-evaluare-a-performanux21bei-bugetare}{%
 \section{Metode de evaluare a performanței
-bugetare}\label{metode-de-evaluare-a-performanux21bei-bugetare}
+bugetare}\label{metode-de-evaluare-a-performanux21bei-bugetare}}
 
 text
 
+\hypertarget{analiza-deviaux21biilor-ux219i-optimizarea-bugetarux103}{%
 \section{Analiza deviațiilor și optimizarea
-bugetară}\label{analiza-deviaux21biilor-ux219i-optimizarea-bugetarux103}
+bugetară}\label{analiza-deviaux21biilor-ux219i-optimizarea-bugetarux103}}
 
 text
 
 \bookmarksetup{startatroot}
 
-\chapter{Etapele analizei datelor}\label{cap5}
+\hypertarget{cap5}{%
+\chapter{Etapele analizei datelor}\label{cap5}}
 
 • cu exemple practice în Excel, Power BI, R, Python
 
+\hypertarget{definirea-obiectivelor-analizei}{%
 \section{Definirea obiectivelor
-analizei}\label{definirea-obiectivelor-analizei}
+analizei}\label{definirea-obiectivelor-analizei}}
 
 text
 
-\section{Colectarea datelor}\label{colectarea-datelor}
+\hypertarget{colectarea-datelor}{%
+\section{Colectarea datelor}\label{colectarea-datelor}}
 
 text
 
-\section{Importarea datelor}\label{importarea-datelor}
+\hypertarget{importarea-datelor}{%
+\section{Importarea datelor}\label{importarea-datelor}}
 
 text
 
-\section{Stocarea datelor}\label{stocarea-datelor}
+\hypertarget{stocarea-datelor}{%
+\section{Stocarea datelor}\label{stocarea-datelor}}
 
 text
 
-\section{Curățarea datelor}\label{curux103ux21barea-datelor}
+\hypertarget{curux103ux21barea-datelor}{%
+\section{Curățarea datelor}\label{curux103ux21barea-datelor}}
 
 • Tratarea duplicatelor, gestionarea valorilor lipsă
 
-\section{Agregarea datelor}\label{agregarea-datelor}
+\hypertarget{agregarea-datelor}{%
+\section{Agregarea datelor}\label{agregarea-datelor}}
 
 • Filtrarea/selectarea și agregarea datelor
 
+\hypertarget{analiza-descriptivux103-a-seturilor-de-date}{%
 \section{Analiza descriptivă a seturilor de
-date}\label{analiza-descriptivux103-a-seturilor-de-date}
+date}\label{analiza-descriptivux103-a-seturilor-de-date}}
 
 • Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor
 și identificarea valorile anormale (outliers)
 
-\section{Interpretarea rezultatelor}\label{interpretarea-rezultatelor}
+\hypertarget{interpretarea-rezultatelor}{%
+\section{Interpretarea rezultatelor}\label{interpretarea-rezultatelor}}
 
 text
 
-\section{Vizualizarea rezultatelor}\label{vizualizarea-rezultatelor}
+\hypertarget{vizualizarea-rezultatelor}{%
+\section{Vizualizarea rezultatelor}\label{vizualizarea-rezultatelor}}
 
 text
 
+\hypertarget{diseminarea-rezultatelor-analizei}{%
 \section{Diseminarea rezultatelor
-analizei}\label{diseminarea-rezultatelor-analizei}
+analizei}\label{diseminarea-rezultatelor-analizei}}
 
 text
 
 \bookmarksetup{startatroot}
 
+\hypertarget{cap6}{%
 \chapter{Crearea și partajarea rapoartelor și tablourilor de
-bord}\label{cap6}
+bord}\label{cap6}}
 
+\hypertarget{crearea-rapoartelor-ux219i-tablourilor-de-bord}{%
 \section{Crearea rapoartelor și tablourilor de
-bord}\label{crearea-rapoartelor-ux219i-tablourilor-de-bord}
+bord}\label{crearea-rapoartelor-ux219i-tablourilor-de-bord}}
 
+\hypertarget{dezvoltarea-de-rapoarte-interactive-ux219i-tablouri-de-bord-uxeen-power-bi.}{%
 \subsection{Dezvoltarea de rapoarte interactive și tablouri de bord în
 Power
-BI.}\label{dezvoltarea-de-rapoarte-interactive-ux219i-tablouri-de-bord-uxeen-power-bi.}
+BI.}\label{dezvoltarea-de-rapoarte-interactive-ux219i-tablouri-de-bord-uxeen-power-bi.}}
 
 text
 
+\hypertarget{utilizarea-storytelling-ului-uxeen-prezentarea-datelor.}{%
 \subsection{Utilizarea storytelling-ului în prezentarea
-datelor.}\label{utilizarea-storytelling-ului-uxeen-prezentarea-datelor.}
+datelor.}\label{utilizarea-storytelling-ului-uxeen-prezentarea-datelor.}}
 
 text
 
+\hypertarget{partajarea-ux219i-colaborarea-pe-rapoarte}{%
 \section{Partajarea și colaborarea pe
-rapoarte}\label{partajarea-ux219i-colaborarea-pe-rapoarte}
+rapoarte}\label{partajarea-ux219i-colaborarea-pe-rapoarte}}
 
+\hypertarget{tehnici-de-partajare-a-rapoartelor-ux219i-tablourilor-de-bord-uxeen-organizaux21bie}{%
 \subsection{Tehnici de partajare a rapoartelor și tablourilor de bord în
-organizație}\label{tehnici-de-partajare-a-rapoartelor-ux219i-tablourilor-de-bord-uxeen-organizaux21bie}
+organizație}\label{tehnici-de-partajare-a-rapoartelor-ux219i-tablourilor-de-bord-uxeen-organizaux21bie}}
 
 text
 
+\hypertarget{utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint}{%
 \subsection{Utilizarea platformelor de colaborare (e.g., Google Drive,
-SharePoint)}\label{utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint}
+SharePoint)}\label{utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint}}
 
 text
 
 \bookmarksetup{startatroot}
 
-\chapter{Calitatea datelor}\label{cap7}
+\hypertarget{cap7}{%
+\chapter{Calitatea datelor}\label{cap7}}
 
+\hypertarget{standarde-ghiduri-ux219i-monitorizare}{%
 \section{Standarde, ghiduri și
-monitorizare}\label{standarde-ghiduri-ux219i-monitorizare}
+monitorizare}\label{standarde-ghiduri-ux219i-monitorizare}}
 
 text
 
-\section{Metodologii}\label{metodologii}
+\hypertarget{metodologii}{%
+\section{Metodologii}\label{metodologii}}
 
 text
 
-\section{Metadate}\label{metadate}
+\hypertarget{metadate}{%
+\section{Metadate}\label{metadate}}
 
 text
 
+\hypertarget{clasificux103ri-ux219i-nomenclatoare}{%
 \section{Clasificări și
-nomenclatoare}\label{clasificux103ri-ux219i-nomenclatoare}
+nomenclatoare}\label{clasificux103ri-ux219i-nomenclatoare}}
 
-\subsection{ceva}\label{ceva}
-
-text
-
-\section{Rapoarte de calitate}\label{rapoarte-de-calitate}
+\hypertarget{ceva}{%
+\subsection{ceva}\label{ceva}}
 
 text
 
-\section{Etica și transparența}\label{etica-ux219i-transparenux21ba}
+\hypertarget{rapoarte-de-calitate}{%
+\section{Rapoarte de calitate}\label{rapoarte-de-calitate}}
+
+text
+
+\hypertarget{etica-ux219i-transparenux21ba}{%
+\section{Etica și transparența}\label{etica-ux219i-transparenux21ba}}
 
 text
 
 \bookmarksetup{startatroot}
 
-\chapter*{Bibliografie}\label{bibliografie}
+\hypertarget{bibliografie}{%
+\chapter*{Bibliografie}\label{bibliografie}}
 \addcontentsline{toc}{chapter}{Bibliografie}
 
 \markboth{Bibliografie}{Bibliografie}
 
 Bibliografie
 
-\phantomsection\label{refs}
+\hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-xie2015}
+\leavevmode\vadjust pre{\hypertarget{ref-xie2015}{}}%
 Xie, Yihui. 2015. \emph{Dynamic Documents with {R} and Knitr}. 2nd ed.
 Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.name/knitr/}.
 
@@ -1694,6 +1740,5 @@ Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.name/knitr/}.
 
 
 \backmatter
-
 
 \end{document}

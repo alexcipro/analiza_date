@@ -1,13 +1,13 @@
-# Analiza bugetară {#cap4}
+# Analiza datelor economico-financiare {#cap4}
 
-## Structura bugetului public
-
-text
-
-## Metode de evaluare a performanței bugetare
+## Indicatori economici și financiari
 
 text
 
-## Analiza deviațiilor și optimizarea bugetară
+## Principii de bază în economie și finanțe publice
+
+text
+
+## Analiza indicatorilor financiari ai instituțiilor publice
 
 text

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ciprian Alexandru-Caragea">
-<meta name="dcterms.date" content="2024-09-29">
 
-<title>Analiza datelor economico-sociale</title>
+<title>Analiza datelor economico-sociale - 8&nbsp; Crearea și partajarea rapoartelor și tablourilor de bord</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./09-cap.html" rel="next">
+<link href="./07-cap.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Despre autor</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08-cap.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Crearea și partajarea rapoartelor și tablourilor de bord</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -111,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Despre autor</span></a>
   </div>
 </li>
@@ -165,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-cap.html" class="sidebar-item-text sidebar-link">
+  <a href="./08-cap.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Crearea și partajarea rapoartelor și tablourilor de bord</span></span></a>
   </div>
 </li>
@@ -191,7 +190,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#despre-autor" id="toc-despre-autor" class="nav-link active" data-scroll-target="#despre-autor">Despre autor</a></li>
+  <li><a href="#crearea-rapoartelor-și-tablourilor-de-bord" id="toc-crearea-rapoartelor-și-tablourilor-de-bord" class="nav-link active" data-scroll-target="#crearea-rapoartelor-și-tablourilor-de-bord"><span class="header-section-number">8.1</span> Crearea rapoartelor și tablourilor de bord</a>
+  <ul class="collapse">
+  <li><a href="#dezvoltarea-de-rapoarte-interactive-și-tablouri-de-bord-în-power-bi." id="toc-dezvoltarea-de-rapoarte-interactive-și-tablouri-de-bord-în-power-bi." class="nav-link" data-scroll-target="#dezvoltarea-de-rapoarte-interactive-și-tablouri-de-bord-în-power-bi."><span class="header-section-number">8.1.1</span> Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.</a></li>
+  <li><a href="#utilizarea-storytelling-ului-în-prezentarea-datelor." id="toc-utilizarea-storytelling-ului-în-prezentarea-datelor." class="nav-link" data-scroll-target="#utilizarea-storytelling-ului-în-prezentarea-datelor."><span class="header-section-number">8.1.2</span> Utilizarea storytelling-ului în prezentarea datelor.</a></li>
+  </ul></li>
+  <li><a href="#partajarea-și-colaborarea-pe-rapoarte" id="toc-partajarea-și-colaborarea-pe-rapoarte" class="nav-link" data-scroll-target="#partajarea-și-colaborarea-pe-rapoarte"><span class="header-section-number">8.2</span> Partajarea și colaborarea pe rapoarte</a>
+  <ul class="collapse">
+  <li><a href="#tehnici-de-partajare-a-rapoartelor-și-tablourilor-de-bord-în-organizație" id="toc-tehnici-de-partajare-a-rapoartelor-și-tablourilor-de-bord-în-organizație" class="nav-link" data-scroll-target="#tehnici-de-partajare-a-rapoartelor-și-tablourilor-de-bord-în-organizație"><span class="header-section-number">8.2.1</span> Tehnici de partajare a rapoartelor și tablourilor de bord în organizație</a></li>
+  <li><a href="#utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint" id="toc-utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint" class="nav-link" data-scroll-target="#utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint"><span class="header-section-number">8.2.2</span> Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/alexcipro/analiza_date/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -200,27 +208,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analiza datelor economico-sociale</h1>
-<p class="subtitle lead">cu aplicații și exemple în R, Python, Excel și PowerBI</p>
+<h1 class="title"><span id="cap8" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Crearea și partajarea rapoartelor și tablourilor de bord</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ciprian Alexandru-Caragea </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 29, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -228,20 +223,29 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="crearea-rapoartelor-și-tablourilor-de-bord" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="crearea-rapoartelor-și-tablourilor-de-bord"><span class="header-section-number">8.1</span> Crearea rapoartelor și tablourilor de bord</h2>
+<section id="dezvoltarea-de-rapoarte-interactive-și-tablouri-de-bord-în-power-bi." class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="dezvoltarea-de-rapoarte-interactive-și-tablouri-de-bord-în-power-bi."><span class="header-section-number">8.1.1</span> Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.</h3>
+<p>text</p>
+</section>
+<section id="utilizarea-storytelling-ului-în-prezentarea-datelor." class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="utilizarea-storytelling-ului-în-prezentarea-datelor."><span class="header-section-number">8.1.2</span> Utilizarea storytelling-ului în prezentarea datelor.</h3>
+<p>text</p>
+</section>
+</section>
+<section id="partajarea-și-colaborarea-pe-rapoarte" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="partajarea-și-colaborarea-pe-rapoarte"><span class="header-section-number">8.2</span> Partajarea și colaborarea pe rapoarte</h2>
+<section id="tehnici-de-partajare-a-rapoartelor-și-tablourilor-de-bord-în-organizație" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="tehnici-de-partajare-a-rapoartelor-și-tablourilor-de-bord-în-organizație"><span class="header-section-number">8.2.1</span> Tehnici de partajare a rapoartelor și tablourilor de bord în organizație</h3>
+<p>text</p>
+</section>
+<section id="utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint"><span class="header-section-number">8.2.2</span> Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)</h3>
+<p>text</p>
 
-<section id="despre-autor" class="level1 unnumbered">
-<h1 class="unnumbered">Despre autor</h1><p><img src="cover.png" title="Analiza datelor economico-sociale" class="quarto-cover-image img-fluid"></p>
-<p><strong>Ciprian Alexandru-Caragea</strong> este conferenţiar universitar la Facultatea de Management Financiar, Universitatea Ecologică din București și Analist de Date la diverse instituții internaționale.<br>
-</p>
-<p>Titlul de doctor în Economie l-a obţinut sub egida Academiei Române, Institutul de Economie Naţională.<br>
-A participat la un program de studii postdoctorale în care a implementat utilizarea software-ului R ca instrument de analiză a evoluției indicilor bursieri.<br>
-Activitatea sa didactică se concentrează, în principal, în domeniul burselor de valori, prin cursuri și seminarii la programele de licență și masterat (Piețe de capital, Managementul Portofoliului, Piețe internaționale de capital).<br>
-A participat la diverse proiecte de cercetare, workshop-uri, conferințe naționale și internaționale. Activitatea de cercetare a fost pusă în valoare prin publicarea studiilor în reviste din țară și din Europa, precum și în baze de date internaționale recunoscute (RePEC, DOAJ, EBSCO).<br>
-În prezent, în cadrul Institului Național de Statistică, participă ca expert în proiecte BigData și utilizează software-ul de analiză statistică R pentru Data cleaning, Data Matching, Web Scraping, analize de date și vizualizare, Data mining, Data integration, data processing, data validation, dar și utilizarea datelor din sursele administrative pentru realizarea de statistici oficiale.</p>
-<p><a href="http://www.researcherid.com/rid/V-2168-2017">ResearcherID: V-2168-2017</a><br>
-https://orcid.org/0000-0001-8215-6671</p>
 
-
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -480,10 +484,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./07-cap.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Etapele analizei datelor</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text">Introducere</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./09-cap.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Calitatea datelor</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

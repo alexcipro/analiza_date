@@ -345,16 +345,6 @@ text
 
 text
 
-## Instrumente și Software pentru Analiza Datelor
-
-### Utilizarea Excel pentru analize financiare
-
-text
-
-### Utilizarea Power BI pentru analize financiare
-
-text
-
-### Introducere în R și Python pentru analize statistice
+## Instrumente avansate pentru prelucrarea și analiza datelor
 
 text

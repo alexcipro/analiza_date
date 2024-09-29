@@ -1,14 +1,33 @@
-# Analiza datelor economico-financiare {#cap3}
+# Introducere în analiza statistică {#cap3}
 
-## Indicatori economici și financiari
-
-text
-
-## Principii de bază în economie și finanțe publice
+## Concepte de bază privind analiza statistică
 
 text
 
-## Analiza indicatorilor financiari ai instituțiilor publice
+## Mărimile relative
 
 text
 
+## Sistematizarea datelor
+
+text
+
+## Indicatorii de nivel
+
+• medie, mediană, mod, quantile
+
+## Indicatorii variației
+
+• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare
+
+## Vizualizarea datelor
+
+text
+
+### Introducerea statisticii descriptive și inferențiale.
+
+text
+
+### Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard
+
+text

@@ -1,26 +1,43 @@
-# Calitatea datelor {#cap7}
+# Etapele analizei datelor {#cap7}
 
-## Standarde, ghiduri și monitorizare
+• cu exemple practice în Excel, Power BI, R, Python
 
-text
-
-## Metodologii
+## Definirea obiectivelor analizei
 
 text
 
-## Metadate
+## Colectarea datelor
 
 text
 
-## Clasificări și nomenclatoare
-
-### ceva
-text
-
-## Rapoarte de calitate
+## Importarea datelor
 
 text
 
-## Etica și transparența
+## Stocarea datelor
+
+text
+
+## Curățarea datelor
+
+• Tratarea duplicatelor, gestionarea valorilor lipsă
+
+## Agregarea datelor
+
+• Filtrarea/selectarea și agregarea datelor
+
+## Analiza descriptivă a seturilor de date
+
+• Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor și identificarea valorile anormale (outliers)
+
+## Interpretarea rezultatelor
+
+text
+
+## Vizualizarea rezultatelor
+
+text
+
+## Diseminarea rezultatelor analizei
 
 text

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ciprian Alexandru-Caragea">
-<meta name="dcterms.date" content="2024-09-29">
 
-<title>Analiza datelor economico-sociale</title>
+<title>Analiza datelor economico-sociale - 9&nbsp; Calitatea datelor</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./08-cap.html" rel="prev">
 <link href="./cover.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Despre autor</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09-cap.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Calitatea datelor</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -111,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Despre autor</span></a>
   </div>
 </li>
@@ -171,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./09-cap.html" class="sidebar-item-text sidebar-link">
+  <a href="./09-cap.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Calitatea datelor</span></span></a>
   </div>
 </li>
@@ -191,7 +190,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#despre-autor" id="toc-despre-autor" class="nav-link active" data-scroll-target="#despre-autor">Despre autor</a></li>
+  <li><a href="#standarde-ghiduri-și-monitorizare" id="toc-standarde-ghiduri-și-monitorizare" class="nav-link active" data-scroll-target="#standarde-ghiduri-și-monitorizare"><span class="header-section-number">9.1</span> Standarde, ghiduri și monitorizare</a></li>
+  <li><a href="#metodologii" id="toc-metodologii" class="nav-link" data-scroll-target="#metodologii"><span class="header-section-number">9.2</span> Metodologii</a></li>
+  <li><a href="#metadate" id="toc-metadate" class="nav-link" data-scroll-target="#metadate"><span class="header-section-number">9.3</span> Metadate</a></li>
+  <li><a href="#clasificări-și-nomenclatoare" id="toc-clasificări-și-nomenclatoare" class="nav-link" data-scroll-target="#clasificări-și-nomenclatoare"><span class="header-section-number">9.4</span> Clasificări și nomenclatoare</a>
+  <ul class="collapse">
+  <li><a href="#ceva" id="toc-ceva" class="nav-link" data-scroll-target="#ceva"><span class="header-section-number">9.4.1</span> ceva</a></li>
+  </ul></li>
+  <li><a href="#rapoarte-de-calitate" id="toc-rapoarte-de-calitate" class="nav-link" data-scroll-target="#rapoarte-de-calitate"><span class="header-section-number">9.5</span> Rapoarte de calitate</a></li>
+  <li><a href="#etica-și-transparența" id="toc-etica-și-transparența" class="nav-link" data-scroll-target="#etica-și-transparența"><span class="header-section-number">9.6</span> Etica și transparența</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/alexcipro/analiza_date/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -200,27 +207,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Analiza datelor economico-sociale</h1>
-<p class="subtitle lead">cu aplicații și exemple în R, Python, Excel și PowerBI</p>
+<h1 class="title"><span id="cap9" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Calitatea datelor</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Ciprian Alexandru-Caragea </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">September 29, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -228,18 +222,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-
-<section id="despre-autor" class="level1 unnumbered">
-<h1 class="unnumbered">Despre autor</h1><p><img src="cover.png" title="Analiza datelor economico-sociale" class="quarto-cover-image img-fluid"></p>
-<p><strong>Ciprian Alexandru-Caragea</strong> este conferenţiar universitar la Facultatea de Management Financiar, Universitatea Ecologică din București și Analist de Date la diverse instituții internaționale.<br>
-</p>
-<p>Titlul de doctor în Economie l-a obţinut sub egida Academiei Române, Institutul de Economie Naţională.<br>
-A participat la un program de studii postdoctorale în care a implementat utilizarea software-ului R ca instrument de analiză a evoluției indicilor bursieri.<br>
-Activitatea sa didactică se concentrează, în principal, în domeniul burselor de valori, prin cursuri și seminarii la programele de licență și masterat (Piețe de capital, Managementul Portofoliului, Piețe internaționale de capital).<br>
-A participat la diverse proiecte de cercetare, workshop-uri, conferințe naționale și internaționale. Activitatea de cercetare a fost pusă în valoare prin publicarea studiilor în reviste din țară și din Europa, precum și în baze de date internaționale recunoscute (RePEC, DOAJ, EBSCO).<br>
-În prezent, în cadrul Institului Național de Statistică, participă ca expert în proiecte BigData și utilizează software-ul de analiză statistică R pentru Data cleaning, Data Matching, Web Scraping, analize de date și vizualizare, Data mining, Data integration, data processing, data validation, dar și utilizarea datelor din sursele administrative pentru realizarea de statistici oficiale.</p>
-<p><a href="http://www.researcherid.com/rid/V-2168-2017">ResearcherID: V-2168-2017</a><br>
-https://orcid.org/0000-0001-8215-6671</p>
+<section id="standarde-ghiduri-și-monitorizare" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="standarde-ghiduri-și-monitorizare"><span class="header-section-number">9.1</span> Standarde, ghiduri și monitorizare</h2>
+<p>text</p>
+</section>
+<section id="metodologii" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="metodologii"><span class="header-section-number">9.2</span> Metodologii</h2>
+<p>text</p>
+</section>
+<section id="metadate" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="metadate"><span class="header-section-number">9.3</span> Metadate</h2>
+<p>text</p>
+</section>
+<section id="clasificări-și-nomenclatoare" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="clasificări-și-nomenclatoare"><span class="header-section-number">9.4</span> Clasificări și nomenclatoare</h2>
+<section id="ceva" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="ceva"><span class="header-section-number">9.4.1</span> ceva</h3>
+<p>text</p>
+</section>
+</section>
+<section id="rapoarte-de-calitate" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="rapoarte-de-calitate"><span class="header-section-number">9.5</span> Rapoarte de calitate</h2>
+<p>text</p>
+</section>
+<section id="etica-și-transparența" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="etica-și-transparența"><span class="header-section-number">9.6</span> Etica și transparența</h2>
+<p>text</p>
 
 
 </section>
@@ -480,10 +488,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./08-cap.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Crearea și partajarea rapoartelor și tablourilor de bord</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text">Introducere</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">Bibliografie</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

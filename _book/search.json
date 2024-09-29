@@ -42,221 +42,284 @@
     "text": "1.3 Concepte de bază legate de formatarea datelor\n(formatul și tipurile de date)\n\n1.3.1 Tipuri de surse de date (primare și secundare)\ntext\n\n\n1.3.2 Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor\ntext\n\n\n1.3.3 Importanța și utilizarea metadatelor\ntext"
   },
   {
-    "objectID": "01-cap.html#instrumente-și-software-pentru-analiza-datelor",
-    "href": "01-cap.html#instrumente-și-software-pentru-analiza-datelor",
+    "objectID": "01-cap.html#instrumente-avansate-pentru-prelucrarea-și-analiza-datelor",
+    "href": "01-cap.html#instrumente-avansate-pentru-prelucrarea-și-analiza-datelor",
     "title": "1  Introducere în analiza datelor",
-    "section": "1.4 Instrumente și Software pentru Analiza Datelor",
-    "text": "1.4 Instrumente și Software pentru Analiza Datelor\n\n1.4.1 Utilizarea Excel pentru analize financiare\ntext\n\n\n1.4.2 Utilizarea Power BI pentru analize financiare\ntext\n\n\n1.4.3 Introducere în R și Python pentru analize statistice\ntext"
+    "section": "1.4 Instrumente avansate pentru prelucrarea și analiza datelor",
+    "text": "1.4 Instrumente avansate pentru prelucrarea și analiza datelor\ntext"
   },
   {
-    "objectID": "02-cap.html#concepte-de-bază-privind-analiza-statistică",
-    "href": "02-cap.html#concepte-de-bază-privind-analiza-statistică",
-    "title": "2  Introducere în analiza statistică",
-    "section": "2.1 Concepte de bază privind analiza statistică",
-    "text": "2.1 Concepte de bază privind analiza statistică\ntext"
+    "objectID": "02-cap.html#utilizarea-r",
+    "href": "02-cap.html#utilizarea-r",
+    "title": "2  Instrumente și platformelor pentru analiza datelor",
+    "section": "2.1 Utilizarea R",
+    "text": "2.1 Utilizarea R\ntext"
   },
   {
-    "objectID": "02-cap.html#mărimile-relative",
-    "href": "02-cap.html#mărimile-relative",
-    "title": "2  Introducere în analiza statistică",
-    "section": "2.2 Mărimile relative",
-    "text": "2.2 Mărimile relative\ntext"
+    "objectID": "02-cap.html#utilizarea-python",
+    "href": "02-cap.html#utilizarea-python",
+    "title": "2  Instrumente și platformelor pentru analiza datelor",
+    "section": "2.2 Utilizarea Python",
+    "text": "2.2 Utilizarea Python\ntext"
   },
   {
-    "objectID": "02-cap.html#sistematizarea-datelor",
-    "href": "02-cap.html#sistematizarea-datelor",
-    "title": "2  Introducere în analiza statistică",
-    "section": "2.3 Sistematizarea datelor",
-    "text": "2.3 Sistematizarea datelor\ntext"
+    "objectID": "02-cap.html#utilizarea-excel",
+    "href": "02-cap.html#utilizarea-excel",
+    "title": "2  Instrumente și platformelor pentru analiza datelor",
+    "section": "2.3 Utilizarea Excel",
+    "text": "2.3 Utilizarea Excel\ntext"
   },
   {
-    "objectID": "02-cap.html#indicatorii-de-nivel",
-    "href": "02-cap.html#indicatorii-de-nivel",
-    "title": "2  Introducere în analiza statistică",
-    "section": "2.4 Indicatorii de nivel",
-    "text": "2.4 Indicatorii de nivel\n• medie, mediană, mod, quantile"
+    "objectID": "02-cap.html#utilizarea-power-bi",
+    "href": "02-cap.html#utilizarea-power-bi",
+    "title": "2  Instrumente și platformelor pentru analiza datelor",
+    "section": "2.4 Utilizarea Power BI",
+    "text": "2.4 Utilizarea Power BI\ntext"
   },
   {
-    "objectID": "02-cap.html#indicatorii-variației",
-    "href": "02-cap.html#indicatorii-variației",
-    "title": "2  Introducere în analiza statistică",
-    "section": "2.5 Indicatorii variației",
-    "text": "2.5 Indicatorii variației\n• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare"
+    "objectID": "03-cap.html#concepte-de-bază-privind-analiza-statistică",
+    "href": "03-cap.html#concepte-de-bază-privind-analiza-statistică",
+    "title": "3  Introducere în analiza statistică",
+    "section": "3.1 Concepte de bază privind analiza statistică",
+    "text": "3.1 Concepte de bază privind analiza statistică\ntext"
   },
   {
-    "objectID": "02-cap.html#vizualizarea-datelor",
-    "href": "02-cap.html#vizualizarea-datelor",
-    "title": "2  Introducere în analiza statistică",
-    "section": "2.6 Vizualizarea datelor",
-    "text": "2.6 Vizualizarea datelor\ntext\n\n2.6.1 Introducerea statisticii descriptive și inferențiale.\ntext\n\n\n2.6.2 Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard\ntext"
+    "objectID": "03-cap.html#mărimile-relative",
+    "href": "03-cap.html#mărimile-relative",
+    "title": "3  Introducere în analiza statistică",
+    "section": "3.2 Mărimile relative",
+    "text": "3.2 Mărimile relative\ntext"
   },
   {
-    "objectID": "03-cap.html#indicatori-economici-și-financiari",
-    "href": "03-cap.html#indicatori-economici-și-financiari",
-    "title": "3  Analiza datelor economico-financiare",
-    "section": "3.1 Indicatori economici și financiari",
-    "text": "3.1 Indicatori economici și financiari\ntext"
+    "objectID": "03-cap.html#sistematizarea-datelor",
+    "href": "03-cap.html#sistematizarea-datelor",
+    "title": "3  Introducere în analiza statistică",
+    "section": "3.3 Sistematizarea datelor",
+    "text": "3.3 Sistematizarea datelor\ntext"
   },
   {
-    "objectID": "03-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
-    "href": "03-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
-    "title": "3  Analiza datelor economico-financiare",
-    "section": "3.2 Principii de bază în economie și finanțe publice",
-    "text": "3.2 Principii de bază în economie și finanțe publice\ntext"
+    "objectID": "03-cap.html#indicatorii-de-nivel",
+    "href": "03-cap.html#indicatorii-de-nivel",
+    "title": "3  Introducere în analiza statistică",
+    "section": "3.4 Indicatorii de nivel",
+    "text": "3.4 Indicatorii de nivel\n• medie, mediană, mod, quantile"
   },
   {
-    "objectID": "03-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
-    "href": "03-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
-    "title": "3  Analiza datelor economico-financiare",
-    "section": "3.3 Analiza indicatorilor financiari ai instituțiilor publice",
-    "text": "3.3 Analiza indicatorilor financiari ai instituțiilor publice\ntext"
+    "objectID": "03-cap.html#indicatorii-variației",
+    "href": "03-cap.html#indicatorii-variației",
+    "title": "3  Introducere în analiza statistică",
+    "section": "3.5 Indicatorii variației",
+    "text": "3.5 Indicatorii variației\n• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare"
   },
   {
-    "objectID": "04-cap.html#structura-bugetului-public",
-    "href": "04-cap.html#structura-bugetului-public",
-    "title": "4  Analiza bugetară",
-    "section": "4.1 Structura bugetului public",
-    "text": "4.1 Structura bugetului public\ntext"
+    "objectID": "03-cap.html#vizualizarea-datelor",
+    "href": "03-cap.html#vizualizarea-datelor",
+    "title": "3  Introducere în analiza statistică",
+    "section": "3.6 Vizualizarea datelor",
+    "text": "3.6 Vizualizarea datelor\ntext\n\n3.6.1 Introducerea statisticii descriptive și inferențiale.\ntext\n\n\n3.6.2 Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard\ntext"
   },
   {
-    "objectID": "04-cap.html#metode-de-evaluare-a-performanței-bugetare",
-    "href": "04-cap.html#metode-de-evaluare-a-performanței-bugetare",
-    "title": "4  Analiza bugetară",
-    "section": "4.2 Metode de evaluare a performanței bugetare",
-    "text": "4.2 Metode de evaluare a performanței bugetare\ntext"
+    "objectID": "04-cap.html#indicatori-economici-și-financiari",
+    "href": "04-cap.html#indicatori-economici-și-financiari",
+    "title": "4  Analiza datelor economico-financiare",
+    "section": "4.1 Indicatori economici și financiari",
+    "text": "4.1 Indicatori economici și financiari\ntext"
   },
   {
-    "objectID": "04-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
-    "href": "04-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
-    "title": "4  Analiza bugetară",
-    "section": "4.3 Analiza deviațiilor și optimizarea bugetară",
-    "text": "4.3 Analiza deviațiilor și optimizarea bugetară\ntext"
+    "objectID": "04-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
+    "href": "04-cap.html#principii-de-bază-în-economie-și-finanțe-publice",
+    "title": "4  Analiza datelor economico-financiare",
+    "section": "4.2 Principii de bază în economie și finanțe publice",
+    "text": "4.2 Principii de bază în economie și finanțe publice\ntext"
   },
   {
-    "objectID": "05-cap.html#definirea-obiectivelor-analizei",
-    "href": "05-cap.html#definirea-obiectivelor-analizei",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.1 Definirea obiectivelor analizei",
-    "text": "5.1 Definirea obiectivelor analizei\ntext"
+    "objectID": "04-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
+    "href": "04-cap.html#analiza-indicatorilor-financiari-ai-instituțiilor-publice",
+    "title": "4  Analiza datelor economico-financiare",
+    "section": "4.3 Analiza indicatorilor financiari ai instituțiilor publice",
+    "text": "4.3 Analiza indicatorilor financiari ai instituțiilor publice\ntext"
   },
   {
-    "objectID": "05-cap.html#colectarea-datelor",
-    "href": "05-cap.html#colectarea-datelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.2 Colectarea datelor",
-    "text": "5.2 Colectarea datelor\ntext"
+    "objectID": "05-cap.html#structura-bugetului-public",
+    "href": "05-cap.html#structura-bugetului-public",
+    "title": "5  Analiza bugetară",
+    "section": "5.1 Structura bugetului public",
+    "text": "5.1 Structura bugetului public\ntext"
   },
   {
-    "objectID": "05-cap.html#importarea-datelor",
-    "href": "05-cap.html#importarea-datelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.3 Importarea datelor",
-    "text": "5.3 Importarea datelor\ntext"
+    "objectID": "05-cap.html#metode-de-evaluare-a-performanței-bugetare",
+    "href": "05-cap.html#metode-de-evaluare-a-performanței-bugetare",
+    "title": "5  Analiza bugetară",
+    "section": "5.2 Metode de evaluare a performanței bugetare",
+    "text": "5.2 Metode de evaluare a performanței bugetare\ntext"
   },
   {
-    "objectID": "05-cap.html#stocarea-datelor",
-    "href": "05-cap.html#stocarea-datelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.4 Stocarea datelor",
-    "text": "5.4 Stocarea datelor\ntext"
+    "objectID": "05-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
+    "href": "05-cap.html#analiza-deviațiilor-și-optimizarea-bugetară",
+    "title": "5  Analiza bugetară",
+    "section": "5.3 Analiza deviațiilor și optimizarea bugetară",
+    "text": "5.3 Analiza deviațiilor și optimizarea bugetară\ntext"
   },
   {
-    "objectID": "05-cap.html#curățarea-datelor",
-    "href": "05-cap.html#curățarea-datelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.5 Curățarea datelor",
-    "text": "5.5 Curățarea datelor\n• Tratarea duplicatelor, gestionarea valorilor lipsă"
+    "objectID": "06-cap.html#introducere-în-analiza-datelor-sociale",
+    "href": "06-cap.html#introducere-în-analiza-datelor-sociale",
+    "title": "6  Analiza datelor sociale",
+    "section": "6.1 Introducere în analiza datelor sociale",
+    "text": "6.1 Introducere în analiza datelor sociale\n\n6.1.1 Definirea conceptului de date sociale\ntext\n\n\n6.1.2 Importanța datelor sociale în deciziile economice și publice\ntext\n\n\n6.1.3 Rolul datelor sociale în cercetare și planificare strategică\ntext"
   },
   {
-    "objectID": "05-cap.html#agregarea-datelor",
-    "href": "05-cap.html#agregarea-datelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.6 Agregarea datelor",
-    "text": "5.6 Agregarea datelor\n• Filtrarea/selectarea și agregarea datelor"
+    "objectID": "06-cap.html#tipuri-de-date-sociale",
+    "href": "06-cap.html#tipuri-de-date-sociale",
+    "title": "6  Analiza datelor sociale",
+    "section": "6.2 Tipuri de date sociale",
+    "text": "6.2 Tipuri de date sociale\n\n6.2.1 Date demografice (vârstă, gen, educație)\ntext\n\n\n6.2.2 Date privind ocuparea forței de muncă și veniturile\ntext\n\n\n6.2.3 Date despre condițiile de trai (sănătate, locuințe)\ntext\n\n\n6.2.4 Date privind comportamentele sociale și culturale\ntext\n\n\n6.2.5 Metode de colectare (sondaje, recensăminte, date administrative)\ntext"
   },
   {
-    "objectID": "05-cap.html#analiza-descriptivă-a-seturilor-de-date",
-    "href": "05-cap.html#analiza-descriptivă-a-seturilor-de-date",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.7 Analiza descriptivă a seturilor de date",
-    "text": "5.7 Analiza descriptivă a seturilor de date\n• Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor și identificarea valorile anormale (outliers)"
+    "objectID": "06-cap.html#indicatori-sociali",
+    "href": "06-cap.html#indicatori-sociali",
+    "title": "6  Analiza datelor sociale",
+    "section": "6.3 Indicatori sociali",
+    "text": "6.3 Indicatori sociali\n\n6.3.1 Indicatori demografici (rata natalității, mortalității, migrației)\ntext\n\n\n6.3.2 Indicatori de sărăcie și incluziune socială\ntext\n\n\n6.3.3 Indicatori privind educația și sănătatea\ntext\n\n\n6.3.4 Indicatori ai ocupării și veniturilor\ntext"
   },
   {
-    "objectID": "05-cap.html#interpretarea-rezultatelor",
-    "href": "05-cap.html#interpretarea-rezultatelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.8 Interpretarea rezultatelor",
-    "text": "5.8 Interpretarea rezultatelor\ntext"
+    "objectID": "06-cap.html#analiza-statistică-a-datelor-sociale",
+    "href": "06-cap.html#analiza-statistică-a-datelor-sociale",
+    "title": "6  Analiza datelor sociale",
+    "section": "6.4 Analiza statistică a datelor sociale",
+    "text": "6.4 Analiza statistică a datelor sociale\n\n6.4.1 Metode descriptive (medii, distribuții, dispersie)\ntext\n\n\n6.4.2 Corelații între variabile sociale\ntext\n\n\n6.4.3 Analiza regresională aplicată datelor sociale\ntext"
   },
   {
-    "objectID": "05-cap.html#vizualizarea-rezultatelor",
-    "href": "05-cap.html#vizualizarea-rezultatelor",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.9 Vizualizarea rezultatelor",
-    "text": "5.9 Vizualizarea rezultatelor\ntext"
+    "objectID": "06-cap.html#aplicații-practice-în-analiza-datelor-sociale",
+    "href": "06-cap.html#aplicații-practice-în-analiza-datelor-sociale",
+    "title": "6  Analiza datelor sociale",
+    "section": "6.5 Aplicații practice în analiza datelor sociale",
+    "text": "6.5 Aplicații practice în analiza datelor sociale\n\n6.5.1 Analiza inegalităților sociale și economice\ntext\n\n\n6.5.2 Evaluarea impactului politicilor publice asupra grupurilor vulnerabile\ntext\n\n\n6.5.3 Studiul fenomenelor demografice și impactul asupra pieței muncii\ntext\n\n\n6.5.4 Exemple de studii de caz bazate pe date sociale"
   },
   {
-    "objectID": "05-cap.html#diseminarea-rezultatelor-analizei",
-    "href": "05-cap.html#diseminarea-rezultatelor-analizei",
-    "title": "5  Etapele analizei datelor",
-    "section": "5.10 Diseminarea rezultatelor analizei",
-    "text": "5.10 Diseminarea rezultatelor analizei\ntext"
+    "objectID": "07-cap.html#definirea-obiectivelor-analizei",
+    "href": "07-cap.html#definirea-obiectivelor-analizei",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.1 Definirea obiectivelor analizei",
+    "text": "7.1 Definirea obiectivelor analizei\ntext"
   },
   {
-    "objectID": "06-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
-    "href": "06-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
-    "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.1 Crearea rapoartelor și tablourilor de bord",
-    "text": "6.1 Crearea rapoartelor și tablourilor de bord\n\n6.1.1 Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.\ntext\n\n\n6.1.2 Utilizarea storytelling-ului în prezentarea datelor.\ntext"
+    "objectID": "07-cap.html#colectarea-datelor",
+    "href": "07-cap.html#colectarea-datelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.2 Colectarea datelor",
+    "text": "7.2 Colectarea datelor\ntext"
   },
   {
-    "objectID": "06-cap.html#partajarea-și-colaborarea-pe-rapoarte",
-    "href": "06-cap.html#partajarea-și-colaborarea-pe-rapoarte",
-    "title": "6  Crearea și partajarea rapoartelor și tablourilor de bord",
-    "section": "6.2 Partajarea și colaborarea pe rapoarte",
-    "text": "6.2 Partajarea și colaborarea pe rapoarte\n\n6.2.1 Tehnici de partajare a rapoartelor și tablourilor de bord în organizație\ntext\n\n\n6.2.2 Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)\ntext"
+    "objectID": "07-cap.html#importarea-datelor",
+    "href": "07-cap.html#importarea-datelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.3 Importarea datelor",
+    "text": "7.3 Importarea datelor\ntext"
   },
   {
-    "objectID": "07-cap.html#standarde-ghiduri-și-monitorizare",
-    "href": "07-cap.html#standarde-ghiduri-și-monitorizare",
-    "title": "7  Calitatea datelor",
-    "section": "7.1 Standarde, ghiduri și monitorizare",
-    "text": "7.1 Standarde, ghiduri și monitorizare\ntext"
+    "objectID": "07-cap.html#stocarea-datelor",
+    "href": "07-cap.html#stocarea-datelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.4 Stocarea datelor",
+    "text": "7.4 Stocarea datelor\ntext"
   },
   {
-    "objectID": "07-cap.html#metodologii",
-    "href": "07-cap.html#metodologii",
-    "title": "7  Calitatea datelor",
-    "section": "7.2 Metodologii",
-    "text": "7.2 Metodologii\ntext"
+    "objectID": "07-cap.html#curățarea-datelor",
+    "href": "07-cap.html#curățarea-datelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.5 Curățarea datelor",
+    "text": "7.5 Curățarea datelor\n• Tratarea duplicatelor, gestionarea valorilor lipsă"
   },
   {
-    "objectID": "07-cap.html#metadate",
-    "href": "07-cap.html#metadate",
-    "title": "7  Calitatea datelor",
-    "section": "7.3 Metadate",
-    "text": "7.3 Metadate\ntext"
+    "objectID": "07-cap.html#agregarea-datelor",
+    "href": "07-cap.html#agregarea-datelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.6 Agregarea datelor",
+    "text": "7.6 Agregarea datelor\n• Filtrarea/selectarea și agregarea datelor"
   },
   {
-    "objectID": "07-cap.html#clasificări-și-nomenclatoare",
-    "href": "07-cap.html#clasificări-și-nomenclatoare",
-    "title": "7  Calitatea datelor",
-    "section": "7.4 Clasificări și nomenclatoare",
-    "text": "7.4 Clasificări și nomenclatoare\n\n7.4.1 ceva\ntext"
+    "objectID": "07-cap.html#analiza-descriptivă-a-seturilor-de-date",
+    "href": "07-cap.html#analiza-descriptivă-a-seturilor-de-date",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.7 Analiza descriptivă a seturilor de date",
+    "text": "7.7 Analiza descriptivă a seturilor de date\n• Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor și identificarea valorile anormale (outliers)"
   },
   {
-    "objectID": "07-cap.html#rapoarte-de-calitate",
-    "href": "07-cap.html#rapoarte-de-calitate",
-    "title": "7  Calitatea datelor",
-    "section": "7.5 Rapoarte de calitate",
-    "text": "7.5 Rapoarte de calitate\ntext"
+    "objectID": "07-cap.html#interpretarea-rezultatelor",
+    "href": "07-cap.html#interpretarea-rezultatelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.8 Interpretarea rezultatelor",
+    "text": "7.8 Interpretarea rezultatelor\ntext"
   },
   {
-    "objectID": "07-cap.html#etica-și-transparența",
-    "href": "07-cap.html#etica-și-transparența",
-    "title": "7  Calitatea datelor",
-    "section": "7.6 Etica și transparența",
-    "text": "7.6 Etica și transparența\ntext"
+    "objectID": "07-cap.html#vizualizarea-rezultatelor",
+    "href": "07-cap.html#vizualizarea-rezultatelor",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.9 Vizualizarea rezultatelor",
+    "text": "7.9 Vizualizarea rezultatelor\ntext"
+  },
+  {
+    "objectID": "07-cap.html#diseminarea-rezultatelor-analizei",
+    "href": "07-cap.html#diseminarea-rezultatelor-analizei",
+    "title": "7  Etapele analizei datelor",
+    "section": "7.10 Diseminarea rezultatelor analizei",
+    "text": "7.10 Diseminarea rezultatelor analizei\ntext"
+  },
+  {
+    "objectID": "08-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
+    "href": "08-cap.html#crearea-rapoartelor-și-tablourilor-de-bord",
+    "title": "8  Crearea și partajarea rapoartelor și tablourilor de bord",
+    "section": "8.1 Crearea rapoartelor și tablourilor de bord",
+    "text": "8.1 Crearea rapoartelor și tablourilor de bord\n\n8.1.1 Dezvoltarea de rapoarte interactive și tablouri de bord în Power BI.\ntext\n\n\n8.1.2 Utilizarea storytelling-ului în prezentarea datelor.\ntext"
+  },
+  {
+    "objectID": "08-cap.html#partajarea-și-colaborarea-pe-rapoarte",
+    "href": "08-cap.html#partajarea-și-colaborarea-pe-rapoarte",
+    "title": "8  Crearea și partajarea rapoartelor și tablourilor de bord",
+    "section": "8.2 Partajarea și colaborarea pe rapoarte",
+    "text": "8.2 Partajarea și colaborarea pe rapoarte\n\n8.2.1 Tehnici de partajare a rapoartelor și tablourilor de bord în organizație\ntext\n\n\n8.2.2 Utilizarea platformelor de colaborare (e.g., Google Drive, SharePoint)\ntext"
+  },
+  {
+    "objectID": "09-cap.html#standarde-ghiduri-și-monitorizare",
+    "href": "09-cap.html#standarde-ghiduri-și-monitorizare",
+    "title": "9  Calitatea datelor",
+    "section": "9.1 Standarde, ghiduri și monitorizare",
+    "text": "9.1 Standarde, ghiduri și monitorizare\ntext"
+  },
+  {
+    "objectID": "09-cap.html#metodologii",
+    "href": "09-cap.html#metodologii",
+    "title": "9  Calitatea datelor",
+    "section": "9.2 Metodologii",
+    "text": "9.2 Metodologii\ntext"
+  },
+  {
+    "objectID": "09-cap.html#metadate",
+    "href": "09-cap.html#metadate",
+    "title": "9  Calitatea datelor",
+    "section": "9.3 Metadate",
+    "text": "9.3 Metadate\ntext"
+  },
+  {
+    "objectID": "09-cap.html#clasificări-și-nomenclatoare",
+    "href": "09-cap.html#clasificări-și-nomenclatoare",
+    "title": "9  Calitatea datelor",
+    "section": "9.4 Clasificări și nomenclatoare",
+    "text": "9.4 Clasificări și nomenclatoare\n\n9.4.1 ceva\ntext"
+  },
+  {
+    "objectID": "09-cap.html#rapoarte-de-calitate",
+    "href": "09-cap.html#rapoarte-de-calitate",
+    "title": "9  Calitatea datelor",
+    "section": "9.5 Rapoarte de calitate",
+    "text": "9.5 Rapoarte de calitate\ntext"
+  },
+  {
+    "objectID": "09-cap.html#etica-și-transparența",
+    "href": "09-cap.html#etica-și-transparența",
+    "title": "9  Calitatea datelor",
+    "section": "9.6 Etica și transparența",
+    "text": "9.6 Etica și transparența\ntext"
   },
   {
     "objectID": "references.html",

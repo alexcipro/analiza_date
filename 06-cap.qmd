@@ -64,9 +64,9 @@ text
 
 text
 
-### Analiza regresională aplicată datelor sociale
+### Limitările și capcanele interpretării datelor sociale
 
-text
+text 
 
 ## Aplicații practice în analiza datelor sociale
 
@@ -83,3 +83,6 @@ text
 text
 
 ### Exemple de studii de caz bazate pe date sociale
+
+text
+

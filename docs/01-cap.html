@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
-
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Analiza datelor economico-sociale - 1&nbsp; Introducere în analiza datelor</title>
+<title>1&nbsp; Introducere în analiza datelor – Analiza datelor economico-sociale</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +18,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -41,14 +37,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,42 +58,34 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-cap.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducere în analiza datelor</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-cap.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducere în analiza datelor</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Analiza datelor economico-sociale</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/alexcipro/analiza_date/" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/alexcipro/analiza_date/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -108,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Despre autor</span></a>
@@ -181,37 +174,35 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#importanța-datelor-în-luare-deciziilor" id="toc-importanța-datelor-în-luare-deciziilor" class="nav-link active" data-scroll-target="#importanța-datelor-în-luare-deciziilor"><span class="header-section-number">1.1</span> Importanța datelor în luare deciziilor</a></li>
-  <li><a href="#identificarea-seturilor-de-date-relevante" id="toc-identificarea-seturilor-de-date-relevante" class="nav-link" data-scroll-target="#identificarea-seturilor-de-date-relevante"><span class="header-section-number">1.2</span> Identificarea seturilor de date relevante</a>
+<li><a href="#importan%C8%9Ba-datelor-%C3%AEn-luare-deciziilor" id="toc-importanța-datelor-în-luare-deciziilor" class="nav-link active" data-scroll-target="#importan%C8%9Ba-datelor-%C3%AEn-luare-deciziilor"><span class="header-section-number">1.1</span> Importanța datelor în luare deciziilor</a></li>
+  <li>
+<a href="#identificarea-seturilor-de-date-relevante" id="toc-identificarea-seturilor-de-date-relevante" class="nav-link" data-scroll-target="#identificarea-seturilor-de-date-relevante"><span class="header-section-number">1.2</span> Identificarea seturilor de date relevante</a>
   <ul class="collapse">
-  <li><a href="#surse-de-date-publice-și-private-inclusiv-open-data" id="toc-surse-de-date-publice-și-private-inclusiv-open-data" class="nav-link" data-scroll-target="#surse-de-date-publice-și-private-inclusiv-open-data"><span class="header-section-number">1.2.1</span> Surse de date publice și private, inclusiv Open Data</a></li>
-  <li><a href="#evaluarea-calității-și-relevanței-datelor" id="toc-evaluarea-calității-și-relevanței-datelor" class="nav-link" data-scroll-target="#evaluarea-calității-și-relevanței-datelor"><span class="header-section-number">1.2.2</span> Evaluarea calității și relevanței datelor</a></li>
+<li><a href="#surse-de-date-publice-%C8%99i-private-inclusiv-open-data" id="toc-surse-de-date-publice-și-private-inclusiv-open-data" class="nav-link" data-scroll-target="#surse-de-date-publice-%C8%99i-private-inclusiv-open-data"><span class="header-section-number">1.2.1</span> Surse de date publice și private, inclusiv Open Data</a></li>
+  <li><a href="#evaluarea-calit%C4%83%C8%9Bii-%C8%99i-relevan%C8%9Bei-datelor" id="toc-evaluarea-calității-și-relevanței-datelor" class="nav-link" data-scroll-target="#evaluarea-calit%C4%83%C8%9Bii-%C8%99i-relevan%C8%9Bei-datelor"><span class="header-section-number">1.2.2</span> Evaluarea calității și relevanței datelor</a></li>
   <li><a href="#utilizarea-platformelor-de-date" id="toc-utilizarea-platformelor-de-date" class="nav-link" data-scroll-target="#utilizarea-platformelor-de-date"><span class="header-section-number">1.2.3</span> Utilizarea platformelor de date</a></li>
-  </ul></li>
-  <li><a href="#concepte-de-bază-legate-de-formatarea-datelor" id="toc-concepte-de-bază-legate-de-formatarea-datelor" class="nav-link" data-scroll-target="#concepte-de-bază-legate-de-formatarea-datelor"><span class="header-section-number">1.3</span> Concepte de bază legate de formatarea datelor</a>
-  <ul class="collapse">
-  <li><a href="#tipuri-de-surse-de-date-primare-și-secundare" id="toc-tipuri-de-surse-de-date-primare-și-secundare" class="nav-link" data-scroll-target="#tipuri-de-surse-de-date-primare-și-secundare"><span class="header-section-number">1.3.1</span> Tipuri de surse de date (primare și secundare)</a></li>
-  <li><a href="#tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" id="toc-tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" class="nav-link" data-scroll-target="#tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor"><span class="header-section-number">1.3.2</span> Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor</a></li>
-  <li><a href="#importanța-și-utilizarea-metadatelor" id="toc-importanța-și-utilizarea-metadatelor" class="nav-link" data-scroll-target="#importanța-și-utilizarea-metadatelor"><span class="header-section-number">1.3.3</span> Importanța și utilizarea metadatelor</a></li>
-  </ul></li>
-  <li><a href="#instrumente-avansate-pentru-prelucrarea-și-analiza-datelor" id="toc-instrumente-avansate-pentru-prelucrarea-și-analiza-datelor" class="nav-link" data-scroll-target="#instrumente-avansate-pentru-prelucrarea-și-analiza-datelor"><span class="header-section-number">1.4</span> Instrumente avansate pentru prelucrarea și analiza datelor</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/alexcipro/analiza_date/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</li>
+  <li>
+<a href="#concepte-de-baz%C4%83-legate-de-formatarea-datelor" id="toc-concepte-de-bază-legate-de-formatarea-datelor" class="nav-link" data-scroll-target="#concepte-de-baz%C4%83-legate-de-formatarea-datelor"><span class="header-section-number">1.3</span> Concepte de bază legate de formatarea datelor</a>
+  <ul class="collapse">
+<li><a href="#tipuri-de-surse-de-date-primare-%C8%99i-secundare" id="toc-tipuri-de-surse-de-date-primare-și-secundare" class="nav-link" data-scroll-target="#tipuri-de-surse-de-date-primare-%C8%99i-secundare"><span class="header-section-number">1.3.1</span> Tipuri de surse de date (primare și secundare)</a></li>
+  <li><a href="#tipuri-de-fi%C8%99iere-csv-xml-json-%C8%99i-utilizarea-lor" id="toc-tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" class="nav-link" data-scroll-target="#tipuri-de-fi%C8%99iere-csv-xml-json-%C8%99i-utilizarea-lor"><span class="header-section-number">1.3.2</span> Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor</a></li>
+  <li><a href="#importan%C8%9Ba-%C8%99i-utilizarea-metadatelor" id="toc-importanța-și-utilizarea-metadatelor" class="nav-link" data-scroll-target="#importan%C8%9Ba-%C8%99i-utilizarea-metadatelor"><span class="header-section-number">1.3.3</span> Importanța și utilizarea metadatelor</a></li>
+  </ul>
+</li>
+  <li><a href="#instrumente-avansate-pentru-prelucrarea-%C8%99i-analiza-datelor" id="toc-instrumente-avansate-pentru-prelucrarea-și-analiza-datelor" class="nav-link" data-scroll-target="#instrumente-avansate-pentru-prelucrarea-%C8%99i-analiza-datelor"><span class="header-section-number">1.4</span> Instrumente avansate pentru prelucrarea și analiza datelor</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/alexcipro/analiza_date/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title"><span id="cap1" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducere în analiza datelor</span></span></h1>
 </div>
 
@@ -225,20 +216,16 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
 
-<section id="importanța-datelor-în-luare-deciziilor" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="importanța-datelor-în-luare-deciziilor"><span class="header-section-number">1.1</span> Importanța datelor în luare deciziilor</h2>
+</header><section id="importanța-datelor-în-luare-deciziilor" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="importanța-datelor-în-luare-deciziilor">
+<span class="header-section-number">1.1</span> Importanța datelor în luare deciziilor</h2>
 <p><strong>Definirea conceptului de analiză a datelor</strong></p>
-<p><em>Analiza datelor</em> reprezintă procesul de examinare, curățare, transformare și modelare a datelor cu scopul de a descoperi informații utile, de a trage concluzii și de a susține luarea deciziilor informate. Acest proces implică utilizarea unor tehnici și metode statistice și computaționale care permit identificarea tiparelor și relațiilor ascunse în datele brute (en. raw data).<br>
-<em>Datele brute</em> sunt informații în forma lor neprelucrată, care pot proveni din surse multiple, cum ar fi bazele de date interne ale unei organizații, statistici guvernamentale, date financiare sau date generate de utilizatorii unei platforme digitale. Prin analiza acestor date, decidenții pot obține perspective valoroase care îi ajută să adopte strategii eficiente, să îmbunătățească procesele și să maximizeze resursele disponibile.</p>
+<p><em>Analiza datelor</em> reprezintă procesul de examinare, curățare, transformare și modelare a datelor cu scopul de a descoperi informații utile, de a trage concluzii și de a susține luarea deciziilor informate. Acest proces implică utilizarea unor tehnici și metode statistice și computaționale care permit identificarea tiparelor și relațiilor ascunse în datele brute (en. raw data).<br><em>Datele brute</em> sunt informații în forma lor neprelucrată, care pot proveni din surse multiple, cum ar fi bazele de date interne ale unei organizații, statistici guvernamentale, date financiare sau date generate de utilizatorii unei platforme digitale. Prin analiza acestor date, decidenții pot obține perspective valoroase care îi ajută să adopte strategii eficiente, să îmbunătățească procesele și să maximizeze resursele disponibile.</p>
 <p><strong>Importanța datelor în funcțiile managementului</strong></p>
 <p>Analiza și utilizarea eficientă a datelor contribuie la îndeplinirea fiecărei funcții de management, conform teoriei clasice a managementului: planificare, organizare, conducere, coordonare și control.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/functii_management.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Functiile Managementului</figcaption>
-</figure>
+<figure class="figure"><p><img src="images/functii_management.png" class="img-fluid figure-img"></p>
+<figcaption>Functiile Managementului</figcaption></figure>
 </div>
 <p>Datele joacă un rol esențial în susținerea tuturor funcțiilor managementului, contribuind la luarea deciziilor mai bine fundamentate și la optimizarea performanței organizaționale. Să analizăm cum sunt datele integrate în fiecare dintre aceste funcții:</p>
 <p><em>1. Planificarea</em><br>
@@ -330,15 +317,13 @@ Funcția de control este esențială pentru a monitoriza progresul și a asigura
 <p>Monitorizarea performanței: Analiza datelor permite organizațiilor să monitorizeze și să evalueze performanța programelor și inițiativelor în timp real, permițând ajustări rapide atunci când este necesar. Acest lucru este esențial în contextul economico-financiar, unde piețele și condițiile economice se pot schimba rapid.</p>
 <p>Susținerea inovației: Prin explorarea datelor, organizațiile pot descoperi noi oportunități de creștere și inovație, fie că este vorba de dezvoltarea unor produse noi, fie de optimizarea operațiunilor existente.</p>
 <p>În esență, analiza datelor nu doar că ajută la înțelegerea mai profundă a situațiilor curente, dar permite și previzionarea evoluțiilor viitoare, oferind decidenților informații esențiale pentru a naviga provocările economice și financiare.</p>
-</section>
-<section id="identificarea-seturilor-de-date-relevante" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="identificarea-seturilor-de-date-relevante"><span class="header-section-number">1.2</span> Identificarea seturilor de date relevante</h2>
+</section><section id="identificarea-seturilor-de-date-relevante" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="identificarea-seturilor-de-date-relevante">
+<span class="header-section-number">1.2</span> Identificarea seturilor de date relevante</h2>
 <p>Identificarea seturilor de date relevante este un pas esențial în procesul de analiză a datelor, deoarece calitatea și relevanța informațiilor folosite pot influența direct acuratețea concluziilor și eficiența deciziilor luate. Fie că vorbim despre sectorul public sau privat, este esențial ca analiza datelor să se bazeze pe informații corecte, complete și relevante pentru obiectivele definite.</p>
 <p><strong>Posibile etape în identificarea seturilor de date relevante</strong></p>
 <ol type="1">
 <li><p><em>Definirea obiectivelor analizei</em>. Înainte de a începe căutarea datelor, este crucial să fie definite clar obiectivele analizei, asa cum am aratat și într-o secțiune precedentă. La ce întrebări se dorește să se răspundă? Ce rezultate se așteaptă să fie obținute? De exemplu, în cazul unei instituții publice care analizează performanțele bugetare, datele financiare și de execuție bugetară vor fi de interes. Definirea clară a obiectivelor ajută la filtrarea și identificarea celor mai relevante seturi de date.</p></li>
-<li><p><em>Determinarea surselor de date disponibile</em>. Odată ce obiectivele sunt stabilite, următorul pas este identificarea surselor potențiale de date. Aceste surse pot fi interne (de exemplu, baze de date organizaționale) sau externe (de exemplu, date guvernamentale, statistici publice, date de piață). Sursele comune de date includ:<br>
-</p></li>
+<li><p><em>Determinarea surselor de date disponibile</em>. Odată ce obiectivele sunt stabilite, următorul pas este identificarea surselor potențiale de date. Aceste surse pot fi interne (de exemplu, baze de date organizaționale) sau externe (de exemplu, date guvernamentale, statistici publice, date de piață). Sursele comune de date includ:<br></p></li>
 </ol>
 <ul>
 <li>Surse publice: Eurostat, Institutul Național de Statistică (INS), OCDE, Banca Mondială, UNData.<br>
@@ -348,7 +333,8 @@ Funcția de control este esențială pentru a monitoriza progresul și a asigura
 <li>Surse interne: Date colectate de către organizație, cum ar fi rapoartele financiare interne, datele despre performanțele operaționale sau bazele de date cu clienți.</li>
 </ul>
 <ol start="3" type="1">
-<li><em>Evaluarea calității datelor</em>. Nu toate datele disponibile sunt de încredere sau relevante pentru analiza propusă. Este esențial să se evalueze calitatea datelor înainte de utilizarea acestora. Criteriile principale de evaluare includ:<br>
+<li>
+<em>Evaluarea calității datelor</em>. Nu toate datele disponibile sunt de încredere sau relevante pentru analiza propusă. Este esențial să se evalueze calitatea datelor înainte de utilizarea acestora. Criteriile principale de evaluare includ:<br>
 </li>
 </ol>
 <ul>
@@ -367,7 +353,8 @@ Funcția de control este esențială pentru a monitoriza progresul și a asigura
 </ol>
 <p><strong>Exemple practice de identificare a seturilor de date relevante</strong></p>
 <ol type="1">
-<li><em>Analiza economică într-o instituție publică</em><br>
+<li>
+<em>Analiza economică într-o instituție publică</em><br>
 O administrație publică dorește să analizeze performanțele economice regionale pentru a stabili unde ar trebui să investească în infrastructură. Sursele de date relevante pot include:<br>
 </li>
 </ol>
@@ -379,7 +366,8 @@ O administrație publică dorește să analizeze performanțele economice region
 <li>Date din rapoartele bugetare locale pentru a evalua capacitatea de investiții în fiecare regiune.</li>
 </ul>
 <ol start="2" type="1">
-<li><em>Analiza pieței pentru o companie privată</em><br>
+<li>
+<em>Analiza pieței pentru o companie privată</em><br>
 O companie de retail dorește să intre pe o piață nouă și are nevoie de date despre comportamentul consumatorilor și concurența în acea regiune. Sursele de date relevante pot include:<br>
 </li>
 </ol>
@@ -391,7 +379,8 @@ O companie de retail dorește să intre pe o piață nouă și are nevoie de dat
 <li>Date din propriile sisteme de management al clienților (CRM) pentru a înțelege tiparele de achiziție ale clienților actuali.</li>
 </ul>
 <ol start="3" type="1">
-<li><em>Monitorizarea performanței bugetare într-o instituție publică</em><br>
+<li>
+<em>Monitorizarea performanței bugetare într-o instituție publică</em><br>
 O primărie dorește să își evalueze performanțele bugetare pentru a optimiza cheltuielile și veniturile. Seturile de date relevante includ:<br>
 </li>
 </ol>
@@ -403,8 +392,8 @@ O primărie dorește să își evalueze performanțele bugetare pentru a optimiz
 <li>Date privind cheltuielile de capital și de funcționare pentru fiecare departament din primărie.</li>
 </ul>
 <p>Datele colectate trebuie să fie de înaltă calitate, relevante pentru obiectivele organizaționale și accesibile într-un format compatibil cu software-urile de analiză utilizate. În plus, trebuie să se respecte reglementările privind protecția datelor și să se folosească surse de încredere.</p>
-<section id="surse-de-date-publice-și-private-inclusiv-open-data" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="surse-de-date-publice-și-private-inclusiv-open-data"><span class="header-section-number">1.2.1</span> Surse de date publice și private, inclusiv Open Data</h3>
+<section id="surse-de-date-publice-și-private-inclusiv-open-data" class="level3" data-number="1.2.1"><h3 data-number="1.2.1" class="anchored" data-anchor-id="surse-de-date-publice-și-private-inclusiv-open-data">
+<span class="header-section-number">1.2.1</span> Surse de date publice și private, inclusiv Open Data</h3>
 <p>Datele utilizate în analiza economico-financiară pot proveni dintr-o varietate de surse, fie publice, fie private. În ultimii ani, o sursă importantă de date a devenit și Open Data, un concept care promovează accesul liber și gratuit la informațiile colectate de instituțiile publice. În acest subcapitol vom explora diferitele surse de date, modalitățile de accesare a acestora, și exemple concrete de utilizare a datelor publice, private și deschise (Open Data).</p>
 <p><strong>Surse de date publice</strong><br>
 Sursele de date publice sunt furnizate de guverne, organizații internaționale și instituții publice și sunt de obicei accesibile fără costuri pentru utilizatori. Aceste date sunt esențiale pentru analiza economico-financiară, fiind deseori utilizate în raportările oficiale și studiile de cercetare.</p>
@@ -510,10 +499,8 @@ Sursele de date publice sunt furnizate de guverne, organizații internaționale 
 </ol>
 <ul>
 <li>Punct central de acces pentru seturile de date deschise livrate de autoritățile și instituțiile administrației publice, ajutând publicul să găsească, să descarce și să folosească informațiile generate și deținute de structurile administrative.</li>
-</ul>
-</section>
-<section id="evaluarea-calității-și-relevanței-datelor" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="evaluarea-calității-și-relevanței-datelor"><span class="header-section-number">1.2.2</span> Evaluarea calității și relevanței datelor</h3>
+</ul></section><section id="evaluarea-calității-și-relevanței-datelor" class="level3" data-number="1.2.2"><h3 data-number="1.2.2" class="anchored" data-anchor-id="evaluarea-calității-și-relevanței-datelor">
+<span class="header-section-number">1.2.2</span> Evaluarea calității și relevanței datelor</h3>
 <p>Evaluarea calității și relevanței datelor este un pas critic în procesul de analiză a datelor economico-financiare. Datele de calitate scăzută sau nerelevante pot duce la concluzii greșite și la decizii nefundamentate. Prin urmare, este esențial să fie evaluate din perspectiva acurateței, completitudinii, consistenței și actualității lor înainte de a fi utilizate în orice analiză.</p>
 <p><strong>Dimensiuni esențiale în evaluarea calității datelor</strong></p>
 <ol type="1">
@@ -530,8 +517,7 @@ Acuratețea se referă la măsura în care datele reflectă realitatea în mod c
 </ul>
 <ol start="2" type="1">
 <li>Completitudinea<br>
-Completitudinea datelor se referă la prezența tuturor valorilor necesare pentru a realiza o analiză corectă. Seturile de date incomplete pot distorsiona rezultatele analizei, mai ales atunci când lipsesc valori esențiale sau variabile importante.<br>
-<em>Exemplu</em>: Dacă datele despre cheltuielile bugetare ale unei instituții publice lipsesc pentru o anumită perioadă de timp, este imposibil să se realizeze o analiză completă a performanței financiare pentru acea perioadă.</li>
+Completitudinea datelor se referă la prezența tuturor valorilor necesare pentru a realiza o analiză corectă. Seturile de date incomplete pot distorsiona rezultatele analizei, mai ales atunci când lipsesc valori esențiale sau variabile importante.<br><em>Exemplu</em>: Dacă datele despre cheltuielile bugetare ale unei instituții publice lipsesc pentru o anumită perioadă de timp, este imposibil să se realizeze o analiză completă a performanței financiare pentru acea perioadă.</li>
 </ol>
 <p>Cum evaluăm completitudinea:</p>
 <ul>
@@ -542,8 +528,7 @@ Completitudinea datelor se referă la prezența tuturor valorilor necesare pentr
 <li>Evaluarea impactului valorilor lipsă asupra obiectivelor analizei (dacă lipsa acestora poate afecta semnificativ rezultatele).</li>
 </ul>
 <ol start="3" type="1">
-<li>Consistența (Coerența datelor) Consistența se referă la măsura în care datele sunt armonizate și respectă aceleași reguli și formate, mai ales atunci când provin din surse diferite. Inconsistențele în structura sau formatul datelor pot crea probleme atunci când seturile de date sunt combinate sau comparate.<br>
-<em>Exemplu</em>: Într-o analiză economică la nivel internațional, datele despre PIB pot fi raportate în monede diferite sau pe ani diferiți. Lipsa conversiei corecte poate duce la erori majore în interpretarea rezultatelor.</li>
+<li>Consistența (Coerența datelor) Consistența se referă la măsura în care datele sunt armonizate și respectă aceleași reguli și formate, mai ales atunci când provin din surse diferite. Inconsistențele în structura sau formatul datelor pot crea probleme atunci când seturile de date sunt combinate sau comparate.<br><em>Exemplu</em>: Într-o analiză economică la nivel internațional, datele despre PIB pot fi raportate în monede diferite sau pe ani diferiți. Lipsa conversiei corecte poate duce la erori majore în interpretarea rezultatelor.</li>
 </ol>
 <p>Cum evaluăm consistența:</p>
 <ul>
@@ -554,8 +539,7 @@ Completitudinea datelor se referă la prezența tuturor valorilor necesare pentr
 </ul>
 <ol start="4" type="1">
 <li>Actualitatea (Timeliness)<br>
-Actualitatea se referă la cât de recent au fost colectate și actualizate datele. În anumite cazuri, datele vechi pot fi irelevante, în special într-un mediu dinamic cum este economia globală sau sectorul financiar.<br>
-<em>Exemplu</em>: Într-o analiză a pieței imobiliare, utilizarea datelor vechi de 5 ani poate duce la concluzii eronate, deoarece prețurile și tendințele pieței s-au schimbat între timp.</li>
+Actualitatea se referă la cât de recent au fost colectate și actualizate datele. În anumite cazuri, datele vechi pot fi irelevante, în special într-un mediu dinamic cum este economia globală sau sectorul financiar.<br><em>Exemplu</em>: Într-o analiză a pieței imobiliare, utilizarea datelor vechi de 5 ani poate duce la concluzii eronate, deoarece prețurile și tendințele pieței s-au schimbat între timp.</li>
 </ol>
 <p>Cum evaluăm actualitatea:</p>
 <ul>
@@ -567,8 +551,7 @@ Actualitatea se referă la cât de recent au fost colectate și actualizate date
 </ul>
 <ol start="5" type="1">
 <li>Relevanța<br>
-Relevanța datelor se referă la măsura în care datele sunt potrivite pentru a răspunde la întrebările sau obiectivele analizei. Chiar dacă un set de date este corect și complet, poate fi irelevant pentru analiza curentă dacă nu oferă informații utile pentru deciziile care trebuie luate.<br>
-<em>Exemplu</em>: Dacă scopul este analiza performanței financiare a unei companii, datele despre satisfacția clienților, deși valoroase în alt context, nu sunt relevante pentru această analiză specifică.</li>
+Relevanța datelor se referă la măsura în care datele sunt potrivite pentru a răspunde la întrebările sau obiectivele analizei. Chiar dacă un set de date este corect și complet, poate fi irelevant pentru analiza curentă dacă nu oferă informații utile pentru deciziile care trebuie luate.<br><em>Exemplu</em>: Dacă scopul este analiza performanței financiare a unei companii, datele despre satisfacția clienților, deși valoroase în alt context, nu sunt relevante pentru această analiză specifică.</li>
 </ol>
 <p>Cum evaluăm relevanța:</p>
 <ul>
@@ -580,7 +563,8 @@ Relevanța datelor se referă la măsura în care datele sunt potrivite pentru a
 </ul>
 <p><strong>Factori suplimentari în evaluarea calității datelor</strong></p>
 <ol type="1">
-<li><em>Proveniența datelor (sursa datelor)</em>. Este esențial să se știe de unde provin datele și cum au fost colectate. Datele colectate din surse necredibile sau neautorizate pot compromite întreaga analiză. Sursele de date oficiale și bine cunoscute, precum instituțiile statistice naționale sau organizațiile internaționale, sunt de obicei preferabile.</li>
+<li>
+<em>Proveniența datelor (sursa datelor)</em>. Este esențial să se știe de unde provin datele și cum au fost colectate. Datele colectate din surse necredibile sau neautorizate pot compromite întreaga analiză. Sursele de date oficiale și bine cunoscute, precum instituțiile statistice naționale sau organizațiile internaționale, sunt de obicei preferabile.</li>
 </ol>
 <p>Cum evaluăm proveniența datelor:</p>
 <ul>
@@ -591,7 +575,8 @@ Relevanța datelor se referă la măsura în care datele sunt potrivite pentru a
 <li>Utilizarea metadatelor pentru a înțelege procesele de curățare și prelucrare aplicate datelor.</li>
 </ul>
 <ol start="2" type="1">
-<li><em>Documentația și metadatele</em>. Un set de date de calitate ar trebui să fie însoțit de documentație și metadate care să explice modul în care datele au fost colectate, prelucrate și structurate. Fără metadate, este dificil să se înțeleagă contextul și limitările datelor.</li>
+<li>
+<em>Documentația și metadatele</em>. Un set de date de calitate ar trebui să fie însoțit de documentație și metadate care să explice modul în care datele au fost colectate, prelucrate și structurate. Fără metadate, este dificil să se înțeleagă contextul și limitările datelor.</li>
 </ol>
 <p>Cum evaluăm documentația și metadatele:</p>
 <ul>
@@ -613,37 +598,27 @@ Relevanța datelor se referă la măsura în care datele sunt potrivite pentru a
 <li>Verificarea că datele sunt prezentate într-un format accesibil și fără ambiguități.</li>
 </ul>
 <p>Evaluarea calității și relevanței datelor este un proces esențial pentru a asigura că analiza datelor economico-financiare este corectă, completă și utilă pentru luarea deciziilor. Un set de date de înaltă calitate oferă un fundament solid pentru analize precise și informații valoroase. Acest proces de evaluare nu trebuie să fie neglijat, indiferent dacă datele provin din surse publice, private sau din Open Data.</p>
-</section>
-<section id="utilizarea-platformelor-de-date" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="utilizarea-platformelor-de-date"><span class="header-section-number">1.2.3</span> Utilizarea platformelor de date</h3>
+</section><section id="utilizarea-platformelor-de-date" class="level3" data-number="1.2.3"><h3 data-number="1.2.3" class="anchored" data-anchor-id="utilizarea-platformelor-de-date">
+<span class="header-section-number">1.2.3</span> Utilizarea platformelor de date</h3>
 <p>• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data</p>
-</section>
-</section>
-<section id="concepte-de-bază-legate-de-formatarea-datelor" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="concepte-de-bază-legate-de-formatarea-datelor"><span class="header-section-number">1.3</span> Concepte de bază legate de formatarea datelor</h2>
+</section></section><section id="concepte-de-bază-legate-de-formatarea-datelor" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="concepte-de-bază-legate-de-formatarea-datelor">
+<span class="header-section-number">1.3</span> Concepte de bază legate de formatarea datelor</h2>
 <p>(formatul și tipurile de date)</p>
-<section id="tipuri-de-surse-de-date-primare-și-secundare" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="tipuri-de-surse-de-date-primare-și-secundare"><span class="header-section-number">1.3.1</span> Tipuri de surse de date (primare și secundare)</h3>
+<section id="tipuri-de-surse-de-date-primare-și-secundare" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="tipuri-de-surse-de-date-primare-și-secundare">
+<span class="header-section-number">1.3.1</span> Tipuri de surse de date (primare și secundare)</h3>
 <p>text</p>
-</section>
-<section id="tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" class="level3" data-number="1.3.2">
-<h3 data-number="1.3.2" class="anchored" data-anchor-id="tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor"><span class="header-section-number">1.3.2</span> Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor</h3>
+</section><section id="tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor" class="level3" data-number="1.3.2"><h3 data-number="1.3.2" class="anchored" data-anchor-id="tipuri-de-fișiere-csv-xml-json-și-utilizarea-lor">
+<span class="header-section-number">1.3.2</span> Tipuri de fișiere (CSV, XML, JSON) și utilizarea lor</h3>
 <p>text</p>
-</section>
-<section id="importanța-și-utilizarea-metadatelor" class="level3" data-number="1.3.3">
-<h3 data-number="1.3.3" class="anchored" data-anchor-id="importanța-și-utilizarea-metadatelor"><span class="header-section-number">1.3.3</span> Importanța și utilizarea metadatelor</h3>
+</section><section id="importanța-și-utilizarea-metadatelor" class="level3" data-number="1.3.3"><h3 data-number="1.3.3" class="anchored" data-anchor-id="importanța-și-utilizarea-metadatelor">
+<span class="header-section-number">1.3.3</span> Importanța și utilizarea metadatelor</h3>
 <p>text</p>
-</section>
-</section>
-<section id="instrumente-avansate-pentru-prelucrarea-și-analiza-datelor" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="instrumente-avansate-pentru-prelucrarea-și-analiza-datelor"><span class="header-section-number">1.4</span> Instrumente avansate pentru prelucrarea și analiza datelor</h2>
+</section></section><section id="instrumente-avansate-pentru-prelucrarea-și-analiza-datelor" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="instrumente-avansate-pentru-prelucrarea-și-analiza-datelor">
+<span class="header-section-number">1.4</span> Instrumente avansate pentru prelucrarea și analiza datelor</h2>
 <p>text</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -678,18 +653,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -721,11 +685,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/mbooks\.ro\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -735,8 +738,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -748,7 +760,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -792,6 +927,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -817,6 +953,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -875,15 +1037,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link" aria-label="Introducere">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introducere</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-cap.html" class="pagination-link">
+      <a href="./02-cap.html" class="pagination-link" aria-label="Instrumente și platformelor pentru analiza datelor">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Instrumente și platformelor pentru analiza datelor</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -892,4 +1052,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexcipro/analiza_date/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

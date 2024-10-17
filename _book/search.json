@@ -284,20 +284,28 @@
     "href": "06-cap.html#analiza-statistică-a-datelor-sociale",
     "title": "6  Analiza datelor sociale",
     "section": "6.4 Analiza statistică a datelor sociale",
+<<<<<<< HEAD
     "text": "6.4 Analiza statistică a datelor sociale\n\n6.4.1 Metode descriptive (medii, distribuții, dispersie)\ntext\n\n\n6.4.2 Corelații între variabile sociale\ntext\n\n\n6.4.3 Analiza regresională aplicată datelor sociale\ntext",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analiza datelor sociale</span>"
     ]
+=======
+    "text": "6.4 Analiza statistică a datelor sociale\n\n6.4.1 Metode descriptive (medii, distribuții, dispersie)\ntext\n\n\n6.4.2 Corelații între variabile sociale\ntext\n\n\n6.4.3 Limitările și capcanele interpretării datelor sociale\ntext"
+>>>>>>> ede492a36492b3ea8f22bb103534be8387fcc704
   },
   {
     "objectID": "06-cap.html#aplicații-practice-în-analiza-datelor-sociale",
     "href": "06-cap.html#aplicații-practice-în-analiza-datelor-sociale",
     "title": "6  Analiza datelor sociale",
     "section": "6.5 Aplicații practice în analiza datelor sociale",
+<<<<<<< HEAD
     "text": "6.5 Aplicații practice în analiza datelor sociale\n\n6.5.1 Analiza inegalităților sociale și economice\ntext\n\n\n6.5.2 Evaluarea impactului politicilor publice asupra grupurilor vulnerabile\ntext\n\n\n6.5.3 Studiul fenomenelor demografice și impactul asupra pieței muncii\ntext\n\n\n6.5.4 Exemple de studii de caz bazate pe date sociale",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Analiza datelor sociale</span>"
     ]
+=======
+    "text": "6.5 Aplicații practice în analiza datelor sociale\n\n6.5.1 Analiza inegalităților sociale și economice\ntext\n\n\n6.5.2 Evaluarea impactului politicilor publice asupra grupurilor vulnerabile\ntext\n\n\n6.5.3 Studiul fenomenelor demografice și impactul asupra pieței muncii\ntext\n\n\n6.5.4 Exemple de studii de caz bazate pe date sociale\ntext"
+>>>>>>> ede492a36492b3ea8f22bb103534be8387fcc704
   },
   {
     "objectID": "07-cap.html",

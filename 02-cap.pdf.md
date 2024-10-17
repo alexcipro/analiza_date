@@ -1,33 +1,17 @@
-# Introducere în analiza statistică {#cap2}
+# Instrumente și platformelor pentru analiza datelor {#cap2}
 
-## Concepte de bază privind analiza statistică
-
-text
-
-## Mărimile relative
+## Utilizarea R
 
 text
 
-## Sistematizarea datelor
+## Utilizarea Python
 
 text
 
-## Indicatorii de nivel
-
-•	medie, mediană, mod, quantile
-
-## Indicatorii variației
-
-•	abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare
-
-## Vizualizarea datelor
+## Utilizarea Excel
 
 text
 
-### Introducerea statisticii descriptive și inferențiale.
-
-text
-
-### Noțiuni fundamentale: medie, mediană, mod, varianță, deviație standard
+## Utilizarea Power BI
 
 text

@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mbooks.ro/index.html</loc>
-<<<<<<< HEAD
     <lastmod>2024-10-01T05:50:34.273Z</lastmod>
   </url>
   <url>
@@ -19,7 +18,7 @@
   </url>
   <url>
     <loc>https://mbooks.ro/03-cap.html</loc>
-    <lastmod>2024-10-17T06:09:27.611Z</lastmod>
+    <lastmod>2024-10-20T09:15:05.948Z</lastmod>
   </url>
   <url>
     <loc>https://mbooks.ro/04-cap.html</loc>
@@ -31,7 +30,7 @@
   </url>
   <url>
     <loc>https://mbooks.ro/06-cap.html</loc>
-    <lastmod>2024-10-01T05:50:34.097Z</lastmod>
+    <lastmod>2024-10-17T06:49:41.757Z</lastmod>
   </url>
   <url>
     <loc>https://mbooks.ro/07-cap.html</loc>
@@ -48,56 +47,9 @@
   <url>
     <loc>https://mbooks.ro/references.html</loc>
     <lastmod>2024-09-28T09:10:15.890Z</lastmod>
-=======
-    <lastmod>2024-10-07T19:59:53.026Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/intro.html</loc>
-    <lastmod>2024-10-07T19:59:53.028Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/01-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.035Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/02-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/03-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.039Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/04-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.041Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/05-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.043Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/06-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.046Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/07-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.049Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/08-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.051Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/09-cap.html</loc>
-    <lastmod>2024-10-07T19:59:53.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mbooks.ro/references.html</loc>
-    <lastmod>2024-10-07T19:59:53.056Z</lastmod>
   </url>
   <url>
     <loc>https://mbooks.ro/Analiza-datelor-economico-sociale.pdf</loc>
-    <lastmod>2024-10-07T19:59:52.986Z</lastmod>
->>>>>>> ede492a36492b3ea8f22bb103534be8387fcc704
+    <lastmod>2024-10-20T09:17:56.625Z</lastmod>
   </url>
 </urlset>

@@ -282,7 +282,8 @@ window.Quarto = {
 <span class="header-section-number">3.4</span> Indicatorii de nivel</h2>
 <section id="aplicații" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="aplicații">
 <span class="header-section-number">3.4.1</span> Aplicații</h3>
-<p><em>1. Media unei serii simple</em></p>
+<section id="media-unei-serii-simple" class="level4" data-number="3.4.1.1"><h4 data-number="3.4.1.1" class="anchored" data-anchor-id="media-unei-serii-simple">
+<span class="header-section-number">3.4.1.1</span> 1. Media unei serii simple</h4>
 <p>Se cunosc date privind veniturile salariale lunare (în lei/lună) ale celor 80 de angajați din firma M. Caracteristicile serie sunt prezentate în tabelul următor și ne propunem realizarea acestei analize descriptive prin cele 4 platforme software.</p>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -476,8 +477,8 @@ total
 </tbody>
 </table>
 <p>Să se determine venitul salarial mediu lunar al angajaților firmei.</p>
-<section id="rezolvare-prin-r" class="level4" data-number="3.4.1.1"><h4 data-number="3.4.1.1" class="anchored" data-anchor-id="rezolvare-prin-r">
-<span class="header-section-number">3.4.1.1</span> Rezolvare prin R</h4>
+<section id="rezolvare-prin-r" class="level5" data-number="3.4.1.1.1"><h5 data-number="3.4.1.1.1" class="anchored" data-anchor-id="rezolvare-prin-r">
+<span class="header-section-number">3.4.1.1.1</span> Rezolvare prin R</h5>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># incarcarea datelor "venit.csv"</span></span>
 <span><span class="va">venit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"date/venit.csv"</span>, head <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
@@ -515,8 +516,8 @@ total
 </div>
 </div>
 <p>Venitul salarial mediu lunar al celor 80 angajați ai firmei este de 1450.875 lei/lună.</p>
-</section><section id="rezolvare-prin-python" class="level4" data-number="3.4.1.2"><h4 data-number="3.4.1.2" class="anchored" data-anchor-id="rezolvare-prin-python">
-<span class="header-section-number">3.4.1.2</span> Rezolvare prin Python</h4>
+</section><section id="rezolvare-prin-python" class="level5" data-number="3.4.1.1.2"><h5 data-number="3.4.1.1.2" class="anchored" data-anchor-id="rezolvare-prin-python">
+<span class="header-section-number">3.4.1.1.2</span> Rezolvare prin Python</h5>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># importarea librariilor necesare</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -558,19 +559,443 @@ max    2360.000000</code></pre>
 <pre><code>1450.875</code></pre>
 </div>
 </div>
-</section><section id="rezolvare-prin-excel" class="level4" data-number="3.4.1.3"><h4 data-number="3.4.1.3" class="anchored" data-anchor-id="rezolvare-prin-excel">
-<span class="header-section-number">3.4.1.3</span> Rezolvare prin Excel</h4>
+</section><section id="rezolvare-prin-excel" class="level5" data-number="3.4.1.1.3"><h5 data-number="3.4.1.1.3" class="anchored" data-anchor-id="rezolvare-prin-excel">
+<span class="header-section-number">3.4.1.1.3</span> Rezolvare prin Excel</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="date/medie_simpla.PNG" class="img-fluid figure-img"></p>
 <figcaption>venit.xlsx</figcaption></figure>
 </div>
-</section><section id="rezolvare-prin-power-bi" class="level4" data-number="3.4.1.4"><h4 data-number="3.4.1.4" class="anchored" data-anchor-id="rezolvare-prin-power-bi">
-<span class="header-section-number">3.4.1.4</span> Rezolvare prin Power BI</h4>
+</section><section id="rezolvare-prin-power-bi" class="level5" data-number="3.4.1.1.4"><h5 data-number="3.4.1.1.4" class="anchored" data-anchor-id="rezolvare-prin-power-bi">
+<span class="header-section-number">3.4.1.1.4</span> Rezolvare prin Power BI</h5>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="date/medie_simpla_Pbi.png" class="img-fluid figure-img"></p>
 <figcaption>venit.xlsx</figcaption></figure>
 </div>
-</section></section></section><section id="indicatorii-variației" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="indicatorii-variației">
+</section></section><section id="gruparea-datelor---construirea-seriilor-de-distribuție" class="level4" data-number="3.4.1.2"><h4 data-number="3.4.1.2" class="anchored" data-anchor-id="gruparea-datelor---construirea-seriilor-de-distribuție">
+<span class="header-section-number">3.4.1.2</span> 2. Gruparea datelor - construirea seriilor de distribuție</h4>
+<p>Exemplu: A fost efectuată o cercetare privind mărimea (măsurată pe baza numărului de salariați) a 80 de firme industriale din orașul M. Datele referitoare la numărul de salariați înregistrat în cursul observării sunt următoarele:</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead><tr>
+<th class="tg-0pky">
+166
+</th>
+<th class="tg-0pky">
+162
+</th>
+<th class="tg-0pky">
+121
+</th>
+<th class="tg-0pky">
+126
+</th>
+<th class="tg-0pky">
+128
+</th>
+<th class="tg-0pky">
+85
+</th>
+<th class="tg-0pky">
+136
+</th>
+<th class="tg-0pky">
+158
+</th>
+<th class="tg-0pky">
+135
+</th>
+<th class="tg-0pky">
+127
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="tg-0pky">
+141
+</td>
+<td class="tg-0pky">
+142
+</td>
+<td class="tg-0pky">
+92
+</td>
+<td class="tg-0pky">
+148
+</td>
+<td class="tg-0pky">
+177
+</td>
+<td class="tg-0pky">
+80
+</td>
+<td class="tg-0pky">
+156
+</td>
+<td class="tg-0pky">
+188
+</td>
+<td class="tg-0pky">
+205
+</td>
+<td class="tg-0pky">
+144
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+155
+</td>
+<td class="tg-0pky">
+230
+</td>
+<td class="tg-0pky">
+100
+</td>
+<td class="tg-0pky">
+129
+</td>
+<td class="tg-0pky">
+160
+</td>
+<td class="tg-0pky">
+159
+</td>
+<td class="tg-0pky">
+105
+</td>
+<td class="tg-0pky">
+150
+</td>
+<td class="tg-0pky">
+110
+</td>
+<td class="tg-0pky">
+98
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+182
+</td>
+<td class="tg-0pky">
+102
+</td>
+<td class="tg-0pky">
+128
+</td>
+<td class="tg-0pky">
+198
+</td>
+<td class="tg-0pky">
+115
+</td>
+<td class="tg-0pky">
+122
+</td>
+<td class="tg-0pky">
+124
+</td>
+<td class="tg-0pky">
+163
+</td>
+<td class="tg-0pky">
+130
+</td>
+<td class="tg-0pky">
+133
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+132
+</td>
+<td class="tg-0pky">
+150
+</td>
+<td class="tg-0pky">
+75
+</td>
+<td class="tg-0pky">
+206
+</td>
+<td class="tg-0pky">
+149
+</td>
+<td class="tg-0pky">
+170
+</td>
+<td class="tg-0pky">
+112
+</td>
+<td class="tg-0pky">
+142
+</td>
+<td class="tg-0pky">
+119
+</td>
+<td class="tg-0pky">
+151
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+134
+</td>
+<td class="tg-0pky">
+224
+</td>
+<td class="tg-0pky">
+135
+</td>
+<td class="tg-0pky">
+236
+</td>
+<td class="tg-0pky">
+126
+</td>
+<td class="tg-0pky">
+175
+</td>
+<td class="tg-0pky">
+215
+</td>
+<td class="tg-0pky">
+130
+</td>
+<td class="tg-0pky">
+121
+</td>
+<td class="tg-0pky">
+128
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+190
+</td>
+<td class="tg-0pky">
+156
+</td>
+<td class="tg-0pky">
+108
+</td>
+<td class="tg-0pky">
+143
+</td>
+<td class="tg-0pky">
+218
+</td>
+<td class="tg-0pky">
+172
+</td>
+<td class="tg-0pky">
+180
+</td>
+<td class="tg-0pky">
+120
+</td>
+<td class="tg-0pky">
+169
+</td>
+<td class="tg-0pky">
+129
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+123
+</td>
+<td class="tg-0pky">
+156
+</td>
+<td class="tg-0pky">
+142
+</td>
+<td class="tg-0pky">
+127
+</td>
+<td class="tg-0pky">
+133
+</td>
+<td class="tg-0pky">
+146
+</td>
+<td class="tg-0pky">
+139
+</td>
+<td class="tg-0pky">
+140
+</td>
+<td class="tg-0pky">
+138
+</td>
+<td class="tg-0pky">
+138
+</td>
+</tr>
+</tbody>
+</table>
+<section id="rezolvare-prin-r-1" class="level5" data-number="3.4.1.2.1"><h5 data-number="3.4.1.2.1" class="anchored" data-anchor-id="rezolvare-prin-r-1">
+<span class="header-section-number">3.4.1.2.1</span> Rezolvare prin R</h5>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># incarcarea datele</span></span>
+<span><span class="va">grupare</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"date/grupare.csv"</span>, head <span class="op">=</span> <span class="cn">F</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">grupare</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   V1
+1 166
+2 162
+3 121
+4 126
+5 128
+6  85</code></pre>
+</div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># numarul de observatii</span></span>
+<span><span class="va">nobs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">grupare</span><span class="op">$</span><span class="va">V1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># numărul de grupe</span></span>
+<span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">ceiling</a></span><span class="op">(</span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">nobs</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#înălțimea intervalelor</span></span>
+<span><span class="va">xmax</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">grupare</span><span class="op">$</span><span class="va">V1</span><span class="op">)</span></span>
+<span><span class="va">xmax</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 236</code></pre>
+</div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">xmin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">grupare</span><span class="op">$</span><span class="va">V1</span><span class="op">)</span></span>
+<span><span class="va">xmin</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 75</code></pre>
+</div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">xmax</span><span class="op">-</span><span class="va">xmin</span><span class="op">)</span><span class="op">/</span><span class="va">g</span></span>
+<span><span class="va">h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 26.83333</code></pre>
+</div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">h</span> <span class="op">&lt;-</span> <span class="fl">30</span></span>
+<span></span>
+<span><span class="co">#limitele intervalelor de grupare</span></span>
+<span><span class="va">x1_inf</span> <span class="op">&lt;-</span> <span class="va">xmin</span> <span class="op">-</span> <span class="op">(</span><span class="va">g</span><span class="op">*</span><span class="va">h</span><span class="op">-</span><span class="op">(</span><span class="va">xmax</span><span class="op">-</span><span class="va">xmin</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span></span>
+<span><span class="va">x1_inf</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 65.5</code></pre>
+</div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x1_inf</span> <span class="op">&lt;-</span> <span class="fl">70</span></span>
+<span><span class="va">x1_sup</span> <span class="op">&lt;-</span> <span class="va">x1_inf</span> <span class="op">+</span> <span class="va">h</span></span>
+<span><span class="va">x2_inf</span> <span class="op">&lt;-</span> <span class="va">x1_sup</span> </span>
+<span><span class="va">x2_sup</span> <span class="op">&lt;-</span> <span class="va">x2_inf</span> <span class="op">+</span> <span class="va">h</span></span>
+<span><span class="va">x3_inf</span> <span class="op">&lt;-</span> <span class="va">x2_sup</span> </span>
+<span><span class="va">x3_sup</span> <span class="op">&lt;-</span> <span class="va">x3_inf</span> <span class="op">+</span> <span class="va">h</span></span>
+<span><span class="va">x4_inf</span> <span class="op">&lt;-</span> <span class="va">x3_sup</span> </span>
+<span><span class="va">x4_sup</span> <span class="op">&lt;-</span> <span class="va">x4_inf</span> <span class="op">+</span> <span class="va">h</span></span>
+<span><span class="va">x5_inf</span> <span class="op">&lt;-</span> <span class="va">x4_sup</span> </span>
+<span><span class="va">x5_sup</span> <span class="op">&lt;-</span> <span class="va">x5_inf</span> <span class="op">+</span> <span class="va">h</span></span>
+<span><span class="va">x6_inf</span> <span class="op">&lt;-</span> <span class="va">x5_sup</span> </span>
+<span><span class="va">x6_sup</span> <span class="op">&lt;-</span> <span class="va">x6_inf</span> <span class="op">+</span> <span class="va">h</span></span>
+<span></span>
+<span><span class="co"># determinarea frecventelor</span></span>
+<span><span class="va">seria_de_distributie</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>lim_inf <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">x1_inf</span>, <span class="va">x2_inf</span>, <span class="va">x3_inf</span>, </span>
+<span>                                               <span class="va">x4_inf</span>, <span class="va">x5_inf</span>, <span class="va">x6_inf</span><span class="op">)</span>, </span>
+<span>                                   lim_sup <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">x1_sup</span>, <span class="va">x2_sup</span>, <span class="va">x3_sup</span>, </span>
+<span>                                               <span class="va">x4_sup</span>, <span class="va">x5_sup</span>, <span class="va">x6_sup</span><span class="op">)</span>, </span>
+<span>                                   frecvente <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span>, <span class="fl">24</span>, <span class="fl">30</span>, <span class="fl">12</span>, <span class="fl">5</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co"># afisarea seriei de distributie</span></span>
+<span><span class="va">seria_de_distributie</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  lim_inf lim_sup frecvente
+1      70     100         6
+2     100     130        24
+3     130     160        30
+4     160     190        12
+5     190     220         5
+6     220     250         3</code></pre>
+</div>
+</div>
+</section><section id="rezolvare-prin-python-1" class="level5" data-number="3.4.1.2.2"><h5 data-number="3.4.1.2.2" class="anchored" data-anchor-id="rezolvare-prin-python-1">
+<span class="header-section-number">3.4.1.2.2</span> Rezolvare prin Python</h5>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># importarea librăriilor necesare</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># încărcarea datelor</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>grupare <span class="op">=</span> pd.read_csv(<span class="st">"date/grupare.csv"</span>, header<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(grupare.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     0
+0  166
+1  162
+2  121
+3  126
+4  128</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numărul de observații</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>nobs <span class="op">=</span> <span class="bu">len</span>(grupare[<span class="dv">0</span>])</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># numărul de grupe</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> math.ceil((<span class="dv">2</span> <span class="op">*</span> nobs) <span class="op">**</span> (<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span>))</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># înălțimea intervalelor</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>xmax <span class="op">=</span> grupare[<span class="dv">0</span>].<span class="bu">max</span>()</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>xmin <span class="op">=</span> grupare[<span class="dv">0</span>].<span class="bu">min</span>()</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> (xmax <span class="op">-</span> xmin) <span class="op">/</span> g</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">30</span>  <span class="co"># forțăm valoarea h conform codului R</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a><span class="co"># limitele intervalelor de grupare</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>x1_inf <span class="op">=</span> xmin <span class="op">-</span> (g <span class="op">*</span> h <span class="op">-</span> (xmax <span class="op">-</span> xmin)) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>x1_inf <span class="op">=</span> <span class="dv">70</span>  <span class="co"># forțăm valoarea x1_inf conform codului R</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>x1_sup <span class="op">=</span> x1_inf <span class="op">+</span> h</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>x2_inf <span class="op">=</span> x1_sup</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>x2_sup <span class="op">=</span> x2_inf <span class="op">+</span> h</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>x3_inf <span class="op">=</span> x2_sup</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>x3_sup <span class="op">=</span> x3_inf <span class="op">+</span> h</span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>x4_inf <span class="op">=</span> x3_sup</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>x4_sup <span class="op">=</span> x4_inf <span class="op">+</span> h</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>x5_inf <span class="op">=</span> x4_sup</span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>x5_sup <span class="op">=</span> x5_inf <span class="op">+</span> h</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>x6_inf <span class="op">=</span> x5_sup</span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>x6_sup <span class="op">=</span> x6_inf <span class="op">+</span> h</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a><span class="co"># determinarea frecvențelor</span></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>seria_de_distributie <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">'lim_inf'</span>: [x1_inf, x2_inf, x3_inf, x4_inf, x5_inf, x6_inf],</span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">'lim_sup'</span>: [x1_sup, x2_sup, x3_sup, x4_sup, x5_sup, x6_sup],</span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'frecvente'</span>: [<span class="dv">6</span>, <span class="dv">24</span>, <span class="dv">30</span>, <span class="dv">12</span>, <span class="dv">5</span>, <span class="dv">3</span>]</span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a><span class="co"># afișarea seriei de distribuție</span></span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(seria_de_distributie)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   lim_inf  lim_sup  frecvente
+0       70      100          6
+1      100      130         24
+2      130      160         30
+3      160      190         12
+4      190      220          5
+5      220      250          3</code></pre>
+</div>
+</div>
+</section><section id="rezolvare-prin-excel-1" class="level5" data-number="3.4.1.2.3"><h5 data-number="3.4.1.2.3" class="anchored" data-anchor-id="rezolvare-prin-excel-1">
+<span class="header-section-number">3.4.1.2.3</span> Rezolvare prin Excel</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="date/medie_simpla.PNG" class="img-fluid figure-img"></p>
+<figcaption>venit.xlsx</figcaption></figure>
+</div>
+</section><section id="rezolvare-prin-power-bi-1" class="level5" data-number="3.4.1.2.4"><h5 data-number="3.4.1.2.4" class="anchored" data-anchor-id="rezolvare-prin-power-bi-1">
+<span class="header-section-number">3.4.1.2.4</span> Rezolvare prin Power BI</h5>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="date/medie_simpla_Pbi.png" class="img-fluid figure-img"></p>
+<figcaption>venit.xlsx</figcaption></figure>
+</div>
+</section></section></section></section><section id="indicatorii-variației" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="indicatorii-variației">
 <span class="header-section-number">3.5</span> Indicatorii variației</h2>
 <p>• abateri, dispersie, abatere standard, repartiție, asimetrie, concentrare</p>
 </section><section id="vizualizarea-datelor" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="vizualizarea-datelor">

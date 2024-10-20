@@ -16,7 +16,7 @@ text
 
 ### Aplicații
 
-_1. Media unei serii simple_  
+#### 1. Media unei serii simple
 
 Se cunosc date privind veniturile salariale lunare (în lei/lună) ale celor 80 de angajați din firma M.  Caracteristicile serie sunt prezentate în tabelul următor și ne propunem realizarea acestei analize descriptive prin cele 4 platforme software.  
 
@@ -108,27 +108,21 @@ Se cunosc date privind veniturile salariale lunare (în lei/lună) ale celor 80 
 :::
 
 ::: {.content-visible when-format="pdf"}
-\begin{table}[!h]
-\centering
-\caption{Distribuția persoanelor, după venitul lunar}
-\label{my-label}
+\begin{table}[]
 \begin{tabular}{lcccccc}
-\hline
-\multicolumn{1}{c}{}                                                       & \begin{tabular}[c]{@{}c@{}}grupe de venit\\ (lei)\end{tabular} & $n_i$ & $h_i$ & $x_i$ & $x_i n_i$ & $N_i$\^{} \\ \hline
-                                                                           & 0 – 1000                                                       & 6     & 300   & 850   & 5100      & 6         \\
-\begin{tabular}[c]{@{}l@{}}interval \\ quartila \\ inferioară\end{tabular} & 1001 – 1300                                                    & 24    & 300   & 1150  & 27600     & 30        \\
-\begin{tabular}[c]{@{}l@{}}interval \\ median\end{tabular}                 & 1301 – 1600                                                    & 30    & 300   & 1450  & 43500     & 60        \\
-\begin{tabular}[c]{@{}l@{}}interval \\ quartila \\ superioară\end{tabular} & 1601 – 1900                                                    & 12    & 300   & 1750  & 21000     & 72        \\
-                                                                           & 1901 – 2200                                                    & 5     & 300   & 2050  & 10250     & 77        \\
-                                                                           & 2201 – $\inf$                                                  & 3     & 300   & 2350  & 7050      & 80        \\
-                                                                           & total                                                          & 80    & -     & -     & 114500    &           \\ \hline
-\end{tabular}
+                             & grupe de venit (lei) & $n_i$ & $h_i$ & $x_i$ & $x_i n_i$ & $N_i$\^ \\                              & 0 – 1000             & 6     & 300   & 850   & 5100      & 6       \\
+interval                     & 1001 - 1300          & 24    & 300   & 1150  & 27600     & 30      \\
+interval median              & 1301 - 1600          & 30    & 300   & 1450  & 43500     & 60      \\
+interval quartila superioară & 1601 - 1900          & 12    & 300   & 1750  & 21000     & 72      \\
+                             & 1901 - 2200          & 5     & 300   & 2050  & 10250     & 77      \\
+                             & 2201 - $\inf$        & 3     & 300   & 2350  & 7050      & 80      \\
+                             & total                & 80    & -     & -     & 114500    &         \\ \end{tabular}
 \end{table}
 :::
 
 Să se determine venitul salarial mediu lunar al angajaților firmei.  
 
-#### Rezolvare prin R
+##### Rezolvare prin R
 
 ```{r}
 # incarcarea datelor "venit.csv"
@@ -148,7 +142,7 @@ mean(venit$venit)
 Venitul salarial mediu lunar al celor 80 angajați ai firmei este de `r mean(venit$venit)` lei/lună.  
 
 
-#### Rezolvare prin Python
+##### Rezolvare prin Python
 
 ```{python}
 # importarea librariilor necesare
@@ -170,13 +164,252 @@ print(venit['venit'].min(), venit['venit'].max())
 print(venit['venit'].mean())
 ```
 
-#### Rezolvare prin Excel
+##### Rezolvare prin Excel
 
 ![venit.xlsx](date/medie_simpla.PNG)
 
-#### Rezolvare prin Power BI
+##### Rezolvare prin Power BI
 
 ![venit.xlsx](date/medie_simpla_Pbi.png)
+
+
+#### 2. Gruparea datelor - construirea seriilor de distribuție
+
+Exemplu: A fost efectuată o cercetare privind mărimea (măsurată pe baza numărului de salariați) a 80 de firme industriale din orașul M. Datele referitoare la numărul de salariați înregistrat în cursul observării sunt următoarele:
+
+::: {.content-visible when-format="html"}
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">166</th>
+    <th class="tg-0pky">162</th>
+    <th class="tg-0pky">121</th>
+    <th class="tg-0pky">126</th>
+    <th class="tg-0pky">128</th>
+    <th class="tg-0pky">85</th>
+    <th class="tg-0pky">136</th>
+    <th class="tg-0pky">158</th>
+    <th class="tg-0pky">135</th>
+    <th class="tg-0pky">127</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">141</td>
+    <td class="tg-0pky">142</td>
+    <td class="tg-0pky">92</td>
+    <td class="tg-0pky">148</td>
+    <td class="tg-0pky">177</td>
+    <td class="tg-0pky">80</td>
+    <td class="tg-0pky">156</td>
+    <td class="tg-0pky">188</td>
+    <td class="tg-0pky">205</td>
+    <td class="tg-0pky">144</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">155</td>
+    <td class="tg-0pky">230</td>
+    <td class="tg-0pky">100</td>
+    <td class="tg-0pky">129</td>
+    <td class="tg-0pky">160</td>
+    <td class="tg-0pky">159</td>
+    <td class="tg-0pky">105</td>
+    <td class="tg-0pky">150</td>
+    <td class="tg-0pky">110</td>
+    <td class="tg-0pky">98</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">182</td>
+    <td class="tg-0pky">102</td>
+    <td class="tg-0pky">128</td>
+    <td class="tg-0pky">198</td>
+    <td class="tg-0pky">115</td>
+    <td class="tg-0pky">122</td>
+    <td class="tg-0pky">124</td>
+    <td class="tg-0pky">163</td>
+    <td class="tg-0pky">130</td>
+    <td class="tg-0pky">133</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">132</td>
+    <td class="tg-0pky">150</td>
+    <td class="tg-0pky">75</td>
+    <td class="tg-0pky">206</td>
+    <td class="tg-0pky">149</td>
+    <td class="tg-0pky">170</td>
+    <td class="tg-0pky">112</td>
+    <td class="tg-0pky">142</td>
+    <td class="tg-0pky">119</td>
+    <td class="tg-0pky">151</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">134</td>
+    <td class="tg-0pky">224</td>
+    <td class="tg-0pky">135</td>
+    <td class="tg-0pky">236</td>
+    <td class="tg-0pky">126</td>
+    <td class="tg-0pky">175</td>
+    <td class="tg-0pky">215</td>
+    <td class="tg-0pky">130</td>
+    <td class="tg-0pky">121</td>
+    <td class="tg-0pky">128</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">190</td>
+    <td class="tg-0pky">156</td>
+    <td class="tg-0pky">108</td>
+    <td class="tg-0pky">143</td>
+    <td class="tg-0pky">218</td>
+    <td class="tg-0pky">172</td>
+    <td class="tg-0pky">180</td>
+    <td class="tg-0pky">120</td>
+    <td class="tg-0pky">169</td>
+    <td class="tg-0pky">129</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">123</td>
+    <td class="tg-0pky">156</td>
+    <td class="tg-0pky">142</td>
+    <td class="tg-0pky">127</td>
+    <td class="tg-0pky">133</td>
+    <td class="tg-0pky">146</td>
+    <td class="tg-0pky">139</td>
+    <td class="tg-0pky">140</td>
+    <td class="tg-0pky">138</td>
+    <td class="tg-0pky">138</td>
+  </tr>
+</tbody></table>
+:::
+
+::: {.content-visible when-format="pdf"}
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+166 & 162 & 121 & 126 & 128 & 85  & 136 & 158 & 135 & 127 \\ \hline
+141 & 142 & 92  & 148 & 177 & 80  & 156 & 188 & 205 & 144 \\ \hline
+155 & 230 & 100 & 129 & 160 & 159 & 105 & 150 & 110 & 98  \\ \hline
+182 & 102 & 128 & 198 & 115 & 122 & 124 & 163 & 130 & 133 \\ \hline
+132 & 150 & 75  & 206 & 149 & 170 & 112 & 142 & 119 & 151 \\ \hline
+134 & 224 & 135 & 236 & 126 & 175 & 215 & 130 & 121 & 128 \\ \hline
+190 & 156 & 108 & 143 & 218 & 172 & 180 & 120 & 169 & 129 \\ \hline
+123 & 156 & 142 & 127 & 133 & 146 & 139 & 140 & 138 & 138 \\ \hline
+\end{tabular}
+\end{table}
+:::
+
+##### Rezolvare prin R
+
+```{r}
+# incarcarea datele
+grupare <- read.csv("date/grupare.csv", head = F)
+head(grupare)
+
+# numarul de observatii
+nobs <- length(grupare$V1)
+
+# numărul de grupe
+g <- ceiling((2*nobs)^(1/3))
+
+#înălțimea intervalelor
+xmax <- max(grupare$V1)
+xmax
+xmin <- min(grupare$V1)
+xmin
+h <- (xmax-xmin)/g
+h
+h <- 30
+
+#limitele intervalelor de grupare
+x1_inf <- xmin - (g*h-(xmax-xmin))/2
+x1_inf 
+x1_inf <- 70
+x1_sup <- x1_inf + h
+x2_inf <- x1_sup 
+x2_sup <- x2_inf + h
+x3_inf <- x2_sup 
+x3_sup <- x3_inf + h
+x4_inf <- x3_sup 
+x4_sup <- x4_inf + h
+x5_inf <- x4_sup 
+x5_sup <- x5_inf + h
+x6_inf <- x5_sup 
+x6_sup <- x6_inf + h
+
+# determinarea frecventelor
+seria_de_distributie <- data.frame(lim_inf = c(x1_inf, x2_inf, x3_inf, 
+                                               x4_inf, x5_inf, x6_inf), 
+                                   lim_sup = c(x1_sup, x2_sup, x3_sup, 
+                                               x4_sup, x5_sup, x6_sup), 
+                                   frecvente = c(6, 24, 30, 12, 5, 3))
+# afisarea seriei de distributie
+seria_de_distributie 
+```
+
+##### Rezolvare prin Python
+
+```{python}
+# importarea librăriilor necesare
+import pandas as pd
+import math
+
+# încărcarea datelor
+grupare = pd.read_csv("date/grupare.csv", header=None)
+print(grupare.head())
+
+# numărul de observații
+nobs = len(grupare[0])
+
+# numărul de grupe
+g = math.ceil((2 * nobs) ** (1 / 3))
+
+# înălțimea intervalelor
+xmax = grupare[0].max()
+xmin = grupare[0].min()
+
+h = (xmax - xmin) / g
+h = 30  # forțăm valoarea h conform codului R
+
+# limitele intervalelor de grupare
+x1_inf = xmin - (g * h - (xmax - xmin)) / 2
+x1_inf = 70  # forțăm valoarea x1_inf conform codului R
+x1_sup = x1_inf + h
+x2_inf = x1_sup
+x2_sup = x2_inf + h
+x3_inf = x2_sup
+x3_sup = x3_inf + h
+x4_inf = x3_sup
+x4_sup = x4_inf + h
+x5_inf = x4_sup
+x5_sup = x5_inf + h
+x6_inf = x5_sup
+x6_sup = x6_inf + h
+
+# determinarea frecvențelor
+seria_de_distributie = pd.DataFrame({
+    'lim_inf': [x1_inf, x2_inf, x3_inf, x4_inf, x5_inf, x6_inf],
+    'lim_sup': [x1_sup, x2_sup, x3_sup, x4_sup, x5_sup, x6_sup],
+    'frecvente': [6, 24, 30, 12, 5, 3]
+})
+
+# afișarea seriei de distribuție
+print(seria_de_distributie)
+```
+
+##### Rezolvare prin Excel
+
+![venit.xlsx](date/medie_simpla.PNG)
+
+##### Rezolvare prin Power BI
+
+![venit.xlsx](date/medie_simpla_Pbi.png)
+
+
 
 ## Indicatorii variației
 

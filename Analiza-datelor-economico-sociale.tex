@@ -43,15 +43,69 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \setcounter{secnumdepth}{5}
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
@@ -77,28 +131,38 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
   % turn on hanging indent if param 1 is 1
   \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
   \fi
   % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{booktabs}
@@ -120,8 +184,6 @@
 \renewcommand\bibname{Bibliografie}
 \newcommand*\rot{\rotatebox{90}}
 \usepackage{tocbibind}
-\makeatletter
-\makeatother
 \makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
@@ -161,23 +223,17 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
+\makeatother
+\makeatletter
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
-\makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
-\makeatother
-\makeatletter
-\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
-\makeatother
-\makeatletter
-\makeatother
-\makeatletter
-\makeatother
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -185,6 +241,7 @@
   pdfauthor={Ciprian Alexandru-Caragea},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
+
 
 \title{Analiza datelor economico-sociale}
 \usepackage{etoolbox}
@@ -200,7 +257,6 @@
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Cuprins}
 {
@@ -209,11 +265,11 @@
 }
 \listoffigures
 \listoftables
+
 \mainmatter
 \bookmarksetup{startatroot}
 
-\hypertarget{despre-autor}{%
-\chapter*{Despre autor}\label{despre-autor}}
+\chapter*{Despre autor}\label{despre-autor}
 \addcontentsline{toc}{chapter}{Despre autor}
 
 \markboth{Despre autor}{Despre autor}
@@ -257,8 +313,7 @@ https://orcid.org/0000-0001-8215-6671
 
 \bookmarksetup{startatroot}
 
-\hypertarget{introducere}{%
-\chapter*{Introducere}\label{introducere}}
+\chapter*{Introducere}\label{introducere}
 \addcontentsline{toc}{chapter}{Introducere}
 
 \markboth{Introducere}{Introducere}
@@ -316,17 +371,15 @@ Septembrie, 2018
 
 \newpage
 
-\hypertarget{quarto}{%
-\section*{Quarto}\label{quarto}}
+\section*{Quarto}\label{quarto}
 \addcontentsline{toc}{section}{Quarto}
 
 \markright{Quarto}
 
 Această carte a fost editată cu ajutorul pachetului R \textbf{bookdown}
-(\protect\hyperlink{ref-xie2015}{Xie 2015}).\\
+(\citeproc{ref-xie2015}{Xie 2015}).\\
 Cartea are la bază manualul \emph{Statistică - concepte și metode de
-analiză a
-datelor}(\protect\hyperlink{ref-caragea2015}{\textbf{caragea2015?}}).
+analiză a datelor}(\citeproc{ref-caragea2015}{Caragea 2015}).
 
 Pachetul R \textbf{bookdown} este integrat R Markdown
 (http://rmarkdown.rstudio.com). Documentele elaborate pe baza acestui
@@ -338,9 +391,8 @@ https://bookdown.org.
 
 \includegraphics[width=0.2\textwidth]{images/logo.png}
 
-\hypertarget{informaux21bii-despre-software}{%
 \section*{Informații despre
-software}\label{informaux21bii-despre-software}}
+software}\label{informaux21bii-despre-software}
 \addcontentsline{toc}{section}{Informații despre software}
 
 \markright{Informații despre software}
@@ -381,7 +433,8 @@ Conform filosofiei
 software-ul open-source este caracterizat de libertatea acordată
 utilizatorilor săi de a-l utiliza, copia, distribui, studia, modifica și
 îmbunătăți. Mai exact, este vorba de patru forme de libertate acordate
-utilizatorilor(\protect\hyperlink{ref-dusa2015}{\textbf{dusa2015?}}):
+utilizatorilor(\citeproc{ref-dusa2015}{Dușa, Caragea, and Alexandru
+2015}):
 
 \begin{itemize}
 \item Libertatea de a utiliza programul, în orice scop (libertatea 0);
@@ -417,12 +470,10 @@ Linux sau sistemul de preparare a documentelor \LaTeX.
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap1}{%
-\chapter{Introducere în analiza datelor}\label{cap1}}
+\chapter{Introducere în analiza datelor}\label{cap1}
 
-\hypertarget{importanux21ba-datelor-uxeen-luare-deciziilor}{%
 \section{Importanța datelor în luare
-deciziilor}\label{importanux21ba-datelor-uxeen-luare-deciziilor}}
+deciziilor}\label{importanux21ba-datelor-uxeen-luare-deciziilor}
 
 \textbf{Definirea conceptului de analiză a datelor}
 
@@ -447,7 +498,7 @@ fiecărei funcții de management, conform teoriei clasice a
 managementului: planificare, organizare, conducere, coordonare și
 control.
 
-\begin{figure}
+\begin{figure}[H]
 
 {\centering \includegraphics{images/functii_management.png}
 
@@ -455,7 +506,7 @@ control.
 
 \caption{Functiile Managementului}
 
-\end{figure}
+\end{figure}%
 
 Datele joacă un rol esențial în susținerea tuturor funcțiilor
 managementului, contribuind la luarea deciziilor mai bine fundamentate
@@ -720,9 +771,8 @@ a situațiilor curente, dar permite și previzionarea evoluțiilor
 viitoare, oferind decidenților informații esențiale pentru a naviga
 provocările economice și financiare.
 
-\hypertarget{identificarea-seturilor-de-date-relevante}{%
 \section{Identificarea seturilor de date
-relevante}\label{identificarea-seturilor-de-date-relevante}}
+relevante}\label{identificarea-seturilor-de-date-relevante}
 
 Identificarea seturilor de date relevante este un pas esențial în
 procesul de analiză a datelor, deoarece calitatea și relevanța
@@ -902,9 +952,8 @@ software-urile de analiză utilizate. În plus, trebuie să se respecte
 reglementările privind protecția datelor și să se folosească surse de
 încredere.
 
-\hypertarget{surse-de-date-publice-ux219i-private-inclusiv-open-data}{%
 \subsection{Surse de date publice și private, inclusiv Open
-Data}\label{surse-de-date-publice-ux219i-private-inclusiv-open-data}}
+Data}\label{surse-de-date-publice-ux219i-private-inclusiv-open-data}
 
 Datele utilizate în analiza economico-financiară pot proveni dintr-o
 varietate de surse, fie publice, fie private. În ultimii ani, o sursă
@@ -1183,9 +1232,8 @@ Exemple de surse Open Data:
   deținute de structurile administrative.
 \end{itemize}
 
-\hypertarget{evaluarea-calitux103ux21bii-ux219i-relevanux21bei-datelor}{%
 \subsection{Evaluarea calității și relevanței
-datelor}\label{evaluarea-calitux103ux21bii-ux219i-relevanux21bei-datelor}}
+datelor}\label{evaluarea-calitux103ux21bii-ux219i-relevanux21bei-datelor}
 
 Evaluarea calității și relevanței datelor este un pas critic în procesul
 de analiză a datelor economico-financiare. Datele de calitate scăzută
@@ -1432,454 +1480,776 @@ oferă un fundament solid pentru analize precise și informații valoroase.
 Acest proces de evaluare nu trebuie să fie neglijat, indiferent dacă
 datele provin din surse publice, private sau din Open Data.
 
-\hypertarget{utilizarea-platformelor-de-date}{%
 \subsection{Utilizarea platformelor de
-date}\label{utilizarea-platformelor-de-date}}
+date}\label{utilizarea-platformelor-de-date}
 
 • Modalități de acces, descărcare și integrare a datelor • Prezentarea
 unor platforme comune: Eurostat, INS, UN data, OECD Data
 
-\hypertarget{concepte-de-bazux103-legate-de-formatarea-datelor}{%
 \section{Concepte de bază legate de formatarea
-datelor}\label{concepte-de-bazux103-legate-de-formatarea-datelor}}
+datelor}\label{concepte-de-bazux103-legate-de-formatarea-datelor}
 
 (formatul și tipurile de date)
 
-\hypertarget{tipuri-de-surse-de-date-primare-ux219i-secundare}{%
 \subsection{Tipuri de surse de date (primare și
-secundare)}\label{tipuri-de-surse-de-date-primare-ux219i-secundare}}
+secundare)}\label{tipuri-de-surse-de-date-primare-ux219i-secundare}
 
 text
 
-\hypertarget{tipuri-de-fiux219iere-csv-xml-json-ux219i-utilizarea-lor}{%
 \subsection{Tipuri de fișiere (CSV, XML, JSON) și utilizarea
-lor}\label{tipuri-de-fiux219iere-csv-xml-json-ux219i-utilizarea-lor}}
+lor}\label{tipuri-de-fiux219iere-csv-xml-json-ux219i-utilizarea-lor}
 
 text
 
-\hypertarget{importanux21ba-ux219i-utilizarea-metadatelor}{%
 \subsection{Importanța și utilizarea
-metadatelor}\label{importanux21ba-ux219i-utilizarea-metadatelor}}
+metadatelor}\label{importanux21ba-ux219i-utilizarea-metadatelor}
 
 text
 
-\hypertarget{instrumente-avansate-pentru-prelucrarea-ux219i-analiza-datelor}{%
 \section{Instrumente avansate pentru prelucrarea și analiza
-datelor}\label{instrumente-avansate-pentru-prelucrarea-ux219i-analiza-datelor}}
+datelor}\label{instrumente-avansate-pentru-prelucrarea-ux219i-analiza-datelor}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap2}{%
-\chapter{Instrumente și platformelor pentru analiza
-datelor}\label{cap2}}
+\chapter{Instrumente și platformelor pentru analiza datelor}\label{cap2}
 
-\hypertarget{utilizarea-r}{%
-\section{Utilizarea R}\label{utilizarea-r}}
+\section{Utilizarea R}\label{utilizarea-r}
 
 text
 
-\hypertarget{utilizarea-python}{%
-\section{Utilizarea Python}\label{utilizarea-python}}
+\section{Utilizarea Python}\label{utilizarea-python}
 
 text
 
-\hypertarget{utilizarea-excel}{%
-\section{Utilizarea Excel}\label{utilizarea-excel}}
+\section{Utilizarea Excel}\label{utilizarea-excel}
 
 text
 
-\hypertarget{utilizarea-power-bi}{%
-\section{Utilizarea Power BI}\label{utilizarea-power-bi}}
+\section{Utilizarea Power BI}\label{utilizarea-power-bi}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap3}{%
-\chapter{Introducere în analiza statistică}\label{cap3}}
+\chapter{Introducere în analiza statistică}\label{cap3}
 
-\hypertarget{concepte-de-bazux103-privind-analiza-statisticux103}{%
 \section{Concepte de bază privind analiza
-statistică}\label{concepte-de-bazux103-privind-analiza-statisticux103}}
+statistică}\label{concepte-de-bazux103-privind-analiza-statisticux103}
 
 text
 
-\hypertarget{mux103rimile-relative}{%
-\section{Mărimile relative}\label{mux103rimile-relative}}
+\section{Mărimile relative}\label{mux103rimile-relative}
 
 text
 
-\hypertarget{sistematizarea-datelor}{%
-\section{Sistematizarea datelor}\label{sistematizarea-datelor}}
+\section{Sistematizarea datelor}\label{sistematizarea-datelor}
 
 text
 
-\hypertarget{indicatorii-de-nivel}{%
-\section{Indicatorii de nivel}\label{indicatorii-de-nivel}}
+\section{Indicatorii de nivel}\label{indicatorii-de-nivel}
 
-• medie, mediană, mod, quantile
+\subsection{Aplicații}\label{aplicaux21bii}
 
-\hypertarget{indicatorii-variaux21biei}{%
-\section{Indicatorii variației}\label{indicatorii-variaux21biei}}
+\subsubsection{1. Media unei serii
+simple}\label{media-unei-serii-simple}
+
+Se cunosc date privind veniturile salariale lunare (în lei/lună) ale
+celor 80 de angajați din firma M. Caracteristicile serie sunt prezentate
+în tabelul următor și ne propunem realizarea acestei analize descriptive
+prin cele 4 platforme software.
+
+\begin{table}[]
+\begin{tabular}{lcccccc}
+                             & grupe de venit (lei) & $n_i$ & $h_i$ & $x_i$ & $x_i n_i$ & $N_i$\^ \\                              & 0 – 1000             & 6     & 300   & 850   & 5100      & 6       \\
+interval                     & 1001 - 1300          & 24    & 300   & 1150  & 27600     & 30      \\
+interval median              & 1301 - 1600          & 30    & 300   & 1450  & 43500     & 60      \\
+interval quartila superioară & 1601 - 1900          & 12    & 300   & 1750  & 21000     & 72      \\
+                             & 1901 - 2200          & 5     & 300   & 2050  & 10250     & 77      \\
+                             & 2201 - $\inf$        & 3     & 300   & 2350  & 7050      & 80      \\
+                             & total                & 80    & -     & -     & 114500    &         \\ \end{tabular}
+\end{table}
+
+Să se determine venitul salarial mediu lunar al angajaților firmei.
+
+\paragraph{Rezolvare prin R}\label{rezolvare-prin-r}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# incarcarea datelor "venit.csv"}
+\NormalTok{venit }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"date/venit.csv"}\NormalTok{, }\AttributeTok{head =}\NormalTok{ T)}
+\CommentTok{\# o vizualizare succinta a datelor}
+\FunctionTok{head}\NormalTok{(venit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  venit
+1  1660
+2  1410
+3  1550
+4  1820
+5  1320
+6  1340
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# explorarea prelimiară a datelor}
+\FunctionTok{summary}\NormalTok{(venit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     venit     
+ Min.   : 750  
+ 1st Qu.:1260  
+ Median :1395  
+ Mean   :1451  
+ 3rd Qu.:1605  
+ Max.   :2360  
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# intervalul datelor}
+\FunctionTok{range}\NormalTok{(venit}\SpecialCharTok{$}\NormalTok{venit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1]  750 2360
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# calculul mediei seriei simple}
+\FunctionTok{mean}\NormalTok{(venit}\SpecialCharTok{$}\NormalTok{venit)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 1450.875
+\end{verbatim}
+
+Venitul salarial mediu lunar al celor 80 angajați ai firmei este de
+1450.875 lei/lună.
+
+\paragraph{Rezolvare prin Python}\label{rezolvare-prin-python}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# importarea librariilor necesare}
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+
+\CommentTok{\# incarcarea datelor "venit.csv"}
+\NormalTok{venit }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"date/venit.csv"}\NormalTok{)}
+
+\CommentTok{\# o vizualizare succinta a datelor}
+\BuiltInTok{print}\NormalTok{(venit.head())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+   venit
+0   1660
+1   1410
+2   1550
+3   1820
+4   1320
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# explorarea preliminara a datelor}
+\BuiltInTok{print}\NormalTok{(venit.describe())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+             venit
+count    80.000000
+mean   1450.875000
+std     338.683952
+min     750.000000
+25%    1260.000000
+50%    1395.000000
+75%    1605.000000
+max    2360.000000
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# intervalul datelor}
+\BuiltInTok{print}\NormalTok{(venit[}\StringTok{\textquotesingle{}venit\textquotesingle{}}\NormalTok{].}\BuiltInTok{min}\NormalTok{(), venit[}\StringTok{\textquotesingle{}venit\textquotesingle{}}\NormalTok{].}\BuiltInTok{max}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+750 2360
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# calculul mediei seriei simple}
+\BuiltInTok{print}\NormalTok{(venit[}\StringTok{\textquotesingle{}venit\textquotesingle{}}\NormalTok{].mean())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+1450.875
+\end{verbatim}
+
+\paragraph{Rezolvare prin Excel}\label{rezolvare-prin-excel}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{date/medie_simpla.PNG}
+
+}
+
+\caption{venit.xlsx}
+
+\end{figure}%
+
+\paragraph{Rezolvare prin Power BI}\label{rezolvare-prin-power-bi}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{date/medie_simpla_Pbi.png}
+
+}
+
+\caption{venit.xlsx}
+
+\end{figure}%
+
+\subsubsection{2. Gruparea datelor - construirea seriilor de
+distribuție}\label{gruparea-datelor---construirea-seriilor-de-distribuux21bie}
+
+Exemplu: A fost efectuată o cercetare privind mărimea (măsurată pe baza
+numărului de salariați) a 80 de firme industriale din orașul M. Datele
+referitoare la numărul de salariați înregistrat în cursul observării
+sunt următoarele:
+
+\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+166 & 162 & 121 & 126 & 128 & 85  & 136 & 158 & 135 & 127 \\ \hline
+141 & 142 & 92  & 148 & 177 & 80  & 156 & 188 & 205 & 144 \\ \hline
+155 & 230 & 100 & 129 & 160 & 159 & 105 & 150 & 110 & 98  \\ \hline
+182 & 102 & 128 & 198 & 115 & 122 & 124 & 163 & 130 & 133 \\ \hline
+132 & 150 & 75  & 206 & 149 & 170 & 112 & 142 & 119 & 151 \\ \hline
+134 & 224 & 135 & 236 & 126 & 175 & 215 & 130 & 121 & 128 \\ \hline
+190 & 156 & 108 & 143 & 218 & 172 & 180 & 120 & 169 & 129 \\ \hline
+123 & 156 & 142 & 127 & 133 & 146 & 139 & 140 & 138 & 138 \\ \hline
+\end{tabular}
+\end{table}
+
+\paragraph{Rezolvare prin R}\label{rezolvare-prin-r-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# incarcarea datele}
+\NormalTok{grupare }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"date/grupare.csv"}\NormalTok{, }\AttributeTok{head =}\NormalTok{ F)}
+\FunctionTok{head}\NormalTok{(grupare)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+   V1
+1 166
+2 162
+3 121
+4 126
+5 128
+6  85
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# numarul de observatii}
+\NormalTok{nobs }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1)}
+
+\CommentTok{\# numărul de grupe}
+\NormalTok{g }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{((}\DecValTok{2}\SpecialCharTok{*}\NormalTok{nobs)}\SpecialCharTok{\^{}}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\DecValTok{3}\NormalTok{))}
+
+\CommentTok{\#înălțimea intervalelor}
+\NormalTok{xmax }\OtherTok{\textless{}{-}} \FunctionTok{max}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1)}
+\NormalTok{xmax}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 236
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{xmin }\OtherTok{\textless{}{-}} \FunctionTok{min}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1)}
+\NormalTok{xmin}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 75
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{h }\OtherTok{\textless{}{-}}\NormalTok{ (xmax}\SpecialCharTok{{-}}\NormalTok{xmin)}\SpecialCharTok{/}\NormalTok{g}
+\NormalTok{h}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 26.83333
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{h }\OtherTok{\textless{}{-}} \DecValTok{30}
+
+\CommentTok{\#limitele intervalelor de grupare}
+\NormalTok{x1\_inf }\OtherTok{\textless{}{-}}\NormalTok{ xmin }\SpecialCharTok{{-}}\NormalTok{ (g}\SpecialCharTok{*}\NormalTok{h}\SpecialCharTok{{-}}\NormalTok{(xmax}\SpecialCharTok{{-}}\NormalTok{xmin))}\SpecialCharTok{/}\DecValTok{2}
+\NormalTok{x1\_inf }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 65.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x1\_inf }\OtherTok{\textless{}{-}} \DecValTok{70}
+\NormalTok{x1\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x1\_inf }\SpecialCharTok{+}\NormalTok{ h}
+\NormalTok{x2\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x1\_sup }
+\NormalTok{x2\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x2\_inf }\SpecialCharTok{+}\NormalTok{ h}
+\NormalTok{x3\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x2\_sup }
+\NormalTok{x3\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x3\_inf }\SpecialCharTok{+}\NormalTok{ h}
+\NormalTok{x4\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x3\_sup }
+\NormalTok{x4\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x4\_inf }\SpecialCharTok{+}\NormalTok{ h}
+\NormalTok{x5\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x4\_sup }
+\NormalTok{x5\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x5\_inf }\SpecialCharTok{+}\NormalTok{ h}
+\NormalTok{x6\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x5\_sup }
+\NormalTok{x6\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x6\_inf }\SpecialCharTok{+}\NormalTok{ h}
+
+\CommentTok{\# determinarea frecventelor}
+\NormalTok{seria\_de\_distributie }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{lim\_inf =} \FunctionTok{c}\NormalTok{(x1\_inf, x2\_inf, x3\_inf, }
+\NormalTok{                                               x4\_inf, x5\_inf, x6\_inf), }
+                                   \AttributeTok{lim\_sup =} \FunctionTok{c}\NormalTok{(x1\_sup, x2\_sup, x3\_sup, }
+\NormalTok{                                               x4\_sup, x5\_sup, x6\_sup), }
+                                   \AttributeTok{frecvente =} \FunctionTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{))}
+\CommentTok{\# afisarea seriei de distributie}
+\NormalTok{seria\_de\_distributie }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  lim_inf lim_sup frecvente
+1      70     100         6
+2     100     130        24
+3     130     160        30
+4     160     190        12
+5     190     220         5
+6     220     250         3
+\end{verbatim}
+
+\paragraph{Rezolvare prin Python}\label{rezolvare-prin-python-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# importarea librăriilor necesare}
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\ImportTok{import}\NormalTok{ math}
+
+\CommentTok{\# încărcarea datelor}
+\NormalTok{grupare }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"date/grupare.csv"}\NormalTok{, header}\OperatorTok{=}\VariableTok{None}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(grupare.head())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     0
+0  166
+1  162
+2  121
+3  126
+4  128
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# numărul de observații}
+\NormalTok{nobs }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(grupare[}\DecValTok{0}\NormalTok{])}
+
+\CommentTok{\# numărul de grupe}
+\NormalTok{g }\OperatorTok{=}\NormalTok{ math.ceil((}\DecValTok{2} \OperatorTok{*}\NormalTok{ nobs) }\OperatorTok{**}\NormalTok{ (}\DecValTok{1} \OperatorTok{/} \DecValTok{3}\NormalTok{))}
+
+\CommentTok{\# înălțimea intervalelor}
+\NormalTok{xmax }\OperatorTok{=}\NormalTok{ grupare[}\DecValTok{0}\NormalTok{].}\BuiltInTok{max}\NormalTok{()}
+\NormalTok{xmin }\OperatorTok{=}\NormalTok{ grupare[}\DecValTok{0}\NormalTok{].}\BuiltInTok{min}\NormalTok{()}
+
+\NormalTok{h }\OperatorTok{=}\NormalTok{ (xmax }\OperatorTok{{-}}\NormalTok{ xmin) }\OperatorTok{/}\NormalTok{ g}
+\NormalTok{h }\OperatorTok{=} \DecValTok{30}  \CommentTok{\# forțăm valoarea h conform codului R}
+
+\CommentTok{\# limitele intervalelor de grupare}
+\NormalTok{x1\_inf }\OperatorTok{=}\NormalTok{ xmin }\OperatorTok{{-}}\NormalTok{ (g }\OperatorTok{*}\NormalTok{ h }\OperatorTok{{-}}\NormalTok{ (xmax }\OperatorTok{{-}}\NormalTok{ xmin)) }\OperatorTok{/} \DecValTok{2}
+\NormalTok{x1\_inf }\OperatorTok{=} \DecValTok{70}  \CommentTok{\# forțăm valoarea x1\_inf conform codului R}
+\NormalTok{x1\_sup }\OperatorTok{=}\NormalTok{ x1\_inf }\OperatorTok{+}\NormalTok{ h}
+\NormalTok{x2\_inf }\OperatorTok{=}\NormalTok{ x1\_sup}
+\NormalTok{x2\_sup }\OperatorTok{=}\NormalTok{ x2\_inf }\OperatorTok{+}\NormalTok{ h}
+\NormalTok{x3\_inf }\OperatorTok{=}\NormalTok{ x2\_sup}
+\NormalTok{x3\_sup }\OperatorTok{=}\NormalTok{ x3\_inf }\OperatorTok{+}\NormalTok{ h}
+\NormalTok{x4\_inf }\OperatorTok{=}\NormalTok{ x3\_sup}
+\NormalTok{x4\_sup }\OperatorTok{=}\NormalTok{ x4\_inf }\OperatorTok{+}\NormalTok{ h}
+\NormalTok{x5\_inf }\OperatorTok{=}\NormalTok{ x4\_sup}
+\NormalTok{x5\_sup }\OperatorTok{=}\NormalTok{ x5\_inf }\OperatorTok{+}\NormalTok{ h}
+\NormalTok{x6\_inf }\OperatorTok{=}\NormalTok{ x5\_sup}
+\NormalTok{x6\_sup }\OperatorTok{=}\NormalTok{ x6\_inf }\OperatorTok{+}\NormalTok{ h}
+
+\CommentTok{\# determinarea frecvențelor}
+\NormalTok{seria\_de\_distributie }\OperatorTok{=}\NormalTok{ pd.DataFrame(\{}
+    \StringTok{\textquotesingle{}lim\_inf\textquotesingle{}}\NormalTok{: [x1\_inf, x2\_inf, x3\_inf, x4\_inf, x5\_inf, x6\_inf],}
+    \StringTok{\textquotesingle{}lim\_sup\textquotesingle{}}\NormalTok{: [x1\_sup, x2\_sup, x3\_sup, x4\_sup, x5\_sup, x6\_sup],}
+    \StringTok{\textquotesingle{}frecvente\textquotesingle{}}\NormalTok{: [}\DecValTok{6}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{]}
+\NormalTok{\})}
+
+\CommentTok{\# afișarea seriei de distribuție}
+\BuiltInTok{print}\NormalTok{(seria\_de\_distributie)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+   lim_inf  lim_sup  frecvente
+0       70      100          6
+1      100      130         24
+2      130      160         30
+3      160      190         12
+4      190      220          5
+5      220      250          3
+\end{verbatim}
+
+\paragraph{Rezolvare prin Excel}\label{rezolvare-prin-excel-1}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{date/medie_simpla.PNG}
+
+}
+
+\caption{venit.xlsx}
+
+\end{figure}%
+
+\paragraph{Rezolvare prin Power BI}\label{rezolvare-prin-power-bi-1}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{date/medie_simpla_Pbi.png}
+
+}
+
+\caption{venit.xlsx}
+
+\end{figure}%
+
+\section{Indicatorii variației}\label{indicatorii-variaux21biei}
 
 • abateri, dispersie, abatere standard, repartiție, asimetrie,
 concentrare
 
-\hypertarget{vizualizarea-datelor}{%
-\section{Vizualizarea datelor}\label{vizualizarea-datelor}}
-
-text
-
-\hypertarget{introducerea-statisticii-descriptive-ux219i-inferenux21biale.}{%
-\subsection{Introducerea statisticii descriptive și
-inferențiale.}\label{introducerea-statisticii-descriptive-ux219i-inferenux21biale.}}
-
-text
-
-\hypertarget{noux21biuni-fundamentale-medie-medianux103-mod-varianux21bux103-deviaux21bie-standard}{%
-\subsection{Noțiuni fundamentale: medie, mediană, mod, varianță,
-deviație
-standard}\label{noux21biuni-fundamentale-medie-medianux103-mod-varianux21bux103-deviaux21bie-standard}}
+\section{Vizualizarea datelor}\label{vizualizarea-datelor}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap4}{%
-\chapter{Analiza datelor economico-financiare}\label{cap4}}
+\chapter{Analiza datelor economico-financiare}\label{cap4}
 
-\hypertarget{indicatori-economici-ux219i-financiari}{%
 \section{Indicatori economici și
-financiari}\label{indicatori-economici-ux219i-financiari}}
+financiari}\label{indicatori-economici-ux219i-financiari}
 
 text
 
-\hypertarget{principii-de-bazux103-uxeen-economie-ux219i-finanux21be-publice}{%
 \section{Principii de bază în economie și finanțe
-publice}\label{principii-de-bazux103-uxeen-economie-ux219i-finanux21be-publice}}
+publice}\label{principii-de-bazux103-uxeen-economie-ux219i-finanux21be-publice}
 
 text
 
-\hypertarget{analiza-indicatorilor-financiari-ai-instituux21biilor-publice}{%
 \section{Analiza indicatorilor financiari ai instituțiilor
-publice}\label{analiza-indicatorilor-financiari-ai-instituux21biilor-publice}}
+publice}\label{analiza-indicatorilor-financiari-ai-instituux21biilor-publice}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap5}{%
-\chapter{Analiza bugetară}\label{cap5}}
+\chapter{Analiza bugetară}\label{cap5}
 
-\hypertarget{structura-bugetului-public}{%
-\section{Structura bugetului public}\label{structura-bugetului-public}}
+\section{Structura bugetului public}\label{structura-bugetului-public}
 
 text
 
-\hypertarget{metode-de-evaluare-a-performanux21bei-bugetare}{%
 \section{Metode de evaluare a performanței
-bugetare}\label{metode-de-evaluare-a-performanux21bei-bugetare}}
+bugetare}\label{metode-de-evaluare-a-performanux21bei-bugetare}
 
 text
 
-\hypertarget{analiza-deviaux21biilor-ux219i-optimizarea-bugetarux103}{%
 \section{Analiza deviațiilor și optimizarea
-bugetară}\label{analiza-deviaux21biilor-ux219i-optimizarea-bugetarux103}}
+bugetară}\label{analiza-deviaux21biilor-ux219i-optimizarea-bugetarux103}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap6}{%
-\chapter{Analiza datelor sociale}\label{cap6}}
+\chapter{Analiza datelor sociale}\label{cap6}
 
-\hypertarget{introducere-uxeen-analiza-datelor-sociale}{%
 \section{Introducere în analiza datelor
-sociale}\label{introducere-uxeen-analiza-datelor-sociale}}
+sociale}\label{introducere-uxeen-analiza-datelor-sociale}
 
-\hypertarget{definirea-conceptului-de-date-sociale}{%
 \subsection{Definirea conceptului de date
-sociale}\label{definirea-conceptului-de-date-sociale}}
+sociale}\label{definirea-conceptului-de-date-sociale}
 
 text
 
-\hypertarget{importanux21ba-datelor-sociale-uxeen-deciziile-economice-ux219i-publice}{%
 \subsection{Importanța datelor sociale în deciziile economice și
-publice}\label{importanux21ba-datelor-sociale-uxeen-deciziile-economice-ux219i-publice}}
+publice}\label{importanux21ba-datelor-sociale-uxeen-deciziile-economice-ux219i-publice}
 
 text
 
-\hypertarget{rolul-datelor-sociale-uxeen-cercetare-ux219i-planificare-strategicux103}{%
 \subsection{Rolul datelor sociale în cercetare și planificare
-strategică}\label{rolul-datelor-sociale-uxeen-cercetare-ux219i-planificare-strategicux103}}
+strategică}\label{rolul-datelor-sociale-uxeen-cercetare-ux219i-planificare-strategicux103}
 
 text
 
-\hypertarget{tipuri-de-date-sociale}{%
-\section{Tipuri de date sociale}\label{tipuri-de-date-sociale}}
+\section{Tipuri de date sociale}\label{tipuri-de-date-sociale}
 
-\hypertarget{date-demografice-vuxe2rstux103-gen-educaux21bie}{%
 \subsection{Date demografice (vârstă, gen,
-educație)}\label{date-demografice-vuxe2rstux103-gen-educaux21bie}}
+educație)}\label{date-demografice-vuxe2rstux103-gen-educaux21bie}
 
 text
 
-\hypertarget{date-privind-ocuparea-forux21bei-de-muncux103-ux219i-veniturile}{%
 \subsection{Date privind ocuparea forței de muncă și
-veniturile}\label{date-privind-ocuparea-forux21bei-de-muncux103-ux219i-veniturile}}
+veniturile}\label{date-privind-ocuparea-forux21bei-de-muncux103-ux219i-veniturile}
 
 text
 
-\hypertarget{date-despre-condiux21biile-de-trai-sux103nux103tate-locuinux21be}{%
 \subsection{Date despre condițiile de trai (sănătate,
-locuințe)}\label{date-despre-condiux21biile-de-trai-sux103nux103tate-locuinux21be}}
+locuințe)}\label{date-despre-condiux21biile-de-trai-sux103nux103tate-locuinux21be}
 
 text
 
-\hypertarget{date-privind-comportamentele-sociale-ux219i-culturale}{%
 \subsection{Date privind comportamentele sociale și
-culturale}\label{date-privind-comportamentele-sociale-ux219i-culturale}}
+culturale}\label{date-privind-comportamentele-sociale-ux219i-culturale}
 
 text
 
-\hypertarget{metode-de-colectare-sondaje-recensux103minte-date-administrative}{%
 \subsection{Metode de colectare (sondaje, recensăminte, date
-administrative)}\label{metode-de-colectare-sondaje-recensux103minte-date-administrative}}
+administrative)}\label{metode-de-colectare-sondaje-recensux103minte-date-administrative}
 
 text
 
-\hypertarget{indicatori-sociali}{%
-\section{Indicatori sociali}\label{indicatori-sociali}}
+\section{Indicatori sociali}\label{indicatori-sociali}
 
-\hypertarget{indicatori-demografici-rata-natalitux103ux21bii-mortalitux103ux21bii-migraux21biei}{%
 \subsection{Indicatori demografici (rata natalității, mortalității,
-migrației)}\label{indicatori-demografici-rata-natalitux103ux21bii-mortalitux103ux21bii-migraux21biei}}
+migrației)}\label{indicatori-demografici-rata-natalitux103ux21bii-mortalitux103ux21bii-migraux21biei}
 
 text
 
-\hypertarget{indicatori-de-sux103rux103cie-ux219i-incluziune-socialux103}{%
 \subsection{Indicatori de sărăcie și incluziune
-socială}\label{indicatori-de-sux103rux103cie-ux219i-incluziune-socialux103}}
+socială}\label{indicatori-de-sux103rux103cie-ux219i-incluziune-socialux103}
 
 text
 
-\hypertarget{indicatori-privind-educaux21bia-ux219i-sux103nux103tatea}{%
 \subsection{Indicatori privind educația și
-sănătatea}\label{indicatori-privind-educaux21bia-ux219i-sux103nux103tatea}}
+sănătatea}\label{indicatori-privind-educaux21bia-ux219i-sux103nux103tatea}
 
 text
 
-\hypertarget{indicatori-ai-ocupux103rii-ux219i-veniturilor}{%
 \subsection{Indicatori ai ocupării și
-veniturilor}\label{indicatori-ai-ocupux103rii-ux219i-veniturilor}}
+veniturilor}\label{indicatori-ai-ocupux103rii-ux219i-veniturilor}
 
 text
 
-\hypertarget{analiza-statisticux103-a-datelor-sociale}{%
 \section{Analiza statistică a datelor
-sociale}\label{analiza-statisticux103-a-datelor-sociale}}
+sociale}\label{analiza-statisticux103-a-datelor-sociale}
 
-\hypertarget{metode-descriptive-medii-distribuux21bii-dispersie}{%
 \subsection{Metode descriptive (medii, distribuții,
-dispersie)}\label{metode-descriptive-medii-distribuux21bii-dispersie}}
+dispersie)}\label{metode-descriptive-medii-distribuux21bii-dispersie}
 
 text
 
-\hypertarget{corelaux21bii-uxeentre-variabile-sociale}{%
 \subsection{Corelații între variabile
-sociale}\label{corelaux21bii-uxeentre-variabile-sociale}}
+sociale}\label{corelaux21bii-uxeentre-variabile-sociale}
 
 text
 
-\hypertarget{limitux103rile-ux219i-capcanele-interpretux103rii-datelor-sociale}{%
 \subsection{Limitările și capcanele interpretării datelor
-sociale}\label{limitux103rile-ux219i-capcanele-interpretux103rii-datelor-sociale}}
+sociale}\label{limitux103rile-ux219i-capcanele-interpretux103rii-datelor-sociale}
 
 text
 
-\hypertarget{aplicaux21bii-practice-uxeen-analiza-datelor-sociale}{%
 \section{Aplicații practice în analiza datelor
-sociale}\label{aplicaux21bii-practice-uxeen-analiza-datelor-sociale}}
+sociale}\label{aplicaux21bii-practice-uxeen-analiza-datelor-sociale}
 
-\hypertarget{analiza-inegalitux103ux21bilor-sociale-ux219i-economice}{%
 \subsection{Analiza inegalităților sociale și
-economice}\label{analiza-inegalitux103ux21bilor-sociale-ux219i-economice}}
+economice}\label{analiza-inegalitux103ux21bilor-sociale-ux219i-economice}
 
 text
 
-\hypertarget{evaluarea-impactului-politicilor-publice-asupra-grupurilor-vulnerabile}{%
 \subsection{Evaluarea impactului politicilor publice asupra grupurilor
-vulnerabile}\label{evaluarea-impactului-politicilor-publice-asupra-grupurilor-vulnerabile}}
+vulnerabile}\label{evaluarea-impactului-politicilor-publice-asupra-grupurilor-vulnerabile}
 
 text
 
-\hypertarget{studiul-fenomenelor-demografice-ux219i-impactul-asupra-pieux21bei-muncii}{%
 \subsection{Studiul fenomenelor demografice și impactul asupra pieței
-muncii}\label{studiul-fenomenelor-demografice-ux219i-impactul-asupra-pieux21bei-muncii}}
+muncii}\label{studiul-fenomenelor-demografice-ux219i-impactul-asupra-pieux21bei-muncii}
 
 text
 
-\hypertarget{exemple-de-studii-de-caz-bazate-pe-date-sociale}{%
 \subsection{Exemple de studii de caz bazate pe date
-sociale}\label{exemple-de-studii-de-caz-bazate-pe-date-sociale}}
+sociale}\label{exemple-de-studii-de-caz-bazate-pe-date-sociale}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap7}{%
-\chapter{Etapele analizei datelor}\label{cap7}}
+\chapter{Etapele analizei datelor}\label{cap7}
 
 • cu exemple practice în Excel, Power BI, R, Python
 
-\hypertarget{definirea-obiectivelor-analizei}{%
 \section{Definirea obiectivelor
-analizei}\label{definirea-obiectivelor-analizei}}
+analizei}\label{definirea-obiectivelor-analizei}
 
 text
 
-\hypertarget{colectarea-datelor}{%
-\section{Colectarea datelor}\label{colectarea-datelor}}
+\section{Colectarea datelor}\label{colectarea-datelor}
 
 text
 
-\hypertarget{importarea-datelor}{%
-\section{Importarea datelor}\label{importarea-datelor}}
+\section{Importarea datelor}\label{importarea-datelor}
 
 text
 
-\hypertarget{stocarea-datelor}{%
-\section{Stocarea datelor}\label{stocarea-datelor}}
+\section{Stocarea datelor}\label{stocarea-datelor}
 
 text
 
-\hypertarget{curux103ux21barea-datelor}{%
-\section{Curățarea datelor}\label{curux103ux21barea-datelor}}
+\section{Curățarea datelor}\label{curux103ux21barea-datelor}
 
 • Tratarea duplicatelor, gestionarea valorilor lipsă
 
-\hypertarget{agregarea-datelor}{%
-\section{Agregarea datelor}\label{agregarea-datelor}}
+\section{Agregarea datelor}\label{agregarea-datelor}
 
 • Filtrarea/selectarea și agregarea datelor
 
-\hypertarget{analiza-descriptivux103-a-seturilor-de-date}{%
 \section{Analiza descriptivă a seturilor de
-date}\label{analiza-descriptivux103-a-seturilor-de-date}}
+date}\label{analiza-descriptivux103-a-seturilor-de-date}
 
 • Tabele de frecvență, diagrame de distribuție • Analiza distribuțiilor
 și identificarea valorile anormale (outliers)
 
-\hypertarget{interpretarea-rezultatelor}{%
-\section{Interpretarea rezultatelor}\label{interpretarea-rezultatelor}}
+\section{Interpretarea rezultatelor}\label{interpretarea-rezultatelor}
 
 text
 
-\hypertarget{vizualizarea-rezultatelor}{%
-\section{Vizualizarea rezultatelor}\label{vizualizarea-rezultatelor}}
+\section{Vizualizarea rezultatelor}\label{vizualizarea-rezultatelor}
 
 text
 
-\hypertarget{diseminarea-rezultatelor-analizei}{%
 \section{Diseminarea rezultatelor
-analizei}\label{diseminarea-rezultatelor-analizei}}
+analizei}\label{diseminarea-rezultatelor-analizei}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap8}{%
 \chapter{Crearea și partajarea rapoartelor și tablourilor de
-bord}\label{cap8}}
+bord}\label{cap8}
 
-\hypertarget{crearea-rapoartelor-ux219i-tablourilor-de-bord}{%
 \section{Crearea rapoartelor și tablourilor de
-bord}\label{crearea-rapoartelor-ux219i-tablourilor-de-bord}}
+bord}\label{crearea-rapoartelor-ux219i-tablourilor-de-bord}
 
-\hypertarget{dezvoltarea-de-rapoarte-interactive-ux219i-tablouri-de-bord-uxeen-power-bi.}{%
 \subsection{Dezvoltarea de rapoarte interactive și tablouri de bord în
 Power
-BI.}\label{dezvoltarea-de-rapoarte-interactive-ux219i-tablouri-de-bord-uxeen-power-bi.}}
+BI.}\label{dezvoltarea-de-rapoarte-interactive-ux219i-tablouri-de-bord-uxeen-power-bi.}
 
 text
 
-\hypertarget{utilizarea-storytelling-ului-uxeen-prezentarea-datelor.}{%
 \subsection{Utilizarea storytelling-ului în prezentarea
-datelor.}\label{utilizarea-storytelling-ului-uxeen-prezentarea-datelor.}}
+datelor.}\label{utilizarea-storytelling-ului-uxeen-prezentarea-datelor.}
 
 text
 
-\hypertarget{partajarea-ux219i-colaborarea-pe-rapoarte}{%
 \section{Partajarea și colaborarea pe
-rapoarte}\label{partajarea-ux219i-colaborarea-pe-rapoarte}}
+rapoarte}\label{partajarea-ux219i-colaborarea-pe-rapoarte}
 
-\hypertarget{tehnici-de-partajare-a-rapoartelor-ux219i-tablourilor-de-bord-uxeen-organizaux21bie}{%
 \subsection{Tehnici de partajare a rapoartelor și tablourilor de bord în
-organizație}\label{tehnici-de-partajare-a-rapoartelor-ux219i-tablourilor-de-bord-uxeen-organizaux21bie}}
+organizație}\label{tehnici-de-partajare-a-rapoartelor-ux219i-tablourilor-de-bord-uxeen-organizaux21bie}
 
 text
 
-\hypertarget{utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint}{%
 \subsection{Utilizarea platformelor de colaborare (e.g., Google Drive,
-SharePoint)}\label{utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint}}
+SharePoint)}\label{utilizarea-platformelor-de-colaborare-e.g.-google-drive-sharepoint}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{cap9}{%
-\chapter{Calitatea datelor}\label{cap9}}
+\chapter{Calitatea datelor}\label{cap9}
 
-\hypertarget{standarde-ghiduri-ux219i-monitorizare}{%
 \section{Standarde, ghiduri și
-monitorizare}\label{standarde-ghiduri-ux219i-monitorizare}}
+monitorizare}\label{standarde-ghiduri-ux219i-monitorizare}
 
 text
 
-\hypertarget{metodologii}{%
-\section{Metodologii}\label{metodologii}}
+\section{Metodologii}\label{metodologii}
 
 text
 
-\hypertarget{metadate}{%
-\section{Metadate}\label{metadate}}
+\section{Metadate}\label{metadate}
 
 text
 
-\hypertarget{clasificux103ri-ux219i-nomenclatoare}{%
 \section{Clasificări și
-nomenclatoare}\label{clasificux103ri-ux219i-nomenclatoare}}
+nomenclatoare}\label{clasificux103ri-ux219i-nomenclatoare}
 
-\hypertarget{ceva}{%
-\subsection{ceva}\label{ceva}}
-
-text
-
-\hypertarget{rapoarte-de-calitate}{%
-\section{Rapoarte de calitate}\label{rapoarte-de-calitate}}
+\subsection{ceva}\label{ceva}
 
 text
 
-\hypertarget{etica-ux219i-transparenux21ba}{%
-\section{Etica și transparența}\label{etica-ux219i-transparenux21ba}}
+\section{Rapoarte de calitate}\label{rapoarte-de-calitate}
+
+text
+
+\section{Etica și transparența}\label{etica-ux219i-transparenux21ba}
 
 text
 
 \bookmarksetup{startatroot}
 
-\hypertarget{bibliografie}{%
-\chapter*{Bibliografie}\label{bibliografie}}
+\chapter*{Bibliografie}\label{bibliografie}
 \addcontentsline{toc}{chapter}{Bibliografie}
 
 \markboth{Bibliografie}{Bibliografie}
 
 Bibliografie
 
-\hypertarget{refs}{}
+\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-xie2015}{}}%
+\bibitem[\citeproctext]{ref-caragea2015}
+Caragea, Nicoleta. 2015. \emph{\href{}{Statistică - Concepte Și Metode
+de Analiză a Datelor}}. 1st ed. București, România: Editura MUSTANG.
+
+\bibitem[\citeproctext]{ref-dusa2015}
+Dușa, Adrian, Nicoleta Caragea, and Ciprian Alexandru. 2015. \emph{{R}
+Cu Aplicații În Statistică}. 1st ed. București, România: Editura
+Universității București.
+\url{https://editura-unibuc.ro/magazin/stiinte-socio-umane/r-cu-aplicatii-in-statistica/}.
+
+\bibitem[\citeproctext]{ref-xie2015}
 Xie, Yihui. 2015. \emph{Dynamic Documents with {R} and Knitr}. 2nd ed.
 Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.name/knitr/}.
 
@@ -1887,5 +2257,6 @@ Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.name/knitr/}.
 
 
 \backmatter
+
 
 \end{document}

@@ -302,11 +302,12 @@ print(venit['venit'].mean())
 
 ##### Rezolvare prin Excel
 
-![venit.xlsx](date/medie_simpla.PNG)
+![](date/medie_simpla.PNG)  
+[venit.xlsx](date/venit.xlsx)
 
 ##### Rezolvare prin Power BI
 
-![venit.xlsx](date/medie_simpla_Pbi.png)
+![](date/medie_simpla_Pbi.png)
 
 
 #### 2. Gruparea datelor - construirea seriilor de distribuție
@@ -472,11 +473,35 @@ head(grupare)
 ```{.r .cell-code}
 # numarul de observatii
 nobs <- length(grupare$V1)
+nobs
+```
 
+::: {.cell-output .cell-output-stdout}
+
+```
+[1] 80
+```
+
+
+:::
+
+```{.r .cell-code}
 # numărul de grupe
 g <- ceiling((2*nobs)^(1/3))
+g
+```
 
-#înălțimea intervalelor
+::: {.cell-output .cell-output-stdout}
+
+```
+[1] 6
+```
+
+
+:::
+
+```{.r .cell-code}
+# valoarea maximă
 xmax <- max(grupare$V1)
 xmax
 ```
@@ -491,6 +516,7 @@ xmax
 :::
 
 ```{.r .cell-code}
+# valoarea minimă
 xmin <- min(grupare$V1)
 xmin
 ```
@@ -505,7 +531,8 @@ xmin
 :::
 
 ```{.r .cell-code}
-h <- (xmax-xmin)/g
+# determinarea înălțimii intervalelor
+h <- (xmax - xmin) / g
 h
 ```
 
@@ -519,9 +546,22 @@ h
 :::
 
 ```{.r .cell-code}
-h <- 30
+# rotunjirea la o valoare superioară a intervalului
+h <- ceiling(h/10) * 10
+h
+```
 
-#limitele intervalelor de grupare
+::: {.cell-output .cell-output-stdout}
+
+```
+[1] 30
+```
+
+
+:::
+
+```{.r .cell-code}
+# limitele intervalelor de grupare
 x1_inf <- xmin - (g*h-(xmax-xmin))/2
 x1_inf 
 ```
@@ -536,39 +576,81 @@ x1_inf
 :::
 
 ```{.r .cell-code}
-x1_inf <- 70
-x1_sup <- x1_inf + h
-x2_inf <- x1_sup 
-x2_sup <- x2_inf + h
-x3_inf <- x2_sup 
-x3_sup <- x3_inf + h
-x4_inf <- x3_sup 
-x4_sup <- x4_inf + h
-x5_inf <- x4_sup 
-x5_sup <- x5_inf + h
-x6_inf <- x5_sup 
-x6_sup <- x6_inf + h
-
-# determinarea frecventelor
-seria_de_distributie <- data.frame(lim_inf = c(x1_inf, x2_inf, x3_inf, 
-                                               x4_inf, x5_inf, x6_inf), 
-                                   lim_sup = c(x1_sup, x2_sup, x3_sup, 
-                                               x4_sup, x5_sup, x6_sup), 
-                                   frecvente = c(6, 24, 30, 12, 5, 3))
-# afisarea seriei de distributie
-seria_de_distributie 
+# rotunjirea la o valoare superioară a limitei inferioare
+x1_inf <- ceiling(x1_inf/10) * 10
+x1_inf
 ```
 
 ::: {.cell-output .cell-output-stdout}
 
 ```
-  lim_inf lim_sup frecvente
-1      70     100         6
-2     100     130        24
-3     130     160        30
-4     160     190        12
-5     190     220         5
-6     220     250         3
+[1] 70
+```
+
+
+:::
+
+```{.r .cell-code}
+# dacă limita inferioară nu cuprinde valoarea minimă se reajustează limita inferioară
+if (x1_inf > xmin) {x1_inf <- (floor(x1_inf/10) - 1) * 10}
+
+# determinarea intervalelor de frecvente
+limite_intervale <- seq(from = x1_inf, to = 250, by = h)
+grupare$interval <- cut(grupare$V1, breaks = limite_intervale)
+
+library(dplyr)
+```
+
+::: {.cell-output .cell-output-stderr}
+
+```
+
+Attaching package: 'dplyr'
+```
+
+
+:::
+
+::: {.cell-output .cell-output-stderr}
+
+```
+The following objects are masked from 'package:stats':
+
+    filter, lag
+```
+
+
+:::
+
+::: {.cell-output .cell-output-stderr}
+
+```
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+```
+
+
+:::
+
+```{.r .cell-code}
+grupare %>% 
+  group_by(interval) %>%
+  summarise(frecvente = n())
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+# A tibble: 6 x 2
+  interval  frecvente
+  <fct>         <int>
+1 (70,100]          6
+2 (100,130]        24
+3 (130,160]        30
+4 (160,190]        12
+5 (190,220]         5
+6 (220,250]         3
 ```
 
 
@@ -590,19 +672,19 @@ seria_de_distributie
 ::: {.cell}
 
 ```{.python .cell-code}
-# importarea librăriilor necesare
 import pandas as pd
+import numpy as np
 import math
 
 # încărcarea datelor
-grupare = pd.read_csv("date/grupare.csv", header=None)
+grupare = pd.read_csv("date/grupare.csv", header=None, names=["V1"])
 print(grupare.head())
 ```
 
 ::: {.cell-output .cell-output-stdout}
 
 ```
-     0
+    V1
 0  166
 1  162
 2  121
@@ -615,54 +697,120 @@ print(grupare.head())
 
 ```{.python .cell-code}
 # numărul de observații
-nobs = len(grupare[0])
-
-# numărul de grupe
-g = math.ceil((2 * nobs) ** (1 / 3))
-
-# înălțimea intervalelor
-xmax = grupare[0].max()
-xmin = grupare[0].min()
-
-h = (xmax - xmin) / g
-h = 30  # forțăm valoarea h conform codului R
-
-# limitele intervalelor de grupare
-x1_inf = xmin - (g * h - (xmax - xmin)) / 2
-x1_inf = 70  # forțăm valoarea x1_inf conform codului R
-x1_sup = x1_inf + h
-x2_inf = x1_sup
-x2_sup = x2_inf + h
-x3_inf = x2_sup
-x3_sup = x3_inf + h
-x4_inf = x3_sup
-x4_sup = x4_inf + h
-x5_inf = x4_sup
-x5_sup = x5_inf + h
-x6_inf = x5_sup
-x6_sup = x6_inf + h
-
-# determinarea frecvențelor
-seria_de_distributie = pd.DataFrame({
-    'lim_inf': [x1_inf, x2_inf, x3_inf, x4_inf, x5_inf, x6_inf],
-    'lim_sup': [x1_sup, x2_sup, x3_sup, x4_sup, x5_sup, x6_sup],
-    'frecvente': [6, 24, 30, 12, 5, 3]
-})
-
-# afișarea seriei de distribuție
-print(seria_de_distributie)
+nobs = len(grupare["V1"])
+print(nobs)
 ```
 
 ::: {.cell-output .cell-output-stdout}
 
 ```
-   lim_inf  lim_sup  frecvente
-0       70      100          6
-1      100      130         24
-2      130      160         30
-3      160      190         12
-4      190      220          5
-5      220      250          3
+80
+```
+
+
+:::
+
+```{.python .cell-code}
+# numărul de grupe
+g = math.ceil((2 * nobs) ** (1/3))
+print(g)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+6
+```
+
+
+:::
+
+```{.python .cell-code}
+# valoarea maximă
+xmax = grupare["V1"].max()
+print(xmax)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+236
+```
+
+
+:::
+
+```{.python .cell-code}
+# valoarea minimă
+xmin = grupare["V1"].min()
+print(xmin)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+75
+```
+
+
+:::
+
+```{.python .cell-code}
+# determinarea înălțimii intervalelor
+h = (xmax - xmin) / g
+h = math.ceil(h / 10) * 10  # rotunjire la cel mai apropiat multiplu de 10
+print(h)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+30
+```
+
+
+:::
+
+```{.python .cell-code}
+# limitele intervalelor de grupare
+x1_inf = xmin - (g * h - (xmax - xmin)) / 2
+x1_inf = math.ceil(x1_inf / 10) * 10  # rotunjire la cel mai apropiat multiplu de 10
+
+# ajustarea limitei inferioare dacă este necesar
+if x1_inf > xmin:
+    x1_inf = (math.floor(x1_inf / 10) - 1) * 10
+print(x1_inf)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+70
+```
+
+
+:::
+
+```{.python .cell-code}
+# determinarea intervalelor de frecvențe
+limite_intervale = np.arange(x1_inf, 250 + h, h)
+grupare['interval'] = pd.cut(grupare['V1'], bins=limite_intervale)
+
+# calculul frecvențelor pe intervale
+frecvente = grupare.groupby('interval').size().reset_index(name='frecvente')
+print(frecvente)
+```
+
+::: {.cell-output .cell-output-stdout}
+
+```
+     interval  frecvente
+0   (70, 100]          6
+1  (100, 130]         24
+2  (130, 160]         30
+3  (160, 190]         12
+4  (190, 220]          5
+5  (220, 250]          3
 ```
 
 
@@ -676,11 +824,12 @@ print(seria_de_distributie)
 
 ##### Rezolvare prin Excel
 
-![venit.xlsx](date/medie_simpla.PNG)
+![](date/grupare.PNG)
+[grupare.xlsx](date/grupare.xlsx)
 
 ##### Rezolvare prin Power BI
 
-![venit.xlsx](date/medie_simpla_Pbi.png)
+![](date/medie_simpla_Pbi.png)
 
 
 

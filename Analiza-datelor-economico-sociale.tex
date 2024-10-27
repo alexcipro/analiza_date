@@ -1703,27 +1703,12 @@ max    2360.000000
 
 \paragraph{Rezolvare prin Excel}\label{rezolvare-prin-excel}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{date/medie_simpla.PNG}
-
-}
-
-\caption{venit.xlsx}
-
-\end{figure}%
+\includegraphics{date/medie_simpla.PNG}\\
+\href{date/venit.xlsx}{venit.xlsx}
 
 \paragraph{Rezolvare prin Power BI}\label{rezolvare-prin-power-bi}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{date/medie_simpla_Pbi.png}
-
-}
-
-\caption{venit.xlsx}
-
-\end{figure}%
+\includegraphics{date/medie_simpla_Pbi.png}
 
 \subsubsection{2. Gruparea datelor - construirea seriilor de
 distribuție}\label{gruparea-datelor---construirea-seriilor-de-distribuux21bie}
@@ -1771,11 +1756,29 @@ sunt următoarele:
 \begin{Highlighting}[]
 \CommentTok{\# numarul de observatii}
 \NormalTok{nobs }\OtherTok{\textless{}{-}} \FunctionTok{length}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1)}
+\NormalTok{nobs}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+[1] 80
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \CommentTok{\# numărul de grupe}
 \NormalTok{g }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{((}\DecValTok{2}\SpecialCharTok{*}\NormalTok{nobs)}\SpecialCharTok{\^{}}\NormalTok{(}\DecValTok{1}\SpecialCharTok{/}\DecValTok{3}\NormalTok{))}
+\NormalTok{g}
+\end{Highlighting}
+\end{Shaded}
 
-\CommentTok{\#înălțimea intervalelor}
+\begin{verbatim}
+[1] 6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# valoarea maximă}
 \NormalTok{xmax }\OtherTok{\textless{}{-}} \FunctionTok{max}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1)}
 \NormalTok{xmax}
 \end{Highlighting}
@@ -1787,6 +1790,7 @@ sunt următoarele:
 
 \begin{Shaded}
 \begin{Highlighting}[]
+\CommentTok{\# valoarea minimă}
 \NormalTok{xmin }\OtherTok{\textless{}{-}} \FunctionTok{min}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1)}
 \NormalTok{xmin}
 \end{Highlighting}
@@ -1798,7 +1802,8 @@ sunt următoarele:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{h }\OtherTok{\textless{}{-}}\NormalTok{ (xmax}\SpecialCharTok{{-}}\NormalTok{xmin)}\SpecialCharTok{/}\NormalTok{g}
+\CommentTok{\# determinarea înălțimii intervalelor}
+\NormalTok{h }\OtherTok{\textless{}{-}}\NormalTok{ (xmax }\SpecialCharTok{{-}}\NormalTok{ xmin) }\SpecialCharTok{/}\NormalTok{ g}
 \NormalTok{h}
 \end{Highlighting}
 \end{Shaded}
@@ -1809,9 +1814,19 @@ sunt următoarele:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{h }\OtherTok{\textless{}{-}} \DecValTok{30}
+\CommentTok{\# rotunjirea la o valoare superioară a intervalului}
+\NormalTok{h }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{(h}\SpecialCharTok{/}\DecValTok{10}\NormalTok{) }\SpecialCharTok{*} \DecValTok{10}
+\NormalTok{h}
+\end{Highlighting}
+\end{Shaded}
 
-\CommentTok{\#limitele intervalelor de grupare}
+\begin{verbatim}
+[1] 30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# limitele intervalelor de grupare}
 \NormalTok{x1\_inf }\OtherTok{\textless{}{-}}\NormalTok{ xmin }\SpecialCharTok{{-}}\NormalTok{ (g}\SpecialCharTok{*}\NormalTok{h}\SpecialCharTok{{-}}\NormalTok{(xmax}\SpecialCharTok{{-}}\NormalTok{xmin))}\SpecialCharTok{/}\DecValTok{2}
 \NormalTok{x1\_inf }
 \end{Highlighting}
@@ -1823,56 +1838,82 @@ sunt următoarele:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{x1\_inf }\OtherTok{\textless{}{-}} \DecValTok{70}
-\NormalTok{x1\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x1\_inf }\SpecialCharTok{+}\NormalTok{ h}
-\NormalTok{x2\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x1\_sup }
-\NormalTok{x2\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x2\_inf }\SpecialCharTok{+}\NormalTok{ h}
-\NormalTok{x3\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x2\_sup }
-\NormalTok{x3\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x3\_inf }\SpecialCharTok{+}\NormalTok{ h}
-\NormalTok{x4\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x3\_sup }
-\NormalTok{x4\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x4\_inf }\SpecialCharTok{+}\NormalTok{ h}
-\NormalTok{x5\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x4\_sup }
-\NormalTok{x5\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x5\_inf }\SpecialCharTok{+}\NormalTok{ h}
-\NormalTok{x6\_inf }\OtherTok{\textless{}{-}}\NormalTok{ x5\_sup }
-\NormalTok{x6\_sup }\OtherTok{\textless{}{-}}\NormalTok{ x6\_inf }\SpecialCharTok{+}\NormalTok{ h}
-
-\CommentTok{\# determinarea frecventelor}
-\NormalTok{seria\_de\_distributie }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{lim\_inf =} \FunctionTok{c}\NormalTok{(x1\_inf, x2\_inf, x3\_inf, }
-\NormalTok{                                               x4\_inf, x5\_inf, x6\_inf), }
-                                   \AttributeTok{lim\_sup =} \FunctionTok{c}\NormalTok{(x1\_sup, x2\_sup, x3\_sup, }
-\NormalTok{                                               x4\_sup, x5\_sup, x6\_sup), }
-                                   \AttributeTok{frecvente =} \FunctionTok{c}\NormalTok{(}\DecValTok{6}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{))}
-\CommentTok{\# afisarea seriei de distributie}
-\NormalTok{seria\_de\_distributie }
+\CommentTok{\# rotunjirea la o valoare superioară a limitei inferioare}
+\NormalTok{x1\_inf }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{(x1\_inf}\SpecialCharTok{/}\DecValTok{10}\NormalTok{) }\SpecialCharTok{*} \DecValTok{10}
+\NormalTok{x1\_inf}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-  lim_inf lim_sup frecvente
-1      70     100         6
-2     100     130        24
-3     130     160        30
-4     160     190        12
-5     190     220         5
-6     220     250         3
+[1] 70
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# dacă limita inferioară nu cuprinde valoarea minimă se reajustează limita inferioară}
+\ControlFlowTok{if}\NormalTok{ (x1\_inf }\SpecialCharTok{\textgreater{}}\NormalTok{ xmin) \{x1\_inf }\OtherTok{\textless{}{-}}\NormalTok{ (}\FunctionTok{floor}\NormalTok{(x1\_inf}\SpecialCharTok{/}\DecValTok{10}\NormalTok{) }\SpecialCharTok{{-}} \DecValTok{1}\NormalTok{) }\SpecialCharTok{*} \DecValTok{10}\NormalTok{\}}
+
+\CommentTok{\# determinarea intervalelor de frecvente}
+\NormalTok{limite\_intervale }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\AttributeTok{from =}\NormalTok{ x1\_inf, }\AttributeTok{to =} \DecValTok{250}\NormalTok{, }\AttributeTok{by =}\NormalTok{ h)}
+\NormalTok{grupare}\SpecialCharTok{$}\NormalTok{interval }\OtherTok{\textless{}{-}} \FunctionTok{cut}\NormalTok{(grupare}\SpecialCharTok{$}\NormalTok{V1, }\AttributeTok{breaks =}\NormalTok{ limite\_intervale)}
+
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+
+Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+The following objects are masked from 'package:stats':
+
+    filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{grupare }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{group\_by}\NormalTok{(interval) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{frecvente =} \FunctionTok{n}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+# A tibble: 6 x 2
+  interval  frecvente
+  <fct>         <int>
+1 (70,100]          6
+2 (100,130]        24
+3 (130,160]        30
+4 (160,190]        12
+5 (190,220]         5
+6 (220,250]         3
 \end{verbatim}
 
 \paragraph{Rezolvare prin Python}\label{rezolvare-prin-python-1}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# importarea librăriilor necesare}
 \ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
 \ImportTok{import}\NormalTok{ math}
 
 \CommentTok{\# încărcarea datelor}
-\NormalTok{grupare }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"date/grupare.csv"}\NormalTok{, header}\OperatorTok{=}\VariableTok{None}\NormalTok{)}
+\NormalTok{grupare }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"date/grupare.csv"}\NormalTok{, header}\OperatorTok{=}\VariableTok{None}\NormalTok{, names}\OperatorTok{=}\NormalTok{[}\StringTok{"V1"}\NormalTok{])}
 \BuiltInTok{print}\NormalTok{(grupare.head())}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-     0
+    V1
 0  166
 1  162
 2  121
@@ -1883,78 +1924,111 @@ sunt următoarele:
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# numărul de observații}
-\NormalTok{nobs }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(grupare[}\DecValTok{0}\NormalTok{])}
-
-\CommentTok{\# numărul de grupe}
-\NormalTok{g }\OperatorTok{=}\NormalTok{ math.ceil((}\DecValTok{2} \OperatorTok{*}\NormalTok{ nobs) }\OperatorTok{**}\NormalTok{ (}\DecValTok{1} \OperatorTok{/} \DecValTok{3}\NormalTok{))}
-
-\CommentTok{\# înălțimea intervalelor}
-\NormalTok{xmax }\OperatorTok{=}\NormalTok{ grupare[}\DecValTok{0}\NormalTok{].}\BuiltInTok{max}\NormalTok{()}
-\NormalTok{xmin }\OperatorTok{=}\NormalTok{ grupare[}\DecValTok{0}\NormalTok{].}\BuiltInTok{min}\NormalTok{()}
-
-\NormalTok{h }\OperatorTok{=}\NormalTok{ (xmax }\OperatorTok{{-}}\NormalTok{ xmin) }\OperatorTok{/}\NormalTok{ g}
-\NormalTok{h }\OperatorTok{=} \DecValTok{30}  \CommentTok{\# forțăm valoarea h conform codului R}
-
-\CommentTok{\# limitele intervalelor de grupare}
-\NormalTok{x1\_inf }\OperatorTok{=}\NormalTok{ xmin }\OperatorTok{{-}}\NormalTok{ (g }\OperatorTok{*}\NormalTok{ h }\OperatorTok{{-}}\NormalTok{ (xmax }\OperatorTok{{-}}\NormalTok{ xmin)) }\OperatorTok{/} \DecValTok{2}
-\NormalTok{x1\_inf }\OperatorTok{=} \DecValTok{70}  \CommentTok{\# forțăm valoarea x1\_inf conform codului R}
-\NormalTok{x1\_sup }\OperatorTok{=}\NormalTok{ x1\_inf }\OperatorTok{+}\NormalTok{ h}
-\NormalTok{x2\_inf }\OperatorTok{=}\NormalTok{ x1\_sup}
-\NormalTok{x2\_sup }\OperatorTok{=}\NormalTok{ x2\_inf }\OperatorTok{+}\NormalTok{ h}
-\NormalTok{x3\_inf }\OperatorTok{=}\NormalTok{ x2\_sup}
-\NormalTok{x3\_sup }\OperatorTok{=}\NormalTok{ x3\_inf }\OperatorTok{+}\NormalTok{ h}
-\NormalTok{x4\_inf }\OperatorTok{=}\NormalTok{ x3\_sup}
-\NormalTok{x4\_sup }\OperatorTok{=}\NormalTok{ x4\_inf }\OperatorTok{+}\NormalTok{ h}
-\NormalTok{x5\_inf }\OperatorTok{=}\NormalTok{ x4\_sup}
-\NormalTok{x5\_sup }\OperatorTok{=}\NormalTok{ x5\_inf }\OperatorTok{+}\NormalTok{ h}
-\NormalTok{x6\_inf }\OperatorTok{=}\NormalTok{ x5\_sup}
-\NormalTok{x6\_sup }\OperatorTok{=}\NormalTok{ x6\_inf }\OperatorTok{+}\NormalTok{ h}
-
-\CommentTok{\# determinarea frecvențelor}
-\NormalTok{seria\_de\_distributie }\OperatorTok{=}\NormalTok{ pd.DataFrame(\{}
-    \StringTok{\textquotesingle{}lim\_inf\textquotesingle{}}\NormalTok{: [x1\_inf, x2\_inf, x3\_inf, x4\_inf, x5\_inf, x6\_inf],}
-    \StringTok{\textquotesingle{}lim\_sup\textquotesingle{}}\NormalTok{: [x1\_sup, x2\_sup, x3\_sup, x4\_sup, x5\_sup, x6\_sup],}
-    \StringTok{\textquotesingle{}frecvente\textquotesingle{}}\NormalTok{: [}\DecValTok{6}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{30}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{]}
-\NormalTok{\})}
-
-\CommentTok{\# afișarea seriei de distribuție}
-\BuiltInTok{print}\NormalTok{(seria\_de\_distributie)}
+\NormalTok{nobs }\OperatorTok{=} \BuiltInTok{len}\NormalTok{(grupare[}\StringTok{"V1"}\NormalTok{])}
+\BuiltInTok{print}\NormalTok{(nobs)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-   lim_inf  lim_sup  frecvente
-0       70      100          6
-1      100      130         24
-2      130      160         30
-3      160      190         12
-4      190      220          5
-5      220      250          3
+80
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# numărul de grupe}
+\NormalTok{g }\OperatorTok{=}\NormalTok{ math.ceil((}\DecValTok{2} \OperatorTok{*}\NormalTok{ nobs) }\OperatorTok{**}\NormalTok{ (}\DecValTok{1}\OperatorTok{/}\DecValTok{3}\NormalTok{))}
+\BuiltInTok{print}\NormalTok{(g)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# valoarea maximă}
+\NormalTok{xmax }\OperatorTok{=}\NormalTok{ grupare[}\StringTok{"V1"}\NormalTok{].}\BuiltInTok{max}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(xmax)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+236
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# valoarea minimă}
+\NormalTok{xmin }\OperatorTok{=}\NormalTok{ grupare[}\StringTok{"V1"}\NormalTok{].}\BuiltInTok{min}\NormalTok{()}
+\BuiltInTok{print}\NormalTok{(xmin)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+75
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# determinarea înălțimii intervalelor}
+\NormalTok{h }\OperatorTok{=}\NormalTok{ (xmax }\OperatorTok{{-}}\NormalTok{ xmin) }\OperatorTok{/}\NormalTok{ g}
+\NormalTok{h }\OperatorTok{=}\NormalTok{ math.ceil(h }\OperatorTok{/} \DecValTok{10}\NormalTok{) }\OperatorTok{*} \DecValTok{10}  \CommentTok{\# rotunjire la cel mai apropiat multiplu de 10}
+\BuiltInTok{print}\NormalTok{(h)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+30
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# limitele intervalelor de grupare}
+\NormalTok{x1\_inf }\OperatorTok{=}\NormalTok{ xmin }\OperatorTok{{-}}\NormalTok{ (g }\OperatorTok{*}\NormalTok{ h }\OperatorTok{{-}}\NormalTok{ (xmax }\OperatorTok{{-}}\NormalTok{ xmin)) }\OperatorTok{/} \DecValTok{2}
+\NormalTok{x1\_inf }\OperatorTok{=}\NormalTok{ math.ceil(x1\_inf }\OperatorTok{/} \DecValTok{10}\NormalTok{) }\OperatorTok{*} \DecValTok{10}  \CommentTok{\# rotunjire la cel mai apropiat multiplu de 10}
+
+\CommentTok{\# ajustarea limitei inferioare dacă este necesar}
+\ControlFlowTok{if}\NormalTok{ x1\_inf }\OperatorTok{\textgreater{}}\NormalTok{ xmin:}
+\NormalTok{    x1\_inf }\OperatorTok{=}\NormalTok{ (math.floor(x1\_inf }\OperatorTok{/} \DecValTok{10}\NormalTok{) }\OperatorTok{{-}} \DecValTok{1}\NormalTok{) }\OperatorTok{*} \DecValTok{10}
+\BuiltInTok{print}\NormalTok{(x1\_inf)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+70
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# determinarea intervalelor de frecvențe}
+\NormalTok{limite\_intervale }\OperatorTok{=}\NormalTok{ np.arange(x1\_inf, }\DecValTok{250} \OperatorTok{+}\NormalTok{ h, h)}
+\NormalTok{grupare[}\StringTok{\textquotesingle{}interval\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ pd.cut(grupare[}\StringTok{\textquotesingle{}V1\textquotesingle{}}\NormalTok{], bins}\OperatorTok{=}\NormalTok{limite\_intervale)}
+
+\CommentTok{\# calculul frecvențelor pe intervale}
+\NormalTok{frecvente }\OperatorTok{=}\NormalTok{ grupare.groupby(}\StringTok{\textquotesingle{}interval\textquotesingle{}}\NormalTok{).size().reset\_index(name}\OperatorTok{=}\StringTok{\textquotesingle{}frecvente\textquotesingle{}}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(frecvente)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     interval  frecvente
+0   (70, 100]          6
+1  (100, 130]         24
+2  (130, 160]         30
+3  (160, 190]         12
+4  (190, 220]          5
+5  (220, 250]          3
 \end{verbatim}
 
 \paragraph{Rezolvare prin Excel}\label{rezolvare-prin-excel-1}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{date/medie_simpla.PNG}
-
-}
-
-\caption{venit.xlsx}
-
-\end{figure}%
+\includegraphics{date/grupare.PNG}
+\href{date/grupare.xlsx}{grupare.xlsx}
 
 \paragraph{Rezolvare prin Power BI}\label{rezolvare-prin-power-bi-1}
 
-\begin{figure}[H]
-
-{\centering \includegraphics{date/medie_simpla_Pbi.png}
-
-}
-
-\caption{venit.xlsx}
-
-\end{figure}%
+\includegraphics{date/medie_simpla_Pbi.png}
 
 \section{Indicatorii variației}\label{indicatorii-variaux21biei}
 

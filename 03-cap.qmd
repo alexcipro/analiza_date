@@ -166,11 +166,12 @@ print(venit['venit'].mean())
 
 ##### Rezolvare prin Excel
 
-![venit.xlsx](date/medie_simpla.PNG)
+![](date/medie_simpla.PNG)  
+[venit.xlsx](date/venit.xlsx)
 
 ##### Rezolvare prin Power BI
 
-![venit.xlsx](date/medie_simpla_Pbi.png)
+![](date/medie_simpla_Pbi.png)
 
 
 #### 2. Gruparea datelor - construirea seriilor de distribuție
@@ -312,102 +313,104 @@ head(grupare)
 
 # numarul de observatii
 nobs <- length(grupare$V1)
+nobs
 
 # numărul de grupe
 g <- ceiling((2*nobs)^(1/3))
+g
 
-#înălțimea intervalelor
+# valoarea maximă
 xmax <- max(grupare$V1)
 xmax
+# valoarea minimă
 xmin <- min(grupare$V1)
 xmin
-h <- (xmax-xmin)/g
-h
-h <- 30
 
-#limitele intervalelor de grupare
+# determinarea înălțimii intervalelor
+h <- (xmax - xmin) / g
+h
+# rotunjirea la o valoare superioară a intervalului
+h <- ceiling(h/10) * 10
+h
+
+# limitele intervalelor de grupare
 x1_inf <- xmin - (g*h-(xmax-xmin))/2
 x1_inf 
-x1_inf <- 70
-x1_sup <- x1_inf + h
-x2_inf <- x1_sup 
-x2_sup <- x2_inf + h
-x3_inf <- x2_sup 
-x3_sup <- x3_inf + h
-x4_inf <- x3_sup 
-x4_sup <- x4_inf + h
-x5_inf <- x4_sup 
-x5_sup <- x5_inf + h
-x6_inf <- x5_sup 
-x6_sup <- x6_inf + h
 
-# determinarea frecventelor
-seria_de_distributie <- data.frame(lim_inf = c(x1_inf, x2_inf, x3_inf, 
-                                               x4_inf, x5_inf, x6_inf), 
-                                   lim_sup = c(x1_sup, x2_sup, x3_sup, 
-                                               x4_sup, x5_sup, x6_sup), 
-                                   frecvente = c(6, 24, 30, 12, 5, 3))
-# afisarea seriei de distributie
-seria_de_distributie 
+# rotunjirea la o valoare superioară a limitei inferioare
+x1_inf <- ceiling(x1_inf/10) * 10
+x1_inf
+# dacă limita inferioară nu cuprinde valoarea minimă se reajustează limita inferioară
+if (x1_inf > xmin) {x1_inf <- (floor(x1_inf/10) - 1) * 10}
+
+# determinarea intervalelor de frecvente
+limite_intervale <- seq(from = x1_inf, to = 250, by = h)
+grupare$interval <- cut(grupare$V1, breaks = limite_intervale)
+
+library(dplyr)
+grupare %>% 
+  group_by(interval) %>%
+  summarise(frecvente = n())
 ```
 
 ##### Rezolvare prin Python
 
 ```{python}
-# importarea librăriilor necesare
 import pandas as pd
+import numpy as np
 import math
 
 # încărcarea datelor
-grupare = pd.read_csv("date/grupare.csv", header=None)
+grupare = pd.read_csv("date/grupare.csv", header=None, names=["V1"])
 print(grupare.head())
 
 # numărul de observații
-nobs = len(grupare[0])
+nobs = len(grupare["V1"])
+print(nobs)
 
 # numărul de grupe
-g = math.ceil((2 * nobs) ** (1 / 3))
+g = math.ceil((2 * nobs) ** (1/3))
+print(g)
 
-# înălțimea intervalelor
-xmax = grupare[0].max()
-xmin = grupare[0].min()
+# valoarea maximă
+xmax = grupare["V1"].max()
+print(xmax)
 
+# valoarea minimă
+xmin = grupare["V1"].min()
+print(xmin)
+
+# determinarea înălțimii intervalelor
 h = (xmax - xmin) / g
-h = 30  # forțăm valoarea h conform codului R
+h = math.ceil(h / 10) * 10  # rotunjire la cel mai apropiat multiplu de 10
+print(h)
 
 # limitele intervalelor de grupare
 x1_inf = xmin - (g * h - (xmax - xmin)) / 2
-x1_inf = 70  # forțăm valoarea x1_inf conform codului R
-x1_sup = x1_inf + h
-x2_inf = x1_sup
-x2_sup = x2_inf + h
-x3_inf = x2_sup
-x3_sup = x3_inf + h
-x4_inf = x3_sup
-x4_sup = x4_inf + h
-x5_inf = x4_sup
-x5_sup = x5_inf + h
-x6_inf = x5_sup
-x6_sup = x6_inf + h
+x1_inf = math.ceil(x1_inf / 10) * 10  # rotunjire la cel mai apropiat multiplu de 10
 
-# determinarea frecvențelor
-seria_de_distributie = pd.DataFrame({
-    'lim_inf': [x1_inf, x2_inf, x3_inf, x4_inf, x5_inf, x6_inf],
-    'lim_sup': [x1_sup, x2_sup, x3_sup, x4_sup, x5_sup, x6_sup],
-    'frecvente': [6, 24, 30, 12, 5, 3]
-})
+# ajustarea limitei inferioare dacă este necesar
+if x1_inf > xmin:
+    x1_inf = (math.floor(x1_inf / 10) - 1) * 10
+print(x1_inf)
 
-# afișarea seriei de distribuție
-print(seria_de_distributie)
+# determinarea intervalelor de frecvențe
+limite_intervale = np.arange(x1_inf, 250 + h, h)
+grupare['interval'] = pd.cut(grupare['V1'], bins=limite_intervale)
+
+# calculul frecvențelor pe intervale
+frecvente = grupare.groupby('interval').size().reset_index(name='frecvente')
+print(frecvente)
 ```
 
 ##### Rezolvare prin Excel
 
-![venit.xlsx](date/medie_simpla.PNG)
+![](date/grupare.PNG)
+[grupare.xlsx](date/grupare.xlsx)
 
 ##### Rezolvare prin Power BI
 
-![venit.xlsx](date/medie_simpla_Pbi.png)
+![](date/medie_simpla_Pbi.png)
 
 
 

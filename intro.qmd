@@ -1,17 +1,24 @@
 # Introducere {.unnumbered}
 
+> "Numerele au fost inventate pentru a măsura grânele și pentru a administra bogățiile regatului."
+> --- Mesopotamia antică
+
+> "Datele sunt noul petrol. (en.Data is the new oil.)"
+> --- Clive Humby (2006)
+
 > “...acum nu mai e nimic nou de descoperit;\
 > tot ce rămâne e doar măsurătoarea din ce în ce mai precisă”
 >
 > --- Lord Kelvin (1894)
 
-Cartea tipărită merită răsfoită. Trăim în vremea în care internetul facilitează comunicarea globală, informația fiind disponibilă oricând și oricum. Toată lumea, de la oameni de știință și până la copii de vârstă școlară primesc și oferă informații și propagă idei pe calea internetului. Tirajele publicațiilor, cărților și manualelor tipărite sunt în scădere în întreaga lume, în timp ce postările online captează atenția omenirii.\
+"Cartea tipărită merită răsfoită", spunea Nicoleta Caragea, în anul 2018, unul dintre apreciații profesori și profesioniști statisticieni ai României, în introducerea cărții [Statistica. Concepte, tehnici si instrumente softwaRe](https://www.ujmag.ro/economie/statistica-economica/statistica-concepte-tehnici-si-instrumente-software). Deși internetul ne oferă aproape tot doar la un click distanță, informația fiind disponibilă oricând și oricum, sezația unei cărți tipărite rămâne de neegalat. Dacă lângă carte adăugăm o coală de hârtie și un creion, putem spune că într-adevăr studiem. Și mai mult, dacă adormim în gând cu o problemă de rezolvat și ne trezim plini de speranță că vom găsi rezolvarea, atunci am început activitatea de cercetare științifică.\
+
 Obiectivul principal al cărții pe care o propun este de a fi un ghid cuprinzător, în termeni de concepte și tehnici, reprezentativ și, mai ales, practic, în ceea ce privește utilizarea instrumentelor software de analiză statistică, R fiind principalul software utilizat pentru aplicațiile propuse. Ca abordare generală, cartea prezintă principalele concepte utilizate în statistică, cu exemple și explicații descriptive. Exemplele din viața economică - cele mai multe dintre ele bazate pe date statistice reale - problemele rezolvate, dar și cele propuse, acoperă o arie cuprinzătoare de tematici, cititorul având șansa de a fi introdus în sfera aplicativă a conceptelor teoretice parcurse.\
 Cartea este destinată tuturor celor care doresc să înțeleagă, prin mijloace științifice, fenomenele economice și sociale, sub aspectul măsurării cantitative și din perspectiva determinării cauzale. Deși se adresează, în principal, studenților care se pregătesc să devină specialiști în științele economice, lucrarea este utilă și celor care își propun să cunoască un domeniu atât de frumos și de captivant. Tocmai nevoia de informații, din ce în ce mai complexe, dar și posibilitățile de calcul avansat cu ajutorul soft-urilor tot mai performante, au condus la crearea unui bazin imens de date care pot fi cu ușurință exploatate pe baza analizei statistice. Poate că acesta este și motivul pentru care statistica rămâne o disciplină percepută ca fiind adesea prea matematizată, destinată specialiștilor. Pentru mulți cititori, mai ales dintre cei care nu au o formare bazată pe un aparat matematic, studiul fenomenelor economice prin metode statistice și matematice, presupune un efort deosebit. Din acest motiv, am încercat să tratez aspectele teoretice, dar și problemele cu aplicație practică din sfera economică, într-o manieră simplă, accesibilă. Așadar, lucrarea are menirea de a facilita înțelegerea conceptelor fundamentale cu care operează statistica, utilizarea adecvată a metodelor de analiză statistică, precum și interpretarea corectă a rezultatelor, în vederea cunoașterii modului de manifestare a fenomenelor.
 
 \begin{flushright}
-Nicoleta Caragea \\
-Septembrie, 2018
+Ciprian Alexandru \\
+Noiembrie, 2024
 \end{flushright}
 
 \newpage

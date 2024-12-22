@@ -327,7 +327,8 @@ Evaluarea calității și relevanței datelor este un proces esențial pentru a 
 
 ### Utilizarea platformelor de date
 
-• Modalități de acces, descărcare și integrare a datelor • Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data
+-   Modalități de acces, descărcare și integrare a datelor\
+-   Prezentarea unor platforme comune: Eurostat, INS, UN data, OECD Data
 
 ## Concepte de bază legate de formatarea datelor
 

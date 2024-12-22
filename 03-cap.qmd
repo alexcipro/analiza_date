@@ -51,7 +51,7 @@ Se cunosc date privind veniturile salariale lunare (în lei/lună) ale celor 80 
     <td class="tg-c3ow">6</td>
   </tr>
   <tr>
-    <td class="tg-0pky">interval <br>quartila <br>inferioară</td>
+    <td class="tg-0pky">interval quartila inferioară</td>
     <td class="tg-c3ow">1001 – 1300</td>
     <td class="tg-c3ow">24</td>
     <td class="tg-c3ow">300</td>
@@ -60,7 +60,7 @@ Se cunosc date privind veniturile salariale lunare (în lei/lună) ale celor 80 
     <td class="tg-c3ow">30</td>
   </tr>
   <tr>
-    <td class="tg-0pky">interval <br>median</td>
+    <td class="tg-0pky">interval median</td>
     <td class="tg-c3ow">1301 – 1600</td>
     <td class="tg-c3ow">30</td>
     <td class="tg-c3ow">300</td>
@@ -69,7 +69,7 @@ Se cunosc date privind veniturile salariale lunare (în lei/lună) ale celor 80 
     <td class="tg-c3ow">60</td>
   </tr>
   <tr>
-    <td class="tg-0pky">interval <br>quartila <br>superioară</td>
+    <td class="tg-0pky">interval quartila superioară</td>
     <td class="tg-c3ow">1601 – 1900</td>
     <td class="tg-c3ow">12</td>
     <td class="tg-c3ow">300</td>

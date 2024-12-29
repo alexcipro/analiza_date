@@ -124,7 +124,7 @@
     "href": "03-cap.html",
     "title": "3  Introducere în analiza statistică",
     "section": "",
-    "text": "3.1 Concepte de bază privind analiza statistică\ntext",
+    "text": "3.1 Concepte de bază privind analiza statistică",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
     ]
@@ -497,6 +497,26 @@
     "text": "Bibliografie",
     "crumbs": [
       "Bibliografie"
+    ]
+  },
+  {
+    "objectID": "03-cap.html#concepte-de-bază-privind-analiza-statistică",
+    "href": "03-cap.html#concepte-de-bază-privind-analiza-statistică",
+    "title": "3  Introducere în analiza statistică",
+    "section": "",
+    "text": "3.1.1 Colectivitate statistică\nColectivitatea sau populația statistică reprezintă totalitatea elementelor sau a manifestărilor de aceeași natură, asupra cărora se efectuează cercetarea.\nPutem reține și o altă definiție a populației statistice, ca fiind întregul set de unități de interes pentru analiza datelor.\nPopulația poate fi formată din persoane, obiecte, evenimente sau orice altă entitate relevantă pentru un studiu.\nExemple: totalitatea angajaților unei companii sau toți locuitorii unui oraș.\nColectivitatea supusă cercetării poate fi totală și se numește cercetare exhaustivă, atunci când se fac înregistrări referitoare la toate elementele care formează obiectul studiului, sau parțială, când se utilizează un eșantion, prin care se fac înregistrări referitoare numai la o parte din această colectivitate.\nEșantionul: este un subset reprezentativ extras din populație pentru a efectua analize. Este folosit pentru a face inferențe despre populație, reducând costurile și timpul necesare colectării datelor.\nExemplu: Un sondaj efectuat pe 500 de angajați dintr-o companie mare, cu 25000 de angajați.\nAlegerea unui eșantion reprezentativ este crucială pentru a obține rezultate valide. Tehnicile de eșantionare, cum ar fi eșantionarea aleatorie simplă, stratificată sau cluster, sunt esențiale pentru a reduce erorile de eșantionare.\n\n3.1.2 Unitate statistică\nElementele care compun populația statistică se numesc unități statistice sau unități de observare.Unitatea statistică sau unitatea de observare este cea mai mică entitate despre care se colectează informații.Unitățile statistice reprezintă mulțimea numărabilă de elemente care compun colectivitatea statistică.\nDe exemplu, unitatea statistică a unei cercetări referitoare la veniturile populației poate fi gospodăria sau persoana. Unitatea statistică a unei cercetări privind calitatea producției este produsul finit, semifabricatul sau piesa căreia i se testează caracteristicile.\nUnitățile statistice pot fi simple sau complexe. Cele complexe sunt formate din mai multe unități simple. O astfel de unitate este gospodăria1. Unitățile pe care se realizează cercetarea salariilor sunt, de asemenea unități complexe: unitățile economice la care se face înregistrarea datelor.\n\n3.1.3 Caracteristici ale unității statistice\nFiecare element al colectivității este purtătorul cel puțin a unei caracteristici supuse observării statistice.Caracteristica statistică reprezintă acea proprietate/însușire care este comună tuturor unităților unei colectivități statistice cercetate.\nCaracteristicele statistice poartă numele și de variabile.\nO variabilă este o caracteristică măsurabilă care poate lua mai multe valori. Spre exemplu, venitul unei persoane, vârsta, nivelul de satisfacție al clienților.\nRolul variabilelor: Variabilele sunt elementele centrale ale analizei datelor, definind relațiile, tendințele și corelațiile care pot fi observate în cadrul unui studiu.\n\n3.1.4 Date statistice\nFormele sau nivelurile concrete ale caracteristicilor statistice sunt denumite variante, valori sau date și diferă de la o unitate la alta (sau în timp, în cazul aceleiași unități) sub influența unui complex de factori.\nDatele statistice exprimă valori ale unor caracteristici cantitative ale unităților statistice.\nNumărul unităților la care se înregistrează aceeași variantă sau valoare poartă denumirea de frecvență a variantei/valorii respective.\n\n3.1.5 Indicatori statistici\ntext",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
+    ]
+  },
+  {
+    "objectID": "03-cap.html#footnotes",
+    "href": "03-cap.html#footnotes",
+    "title": "3  Introducere în analiza statistică",
+    "section": "",
+    "text": "Prin gospodărie se înțelege grupul de două sau mai multe persoane care locuiesc împreună în mod obișnuit, având, în general, legături de rudenie și care se gospodăresc (fac menajul) în comun, participând în totalitate sau parțial la formarea veniturilor și la cheltuirea lor. Persoana care nu aparține de o gospodărie și care declară că locuiește și se gospodărește singură se consideră gospodărie formată dintr-o singură persoană. Se consideră membri ai gospodăriei și persoanele plecate din localitate pentru o perioadă mai mare de 6 luni, care se află în țară sau străinătate, dacă acestea păstrează legături familiale cu gospodăria↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Introducere în analiza statistică</span>"
     ]
   }
 ]

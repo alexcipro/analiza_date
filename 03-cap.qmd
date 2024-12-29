@@ -2,6 +2,47 @@
 
 ## Concepte de bază privind analiza statistică
 
+### Colectivitate statistică
+
+*Colectivitatea* sau *populația statistică* reprezintă totalitatea elementelor sau a manifestărilor de aceeași natură, asupra cărora se efectuează cercetarea.  
+Putem reține și o altă definiție a populației statistice, ca fiind întregul set de unități de interes pentru analiza datelor.  
+Populația poate fi formată din persoane, obiecte, evenimente sau orice altă entitate relevantă pentru un studiu.  
+Exemple: totalitatea angajaților unei companii sau toți locuitorii unui oraș.  
+
+Colectivitatea supusă cercetării poate fi totală și se numește *cercetare exhaustivă*, atunci când se fac înregistrări referitoare la toate elementele care formează obiectul studiului, sau parțială, când se utilizează un *eșantion*, prin care se fac înregistrări referitoare numai la o parte din această colectivitate.  
+
+*Eșantionul*: este un subset reprezentativ extras din populație pentru a efectua analize. Este folosit pentru a face inferențe despre populație, reducând costurile și timpul necesare colectării datelor.  
+Exemplu: Un sondaj efectuat pe 500 de angajați dintr-o companie mare, cu 25000 de angajați.  
+Alegerea unui eșantion reprezentativ este crucială pentru a obține rezultate valide. Tehnicile de eșantionare, cum ar fi eșantionarea aleatorie simplă, stratificată sau cluster, sunt esențiale pentru a reduce erorile de eșantionare.  
+
+### Unitate statistică
+
+Elementele care compun populația statistică se numesc *unități statistice* sau *unități de observare*.  
+*Unitatea statistică* sau *unitatea de observare* este cea mai mică entitate despre care se colectează informații.  
+*Unitățile statistice* reprezintă mulțimea numărabilă de elemente care compun colectivitatea statistică.  
+De exemplu, unitatea statistică a unei cercetări referitoare la veniturile populației poate fi gospodăria sau persoana. Unitatea statistică a unei cercetări privind calitatea producției este produsul finit, semifabricatul sau piesa căreia i se testează caracteristicile.   
+
+Unitățile statistice pot fi *simple* sau *complexe*. Cele complexe sunt formate din mai multe unități simple. O astfel de unitate este gospodăria^[Prin __gospodărie__ se înțelege grupul de două sau mai multe persoane care locuiesc împreună în mod obișnuit, având, în general, legături de rudenie și care se gospodăresc (fac menajul) în comun, participând în totalitate sau parțial la formarea veniturilor și la cheltuirea lor. Persoana care nu aparține de o gospodărie și care declară că locuiește și se gospodărește singură se consideră gospodărie formată dintr-o singură persoană. Se consideră membri ai gospodăriei și persoanele plecate din localitate pentru o perioadă mai mare de 6 luni, care se află în țară sau străinătate, dacă acestea păstrează legături familiale cu gospodăria]. Unitățile pe care se realizează cercetarea salariilor sunt, de asemenea unități complexe: unitățile economice la care se face înregistrarea datelor.  
+
+### Caracteristici ale unității statistice
+
+Fiecare element al colectivității este purtătorul cel puțin a unei _caracteristici_ supuse observării statistice.  
+*Caracteristica statistică* reprezintă acea proprietate/însușire care este comună tuturor unităților unei colectivități statistice cercetate.  
+Caracteristicele statistice poartă numele și de *variabile*.  
+O variabilă este o caracteristică măsurabilă care poate lua mai multe valori. Spre exemplu, venitul unei persoane, vârsta, nivelul de satisfacție al clienților.  
+
+**Rolul variabilelor**: Variabilele sunt elementele centrale ale analizei datelor, definind relațiile, tendințele și corelațiile care pot fi observate în cadrul unui studiu.  
+
+### Date statistice
+
+Formele sau nivelurile concrete ale caracteristicilor statistice sunt denumite _variante_,  _valori_ sau _date_ și diferă de la o unitate la alta (sau în timp, în cazul aceleiași unități) sub influența unui complex de factori.  
+
+_Datele statistice_ exprimă valori ale unor caracteristici cantitative ale unităților statistice.  
+
+Numărul unităților la care se înregistrează aceeași variantă sau valoare poartă denumirea de _frecvență_ a variantei/valorii respective.   
+
+### Indicatori statistici
+
 text
 
 ## Mărimile relative
